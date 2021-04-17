@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('includes.main')
 @section('content')
 
   <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url(img/bg-img/34.jpg);">

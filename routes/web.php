@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LayoutsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -12,28 +13,17 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', [LayoutsController::class, 'index']);
 
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/timetable', function () {
-    return view('timetable');
-});
-Route::get('/service', function () {
-    return view('service');
-});
-Route::get('/relatives', function () {
-    return view('relatives');
-});
-Route::get('/blog', function () {
-    return view('blog');
-});
-Route::get('/blog-details', function () {
-    return view('blog-details');
-});
-Route::get('/application1', function () {
-    return view('application1');
-});
-Route::get('/hamada', function () {
-    return view('hamada');
-});
+Route::get('/timetable', [LayoutsController::class, 'timeTable']);
+
+Route::get('/blog', [LayoutsController::class, 'blog']);
+
+Route::get('/blog-details', [LayoutsController::class, 'blogDetails']);
+
+Route::get('/relatives', [LayoutsController::class, 'relatives']);
+
+Route::get('/service', [LayoutsController::class, 'service']);
+
+Route::get('/application', [LayoutsController::class, 'application']);
+

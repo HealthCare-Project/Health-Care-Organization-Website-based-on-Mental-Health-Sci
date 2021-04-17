@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('includes.main')
 @section('content')
 
   <!-- ***** Breadcrumb Area Start ***** -->
