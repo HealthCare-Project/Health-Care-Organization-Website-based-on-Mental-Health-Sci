@@ -65,7 +65,7 @@
   
 
             <!-- Logo -->
-            <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt="Italian Trulli" style="    width: 184px;
+            <a class="nav-brand" href="/"><img src="./img/core-img/logo.png" alt="Italian Trulli" style="    width: 184px;
               margin-left: 15px;
               margin-top: -26px;"></a>
 
@@ -143,7 +143,7 @@
                   <li><a href="timetable">TimeTable</a></li>
                   <li><a href="#">Applications</a>
                     <ul class="dropdown">
-                      <li><a href="application1">- Calculate Your Weight</a></li>
+                      <li><a href="application">- Calculate Your Weight</a></li>
                       <li><a href="blog-details">- Your Pathological History</a></li>
                     </ul>
                   </li>
