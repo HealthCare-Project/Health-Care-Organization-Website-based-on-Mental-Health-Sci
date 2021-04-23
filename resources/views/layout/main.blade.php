@@ -16,6 +16,7 @@
   <!-- Core Stylesheet -->
   <link rel="stylesheet" href="{{asset('style.css')}}">
 
+
 </head>
 
 <body>
@@ -65,7 +66,7 @@
   
 
             <!-- Logo -->
-            <a class="nav-brand" href="index.html"><img src="./img/core-img/logo.png" alt="Italian Trulli" style="    width: 184px;
+            <a class="nav-brand" href="index.html"><img src="{{url('img/core-img/logo.png')}}" alt="Italian Trulli" style="    width: 184px;
               margin-left: 15px;
               margin-top: -26px;"></a>
 
@@ -106,36 +107,25 @@
                     </ul>
                   </li>
                   
-                  <li><a href="#">Services</a>
+                  <li><a href="#">Departments</a>
                     <ul class="dropdown">
                         <ul class="dropdown">
-                          <li><a href="#">- Medical Department</a>
-                            <ul class="dropdown">
-                              
-                              <li><a href="#">- Internal Medicine</a></li>
-                              <li><a href="#">- Pediatric</a></li>
-                              <li><a href="#">- Rheumatology</a></li>
-                              <li><a href="#">- Oncology</a></li>
-                              <li><a href="#">- Nephrology</a></li>
-                              <li><a href="#">- Hematology </a></li>
-                              <li><a href="#">- Endocrinology</a></li>
-                              <li><a href="#">- Cardiology</a></li>
-                              <li><a href="#">- Neurology</a></li>
-                              <li><a href="#">- Psychiaty</a></li>
-                              <li><a href="#">- Dentist</a></li>
-                            </ul>
+                          
+                          <li><a href="internamedicine">- Internal Medicine</a></li>
+                              <li><a href="pediatric">- Pediatric</a></li>
+                              <li><a href="rheumatology">- Rheumatology</a></li>
+                              <li><a href="oncology">- Oncology</a></li>
+                              <li><a href="nephrology">- Nephrology</a></li>
+                              <li><a href="hematology">- Hematology </a></li>
+                              <li><a href="endocrinology">- Endocrinology</a></li>
+                              <li><a href="cardiology">- Cardiology</a></li>
+                              <li><a href="neurology">- Neurology</a></li>
+                              <li><a href="psychiaty">- Psychiaty</a></li>
+                              <li><a href="dentist">- Dentist</a></li>
+
                           </li>
-                          <li><a href="#">- Surgical Department</a>
-                            <ul class="dropdown">
-                              
-                              <li><a href="#">- For Doctors</a></li>
-                              
-                            </ul></li>
-                          <li><a href="#">- Other Services</a>
-                            <ul class="dropdown">
-                              <li><a href="#">- For Doctors</a></li>
-                             
-                            </ul></li>
+                          
+                          
                         </ul>
                       </li>
                     </ul>
@@ -144,7 +134,8 @@
                   <li><a href="#">Applications</a>
                     <ul class="dropdown">
                       <li><a href="application1">- Calculate Your Weight</a></li>
-                      <li><a href="blog-details">- Your Pathological History</a></li>
+                      <li><a href="pathological-history">- Pathological History</a></li>
+                      <li><a href="doctor-register">- doctor-register BETA</a></li>
                     </ul>
                   </li>
                   <li><a href="about">About</a></li>
@@ -174,7 +165,7 @@
         <!-- Single Footer Widget -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
-            <a href="index" class="d-block mb-4"><img src="./img/core-img/logo.png" style="    width: 184px;
+            <a href="index" class="d-block mb-4"><img src="{{url('img/core-img/logo.png')}}" style="    width: 184px;
               margin-left: 15px;
               margin-top: -26px;"></a>
             <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>

@@ -1,0 +1,61 @@
+    body
+			{
+				background:#EFEFEF;
+			}
+			fieldset
+			{
+				background:#FFF;
+				border:1px solid #CCC;
+				padding:20px;
+				width:600px;
+				margin:20px auto
+			}
+			legend
+			{
+				background:rgb(235, 235, 235);
+				border:1px solid #CCC; 
+				padding:8px;
+        width:auto;
+				font-weight: bold;
+			}
+			label[for="bloodtype"],
+			label[for="length"],
+			label[for="weight"],
+			label[for="occupation"],
+			label[for="socialstatus"],
+			label[for="problem"],
+			label[for="sugartest"],
+			label[for="bloodtest"],
+			label[for="time"]
+		    {
+				margin-bottom:10px;
+				display:block
+			}
+			input{margin-bottom:10px}
+
+			input[type="text"]
+			{
+				padding:6px;
+			}
+
+			input[id="bloodtest"],
+			input[id="sugartest"],
+			input[id="height"],
+			input[id="weight"]
+			{
+				margin-right:4px
+			}
+			hr {border:1px solid #EEE}
+
+			textarea
+			{
+				padding:6px;
+				height:100px;
+				margin-bottom:10px
+			}
+			input[type="submit"]
+			{
+				margin-top: 5px;
+				border:1px solid #CCC;
+				padding:10px;
+			}

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,57 @@ Route::get('/blog-details', function () {
 Route::get('/application1', function () {
     return view('application1');
 });
-Route::get('/hamada', function () {
-    return view('hamada');
+
+
+Route::get('/internamedicine', function () {
+    return view('internamedicine');
 });
+Route::get('/dentist', function () {
+    return view('dentist');
+});
+
+Route::get('/psychiaty', function () {
+    return view('psychiaty');
+});
+
+Route::get('/neurology', function () {
+    return view('neurology');
+});
+
+Route::get('/cardiology', function () {
+    return view('cardiology');
+});
+
+Route::get('/endocrinology', function () {
+    return view('endocrinology');
+});
+
+Route::get('/hemtology', function () {
+    return view('hemtology');
+});
+
+Route::get('/nephrology', function () {
+    return view('nephrology');
+});
+
+Route::get('/oncology', function () {
+    return view('oncology');
+});
+Route::get('/rheumatology', function () {
+    return view('rheumatology');
+});
+Route::get('/pedicatric', function () {
+    return view('pedicatric');
+});
+Route::get('/doctor-register', function () {
+    return view('doctor-register');
+});
+Route::get('/pathological-history', function () {
+    return view('pathological-history');
+});
+Route::get('/application2', function () {
+    return view('application2');
+});
+
+Route::get('posts',[PostsController::class,'index']);
+Route::get('posts/{id}',[PostsController::class,'view']);
