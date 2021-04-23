@@ -174,7 +174,7 @@
         <!-- Single Footer Widget -->
         <div class="col-12 col-sm-6 col-lg-4">
           <div class="single-footer-widget">
-            <a href="index" class="d-block mb-4"><img src="./img/core-img/logo.png" style="    width: 184px;
+            <a href="/" class="d-block mb-4"><img src="./img/core-img/logo.png" style="    width: 184px;
               margin-left: 15px;
               margin-top: -26px;"></a>
             <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
