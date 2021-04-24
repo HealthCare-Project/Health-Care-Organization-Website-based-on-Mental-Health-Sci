@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\RegistrationsController;
+use App\Http\Controllers\SessionsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,3 +91,11 @@ Route::get('/application2', function () {
 
 Route::get('posts',[PostsController::class,'index']);
 Route::get('posts/{id}',[PostsController::class,'view']);
+
+Route::get('/register',[RegistrationsController::class,'create']);
+Route::post('/register',[RegistrationsController::class,'store'])->name('register.store');
+
+
+Route::get('/login',[SessionsController::class,'create']);
+Route::post('/login',[SessionsController::class,'store'])->name('session.login');
+Route::get('/logout', [SessionsController::class,'destroy'])->name("session.destroy");
