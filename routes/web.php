@@ -1,9 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\RegistrationsController;
 use App\Http\Controllers\SessionsController;
+=======
+use App\Http\Controllers\LayoutsController;
+>>>>>>> 93cb29eee4589d0d01a44db1e28422ac9ff6cfa4
 
 /*
 |--------------------------------------------------------------------------
@@ -15,6 +19,7 @@ use App\Http\Controllers\SessionsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
+<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('index');
@@ -99,3 +104,19 @@ Route::post('/register',[RegistrationsController::class,'store'])->name('registe
 Route::get('/login',[SessionsController::class,'create']);
 Route::post('/login',[SessionsController::class,'store'])->name('session.login');
 Route::get('/logout', [SessionsController::class,'destroy'])->name("session.destroy");
+=======
+Route::get('/', [LayoutsController::class, 'index']);
+
+Route::get('/timetable', [LayoutsController::class, 'timeTable']);
+
+Route::get('/blog', [LayoutsController::class, 'blog']);
+
+Route::get('/blog-details', [LayoutsController::class, 'blogDetails']);
+
+Route::get('/relatives', [LayoutsController::class, 'relatives']);
+
+Route::get('/service', [LayoutsController::class, 'service']);
+
+Route::get('/application', [LayoutsController::class, 'application']);
+
+>>>>>>> 93cb29eee4589d0d01a44db1e28422ac9ff6cfa4
