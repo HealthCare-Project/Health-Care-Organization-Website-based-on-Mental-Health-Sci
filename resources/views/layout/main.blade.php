@@ -14,9 +14,9 @@
   <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" href="{{asset('style.css')}}">
-
-
+  <link rel="stylesheet" type="text/css" href="{{asset('style.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/styleforgot.css')}}">
+  <link rel="stylesheet" type="text/css" href="{{asset('css/stylelogin.css')}}">
 </head>
 
 <body>

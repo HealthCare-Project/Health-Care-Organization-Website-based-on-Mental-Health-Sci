@@ -1,6 +1,6 @@
-@extends('layout.main')
-    
-@section('content')
+<title> Login </title>
+ 
+  <link rel="stylesheet" type="text/css" href="{{asset('css/stylelogin.css')}}">   
     @if( auth()->check() )
         <li class="nav-item">
             <p class="nav-link" href="#">Hey, {{ auth()->user()->first_name }} 
@@ -11,32 +11,19 @@
             <a class="nav-link" href="{{route('session.destroy')}}" style="color:blue;">Log Out</a>
         </li>
     @endif
-    <h2>Log In</h2>
-    
-    <form method="POST" action="{{route('session.login')}}">
+        <form method="POST" class="box1" action="{{route('session.login')}}">
         {{ csrf_field() }}
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email">
-        </div>
+        <h1> Sign in </h1>
+        <input type = "email" name = "email" placeholder = "Email" required>
+        <input type = "password" name = "password" placeholder = "Password" required>
+     
+        <input type = "checkbox"> <span> Remember me </span> 
+        <p class = "forgot"> <a href = "{{route('session.forgot')}}"> Forgot Your Password? </a> </p>
+        <input type = "submit" name = "login" value = "Login">
+        <p class = "message"> Don't have an account? <a href = "signup.html"> Sign up </a></p>
+        </form>
 
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" name="password">
-        </div>
 
-        <div class="form-group">
-            <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
-        </div>
-        @if (count($errors) > 0)
-            <div class="error">
-                <ul>
-                    @foreach ($errors->all() as $error)
-                        <li>{{ $error }}</li>
-                    @endforeach
-                </ul>
-            </div>
-        @endif    
-</form>
 
-@endsection
+
+

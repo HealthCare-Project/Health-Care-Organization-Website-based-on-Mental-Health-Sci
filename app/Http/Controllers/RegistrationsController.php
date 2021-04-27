@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use Mail;
+
 class RegistrationsController extends Controller
 {
     //
@@ -12,7 +14,6 @@ class RegistrationsController extends Controller
     {
         return view('registrations.create');
     }
-
     public function store(Request $request){
     $validated = $request->validate([
     	'first_name' => "required",
@@ -34,10 +35,23 @@ class RegistrationsController extends Controller
         "weight" => request("weight"),
         'age' => request("age"),
         'password' => request("password"),
+        'verification_code' => sha1(time())
     ]);
 
     auth()->login($user);
-    return redirect()->to('/games');
+
+    EmailController::sendSignUpEmail($user->first_name, $user->last_name, $user->email, 
+        $user->verification_code);
+    return redirect()->to('/')
     // The blog post is valid...
 	}
+    public function verifyUser(Request $request){
+        $verification_code = \Illuminate\Support\Facades\Request::get('code');
+        $user = User::where(["verification_code" => $verification_code])->first();
+        if($user != null){
+            $user->is_verified = 1;
+            $user->save();
+        };
+    #        return redirect()->route("/login")->with(session()->flash('alert-success', "Your account has been verified"));
+    }
 }

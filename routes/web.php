@@ -1,14 +1,11 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-<<<<<<< HEAD
 use App\Http\Controllers\PostsController;
 use App\Http\Controllers\RegistrationsController;
 use App\Http\Controllers\SessionsController;
-=======
 use App\Http\Controllers\LayoutsController;
->>>>>>> 93cb29eee4589d0d01a44db1e28422ac9ff6cfa4
-
+use App\Http\Controllers\EmailController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -19,7 +16,6 @@ use App\Http\Controllers\LayoutsController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-<<<<<<< HEAD
 
 Route::get('/', function () {
     return view('index');
@@ -104,7 +100,14 @@ Route::post('/register',[RegistrationsController::class,'store'])->name('registe
 Route::get('/login',[SessionsController::class,'create']);
 Route::post('/login',[SessionsController::class,'store'])->name('session.login');
 Route::get('/logout', [SessionsController::class,'destroy'])->name("session.destroy");
-=======
+
+Route::get('/verify', [RegistrationsController::class,'verifyUser'])->name('sendemail');
+Route::get('/ForgotPassword', [SessionsController::class, "forgotPassword"])->name('session.forgot');
+Route::post('/ForgotPassword', [SessionsController::class, "restore"])
+
+
+
+
 Route::get('/', [LayoutsController::class, 'index']);
 
 Route::get('/timetable', [LayoutsController::class, 'timeTable']);
@@ -119,4 +122,3 @@ Route::get('/service', [LayoutsController::class, 'service']);
 
 Route::get('/application', [LayoutsController::class, 'application']);
 
->>>>>>> 93cb29eee4589d0d01a44db1e28422ac9ff6cfa4

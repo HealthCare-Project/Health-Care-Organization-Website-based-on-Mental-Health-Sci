@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable
+class User extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
 
@@ -17,7 +17,6 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-<<<<<<< HEAD
         'first_name',
         'last_name',
         'email',
@@ -26,11 +25,10 @@ class User extends Authenticatable
         'weight',
         'phone',
         'age',
-=======
         'name',
         'email',
         'password',
->>>>>>> 93cb29eee4589d0d01a44db1e28422ac9ff6cfa4
+        'verification_code'
     ];
 
     /**
@@ -51,11 +49,9 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
-<<<<<<< HEAD
 
     public function setPasswordAttribute($password){
         $this->attributes['password'] = bcrypt($password);
     }
-=======
->>>>>>> 93cb29eee4589d0d01a44db1e28422ac9ff6cfa4
+
 }
