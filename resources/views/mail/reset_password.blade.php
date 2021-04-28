@@ -1,0 +1,1 @@
+<a href="http://homestead.test/reset-password/{{$email_data}}">Here is your token</a>

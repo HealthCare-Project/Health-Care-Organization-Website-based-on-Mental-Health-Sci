@@ -103,9 +103,12 @@ Route::get('/logout', [SessionsController::class,'destroy'])->name("session.dest
 
 Route::get('/verify', [RegistrationsController::class,'verifyUser'])->name('sendemail');
 Route::get('/ForgotPassword', [SessionsController::class, "forgotPassword"])->name('session.forgot');
-Route::post('/ForgotPassword', [SessionsController::class, "restore"])
+Route::post('/ForgotPassword', [SessionsController::class, "RestorePassword"])->name("session.restore");
 
+Route::get('reset-password/{token}', [SessionsController::class, 'showPasswordResetForm'])->name("sessions.password_reset");
 
+Route::post('reset-password/{token}',
+    [SessionsController::class, 'PasswordReset'])->name("new-password");
 
 
 Route::get('/', [LayoutsController::class, 'index']);

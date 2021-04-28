@@ -4,7 +4,7 @@
     @if( auth()->check() )
         <li class="nav-item">
             <p class="nav-link" href="#">Hey, {{ auth()->user()->first_name }} 
-            {{auth()->user()->last_name}}
+            {{auth()->user()->last_name}}wwww
             </p>
         </li>
             <li class="nav-item">
