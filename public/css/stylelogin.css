@@ -11,7 +11,7 @@ body{
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
-  background: #191919;
+  background-image: url('../img/bg-img/login-form-bg.jpg');
   text-align: center;
 }
 .box1 h1{
@@ -20,26 +20,26 @@ body{
   font-weight: 500;
 }
 .box1 input[type = "email"],.box1 input[type = "password"]{
-  border:0;
-  background: none;
   display: block;
   margin: 20px auto;
   text-align: center;
   border: 2px solid #4f799c;
   padding: 14px 10px;
-  width: 200px;
+  width: 220px;
   outline: none;
-  color: white;
+  color: black;
+  background-color: white;
   border-radius: 24px;
   transition: 0.25s;
+  font-size: 15px;
 }
 .box1 input[type = "email"]:focus,.box1 input[type = "password"]:focus{
   width: 280px;
   border-color: #bacac1;
 }
 .box1 input[type = checkbox]{
-  margin: 0;
-  padding: 0;
+  width: 15px;
+  height: 15px;
 }
 .box1 span{
   color: aliceblue;
@@ -48,13 +48,11 @@ body{
   position: initial;
 }
 .box1 .forgot a{
-  color: #4f799c;
+  color: #02021a;;
   text-decoration: none;
   font-size: 14px;
 }
 .box1 input[type = "submit"]{
-  border:0;
-  background: none;
   display: block;
   margin: 20px auto;
   text-align: center;
@@ -62,6 +60,7 @@ body{
   padding: 14px 40px;
   outline: none;
   color: white;
+  background-color: #818080;
   border-radius: 24px;
   transition: 0.25s;
   cursor: pointer;
@@ -74,6 +73,6 @@ body{
   font-size: 14px;
 }
 .box1 .message a{
-  color: #4f799c;
+  color: black;
   text-decoration: none;
 }

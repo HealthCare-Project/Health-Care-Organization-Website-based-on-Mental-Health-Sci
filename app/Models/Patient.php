@@ -7,9 +7,10 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 
-class User extends Authenticatable implements MustVerifyEmail
+class Patient extends Authenticatable implements MustVerifyEmail
 {
     use HasFactory, Notifiable;
+    protected $guard = 'patient';
 
     /**
      * The attributes that are mass assignable.

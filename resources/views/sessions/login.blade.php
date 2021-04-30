@@ -1,16 +1,29 @@
 <title> Login </title>
- 
+ @if ($message = Session::get('error'))
+<div class="alert alert-danger alert-block">
+    <button type="button" class="close" data-dismiss="alert">×</button> 
+        <strong>{{ $message }}</strong>
+</div>
+@endif
   <link rel="stylesheet" type="text/css" href="{{asset('css/stylelogin.css')}}">   
-    @if( auth()->check() )
+    @if(auth()->guard('patient')->check())
         <li class="nav-item">
-            <p class="nav-link" href="#">Hey, {{ auth()->user()->first_name }} 
-            {{auth()->user()->last_name}}wwww
+            {{auth()->guard('patient')->user()->first_name}}
+            {{auth()->guard('patient')->user()->last_name}}
+
             </p>
         </li>
             <li class="nav-item">
             <a class="nav-link" href="{{route('session.destroy')}}" style="color:blue;">Log Out</a>
         </li>
     @endif
+
+ @if(session()->has('message'))
+    <div class="alert alert-success">
+        {{ session()->get('message') }}
+    </div>
+@endif
+
         <form method="POST" class="box1" action="{{route('session.login')}}">
         {{ csrf_field() }}
         <h1> Sign in </h1>

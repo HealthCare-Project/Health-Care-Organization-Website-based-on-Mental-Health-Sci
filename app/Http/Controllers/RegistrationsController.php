@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\Patient;
 use Mail;
 
 class RegistrationsController extends Controller
@@ -18,7 +18,7 @@ class RegistrationsController extends Controller
     $validated = $request->validate([
     	'first_name' => "required",
     	'last_name' => "required",
-        'email' => 'required|unique:users|max:255',
+        'email' => 'required|unique:patients|max:255',
         'phone' => 'required|string|min:8|max:16',
         'height' => 'required|min:1:integer',
         'weight' => 'required|min:1:integer',
@@ -26,7 +26,7 @@ class RegistrationsController extends Controller
         'age' => "required",
     ]);
 
-    $user = User::create([
+    $user = Patient::create([
         'first_name' => request('first_name'),
         'email' => request('email'),
         'last_name' => request('last_name'),
@@ -42,12 +42,12 @@ class RegistrationsController extends Controller
 
     EmailController::sendSignUpEmail($user->first_name, $user->last_name, $user->email, 
         $user->verification_code);
-    return redirect()->to('/')
+    return redirect()->to('/');
     // The blog post is valid...
 	}
     public function verifyUser(Request $request){
         $verification_code = \Illuminate\Support\Facades\Request::get('code');
-        $user = User::where(["verification_code" => $verification_code])->first();
+        $user = Patient::where(["verification_code" => $verification_code])->first();
         if($user != null){
             $user->is_verified = 1;
             $user->save();

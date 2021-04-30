@@ -4,7 +4,7 @@ body{
   font-family: sans-serif;
   background-image: url('../img/bg-img/healthcare-login-bg.jpg');
 }
-.box1{
+.box2{
   width: 300px;
   padding: 40px;
   position: absolute;
@@ -14,12 +14,12 @@ body{
   background-image: url('../img/bg-img/login-form-bg.jpg');
   text-align: center;
 }
-.box1 h1{
+.box2 h1{
   color: white;
   text-transform: uppercase;
   font-weight: 500;
 }
-.box1 input[type = "email"],.box1 input[type = "password"]{
+.box2 input[type = "email"],.box2 input[type = "text"],.box2 input[type = "password"]{
   display: block;
   margin: 20px auto;
   text-align: center;
@@ -33,26 +33,21 @@ body{
   transition: 0.25s;
   font-size: 15px;
 }
-.box1 input[type = "email"]:focus,.box1 input[type = "password"]:focus{
+.box2 input[type = "email"]:focus,.box2 input[type = "text"]:focus,.box2 input[type = "password"]:focus{
   width: 280px;
   border-color: #bacac1;
 }
-.box1 input[type = checkbox]{
+.box2 input[type = checkbox]{
   width: 15px;
   height: 15px;
 }
-.box1 span{
+.box2 span{
   color: aliceblue;
   font-size: 14px;
   bottom: 160px;
   position: initial;
 }
-.box1 .forgot a{
-  color: #02021a;;
-  text-decoration: none;
-  font-size: 14px;
-}
-.box1 input[type = "submit"]{
+.box2 input[type = "submit"]{
   display: block;
   margin: 20px auto;
   text-align: center;
@@ -65,14 +60,14 @@ body{
   transition: 0.25s;
   cursor: pointer;
 }
-.box1 input[type = "submit"]:hover{
+.box2 input[type = "submit"]:hover{
   background: #2ecc71;
 }
-.box1 .message{
+.box2 .message{
   color: aliceblue;
   font-size: 14px;
 }
-.box1 .message a{
+.box2 .message a{
   color: black;
   text-decoration: none;
 }

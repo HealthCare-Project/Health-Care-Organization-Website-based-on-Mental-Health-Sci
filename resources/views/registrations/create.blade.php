@@ -1,31 +1,15 @@
-@extends('layout.main')
+<title> Login </title>
+  <link rel="stylesheet" type="text/css" href="{{asset('css/stylesignup.css')}}">   
 
-@section('content')
 
-    <h2>Register</h2>
-    <form method="POST" action="{{route('register.store')}}">
+    <form class = "box2" method="POST" action="{{route('register.store')}}">
         {{ csrf_field() }}
-        <div class="form-group">
-            <label for="first_name">First Name:</label>
-            <input type="text" class="form-control" id="first_name" name="first_name">
-        </div>
-        <div class="form-group">
-            <label for="last_name">Last Name:</label>
-            <input type="text" class="form-control" id="last_name" name="last_name">
-        </div>
-        <div class="form-group">
-            <label for="email">Email:</label>
-            <input type="email" class="form-control" id="email" name="email">
-        </div>
-        <div class="form-group">
-            <label for="password">Password:</label>
-            <input type="password" class="form-control" id="password" name="password">
-        </div>
-        <div class="form-group">
-            <label for="password_confirmation">Password Confirmation:</label>
-            <input type="password" class="form-control" id="password_confirmation"
-                   name="password_confirmation">
-        </div>
+        <h1> sign up </h1>
+        <input type = "text" name = "first_name" placeholder = "First Name" required>
+        <input type = "text" name = "last_name" placeholder = "Last Name" required>
+        <input type = "email" name = "email" placeholder = "Email" required>
+        <input type="password" name="password" placeholder = "Password" required>
+        <input type="password" name="password_confirmation" placeholder="Password Confirmation">
         <div class="form-group">
             <label for="age">Age:</label>
             <input type="number" class="form-control" id="age" name="age">
@@ -42,10 +26,15 @@
             <label for="height">Height:</label>
             <input type="number" class="form-control" id="height" name="height" placeholder="Enter in cms">
         </div>
-        <div class="form-group">
-            <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
-        </div>
+        <input type = "checkbox"> <span> I agree to Health Care Terms </span>
+        <input type = "submit" name = "signup" value = "SIGN UP">
+        <p class = "message"> Already have an account? <a href = "login.html"> Login </a></p>
     </form>
+
+
+
+
+
 
     @if (count($errors) > 0)
     <div class="error">
@@ -57,4 +46,3 @@
     </div>
 @endif
 
-@endsection

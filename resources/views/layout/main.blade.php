@@ -242,6 +242,8 @@
       </div>
     </div>
   </footer>
+
+  
   <!-- ***** Footer Area End ***** -->
 
   <!-- ******* All JS ******* -->

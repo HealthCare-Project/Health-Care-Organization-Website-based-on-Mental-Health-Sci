@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Mail;
-use App\Models\User;
+use App\Models\Patient;
 
 use DB;
 use Illuminate\Support\Facades\Hash;
@@ -15,12 +15,13 @@ class SessionsController extends Controller
 {
     //
     public function create(){
-        return view('sessions.login');
+        $patient = Auth::guard('patient');
+        return view('sessions.login', ["patient" => $patient]);
     }
     public function store(){
         $remember_me  = ( !empty( $request->remember_me ) )? TRUE : FALSE;
 
-        if (auth()->attempt(request(['email', 'password'])) == false) {
+        if (Auth::guard('patient')->attempt(request(['email', 'password'])) == false) {
             return back()->withErrors([
                 'message' => 'The email or password is incorrect, please try again'
             ]);
@@ -29,15 +30,15 @@ class SessionsController extends Controller
         return redirect()->to('/');
     }
     public function destroy(){
-        auth()->logout();
+        Auth::guard('patient')->logout();
         
-        return redirect()->to('/games');
+        return redirect()->to('/login')->with('message', 'IT WORKS!');
     }
     public function forgotPassword(){
         return view("sessions.forgotPassword");
     }
     public function RestorePassword(Request $request){
-        $user = User::where('email', request("email"))->get()->first();
+        $user = Patient::where('email', request("email"))->get()->first();
         if (!$user) {
             return redirect()->back()->withErrors(['email' => trans('User does not exist')]);
         }
@@ -46,7 +47,7 @@ class SessionsController extends Controller
 
 
     public function showPasswordResetForm($token){
-             $tokenData = DB::table('password_resets')
+             $tokenData = DB::table('patient_password_resets')
              ->where('token', $token)->first();
 
              if ( !$tokenData ) return redirect()->to('/'); //redirect them anywhere you want if the token does not exist.
@@ -56,10 +57,10 @@ class SessionsController extends Controller
     public function PasswordReset(Request $request, $token){
 
      $password = $request->password;
-     $tokenData = DB::table('password_resets')
+     $tokenData = DB::table('patient_password_resets')
      ->where('token', $token)->first();
 
-     $user = User::where('email', $tokenData->email)->first();
+     $user = Patient::where('email', $tokenData->email)->first();
      if ( !$user ) return redirect()->to('home'); //or wherever you want
 
      $user->password = $password;
@@ -69,7 +70,7 @@ class SessionsController extends Controller
 
      Auth::login($user);
     // If the user shouldn't reuse the token later, delete the token 
-    DB::table('password_resets')->where('email', $user->email)->delete();
+    DB::table('patient_password_resets')->where('email', $user->email)->delete();
 
     //redirect where we want according to whether they are logged in or not.
     redirect()->to('/');

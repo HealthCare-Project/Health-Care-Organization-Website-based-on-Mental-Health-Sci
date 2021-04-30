@@ -93,22 +93,6 @@ Route::get('/application2', function () {
 Route::get('posts',[PostsController::class,'index']);
 Route::get('posts/{id}',[PostsController::class,'view']);
 
-Route::get('/register',[RegistrationsController::class,'create']);
-Route::post('/register',[RegistrationsController::class,'store'])->name('register.store');
-
-
-Route::get('/login',[SessionsController::class,'create']);
-Route::post('/login',[SessionsController::class,'store'])->name('session.login');
-Route::get('/logout', [SessionsController::class,'destroy'])->name("session.destroy");
-
-Route::get('/verify', [RegistrationsController::class,'verifyUser'])->name('sendemail');
-Route::get('/ForgotPassword', [SessionsController::class, "forgotPassword"])->name('session.forgot');
-Route::post('/ForgotPassword', [SessionsController::class, "RestorePassword"])->name("session.restore");
-
-Route::get('reset-password/{token}', [SessionsController::class, 'showPasswordResetForm'])->name("sessions.password_reset");
-
-Route::post('reset-password/{token}',
-    [SessionsController::class, 'PasswordReset'])->name("new-password");
 
 
 Route::get('/', [LayoutsController::class, 'index']);
@@ -125,3 +109,23 @@ Route::get('/service', [LayoutsController::class, 'service']);
 
 Route::get('/application', [LayoutsController::class, 'application']);
 
+
+Route::group(['prefix'=>'patient'], function() {
+    Route::get('/login',[SessionsController::class,'create']);
+
+    Route::get('/register',[RegistrationsController::class,'create']);
+    Route::post('/register',[RegistrationsController::class,'store'])->name('register.store');
+
+
+    Route::post('/login',[SessionsController::class,'store'])->name('session.login');
+    Route::get('/logout', [SessionsController::class,'destroy'])->name("session.destroy");
+
+    Route::get('/verify', [RegistrationsController::class,'verifyUser'])->name('sendemail');
+    Route::get('/ForgotPassword', [SessionsController::class, "forgotPassword"])->name('session.forgot');
+    Route::post('/ForgotPassword', [SessionsController::class, "RestorePassword"])->name("session.restore");
+
+    Route::get('reset-password/{token}', [SessionsController::class, 'showPasswordResetForm'])->name("sessions.password_reset");
+
+    Route::post('reset-password/{token}',
+    [SessionsController::class, 'PasswordReset'])->name("new-password");
+});
