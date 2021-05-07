@@ -16,73 +16,10 @@ use App\Http\Controllers\EmailController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('index');
-});
-Route::get('/timetable', function () {
-    return view('timetable');
-});
-Route::get('/service', function () {
-    return view('service');
-});
-Route::get('/relatives', function () {
-    return view('relatives');
-});
-Route::get('/blog', function () {
-    return view('blog');
-});
-Route::get('/blog-details', function () {
-    return view('blog-details');
-});
 Route::get('/application1', function () {
     return view('application1');
 });
 
-
-Route::get('/internamedicine', function () {
-    return view('internamedicine');
-});
-Route::get('/dentist', function () {
-    return view('dentist');
-});
-
-Route::get('/psychiaty', function () {
-    return view('psychiaty');
-});
-
-Route::get('/neurology', function () {
-    return view('neurology');
-});
-
-Route::get('/cardiology', function () {
-    return view('cardiology');
-});
-
-Route::get('/endocrinology', function () {
-    return view('endocrinology');
-});
-
-Route::get('/hemtology', function () {
-    return view('hemtology');
-});
-
-Route::get('/nephrology', function () {
-    return view('nephrology');
-});
-
-Route::get('/oncology', function () {
-    return view('oncology');
-});
-Route::get('/rheumatology', function () {
-    return view('rheumatology');
-});
-Route::get('/pedicatric', function () {
-    return view('pedicatric');
-});
-Route::get('/doctor-register', function () {
-    return view('doctor-register');
-});
 Route::get('/pathological-history', function () {
     return view('pathological-history');
 });
@@ -90,24 +27,78 @@ Route::get('/application2', function () {
     return view('application2');
 });
 
+
+//medical department
+Route::get('/dentist', [LayoutsController::class, 'dentist']);
+Route::get('/oncology', [LayoutsController::class, 'oncology']);
+Route::get('/neurology', [LayoutsController::class, 'neurology']);
+Route::get('/pediatric', [LayoutsController::class, 'pediatric']);
+Route::get('/psychiaty', [LayoutsController::class, 'psychiaty']);
+Route::get('/cardiology', [LayoutsController::class, 'cardiology']);
+Route::get('/hematology', [LayoutsController::class, 'hematology']);
+Route::get('/nephrology', [LayoutsController::class, 'nephrology']);
+Route::get('/rheumatology', [LayoutsController::class, 'rheumatology']);
+Route::get('/endocrinology', [LayoutsController::class, 'endocrinology']);
+Route::get('/internal medicine', [LayoutsController::class, 'internal medicine']);
+
+
+//home page
+Route::get('/', [LayoutsController::class, 'index']);
+
+//timeTable 
+Route::get('/timetable', [LayoutsController::class, 'timeTable']);
+
+//blog 
+Route::get('/blog', [LayoutsController::class, 'blog']);
+
+//blog details 
+Route::get('/blog-details', [LayoutsController::class, 'blogDetails']);
+
+//relatives
+Route::get('/relatives', [LayoutsController::class, 'relatives']);
+
+//service
+Route::get('/service', [LayoutsController::class, 'service']);
+
+////
 Route::get('posts',[PostsController::class,'index']);
 Route::get('posts/{id}',[PostsController::class,'view']);
 
-
-
-Route::get('/', [LayoutsController::class, 'index']);
-
-Route::get('/timetable', [LayoutsController::class, 'timeTable']);
-
-Route::get('/blog', [LayoutsController::class, 'blog']);
-
-Route::get('/blog-details', [LayoutsController::class, 'blogDetails']);
-
-Route::get('/relatives', [LayoutsController::class, 'relatives']);
-
-Route::get('/service', [LayoutsController::class, 'service']);
-
 Route::get('/application', [LayoutsController::class, 'application']);
+
+
+//doctor register 
+Route::get('/doctor-register', [DoctorsController::class, 'index']);
+Route::post('/doctor-register', [DoctorsController::class, 'store'])->name('doctor.store');
+
+//doctor login
+Route::get('/doctor-login', [DoctorSessionsController::class, 'create']);
+Route::post('/doctor-login',[DoctorSessionsController::class,'store'])->name('doctor.login');
+
+//doctor logout
+Route::get('/logout', [DoctorSessionsController::class, 'destroy']);
+
+//doctor page 
+Route::get('/doctor', [DoctorPageController::class, 'index']);
+
+//show hospitals
+Route::get('/hospital', [HospitalController::class, 'showHospitals']);
+
+//show hospitals doctors
+Route::get('/hospital-doctors', [HospitalController::class, 'getHospitalDoctors']);
+
+//Email vertification
+Route::get('email/verify', [VerificationController::class, 'show'])->name('verification.notice');
+Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
+Route::post('email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
+
+//password
+Route::get('password/confirm', [ConfirmPasswordController::class, 'showConfirmForm'])->name('password.confirm');
+Route::post('password/confirm', [ConfirmPasswordController::class, 'confirm']);
+Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+Route::get('password/reset/{token}', [ResetPasswordController::class, 'reset'])->name('password.reset');
+Route::post('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.update');
 
 
 Route::group(['prefix'=>'patient'], function() {
@@ -115,7 +106,6 @@ Route::group(['prefix'=>'patient'], function() {
 
     Route::get('/register',[RegistrationsController::class,'create']);
     Route::post('/register',[RegistrationsController::class,'store'])->name('register.store');
-
 
     Route::post('/login',[SessionsController::class,'store'])->name('session.login');
     Route::get('/logout', [SessionsController::class,'destroy'])->name("session.destroy");

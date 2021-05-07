@@ -1,4 +1,4 @@
-@extends('layout.main')
+@extends('includes.main')
 @section('content')
 
   <!-- ***** Welcome Area Start ***** -->
