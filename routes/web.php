@@ -71,40 +71,41 @@ Route::get('posts/{id}',[PostsController::class,'view']);
 
 Route::get('/application', [LayoutsController::class, 'application']);
 
+Route::group(['prefix'=>'doctor'], function() {
 
-//doctor register 
-Route::get('/doctor-register', [DoctorsController::class, 'index']);
-Route::post('/doctor-register', [DoctorsController::class, 'store'])->name('doctor.store');
+    //doctor register 
+    Route::get('register', [DoctorsController::class, 'index']);
+    Route::post('register', [DoctorsController::class, 'store'])->name('doctor.store');
 
-//doctor login
-Route::get('/doctor-login', [DoctorSessionsController::class, 'create']);
-Route::post('/doctor-login',[DoctorSessionsController::class,'store'])->name('doctor.login');
+    //doctor login
+    Route::get('login', [DoctorSessionsController::class, 'create']);
+    Route::post('login',[DoctorSessionsController::class,'store'])->name('doctor.login');
 
-//doctor logout
-Route::get('/logout', [DoctorSessionsController::class, 'destroy']);
+    //doctor logout
+    Route::get('/logout', [DoctorSessionsController::class, 'destroy'])->name("doctor.logout");
 
-//doctor page 
-Route::get('/doctor', [DoctorPageController::class, 'index']);
+    //doctor page 
+//  Route::get('/doctor', [DoctorPageController::class, 'index']);
 
-//show hospitals
-Route::get('/hospital', [HospitalController::class, 'showHospitals']);
+    //show hospitals
+    Route::get('/hospital', [HospitalController::class, 'showHospitals']);
 
-//show hospitals doctors
-Route::get('/hospital-doctors', [HospitalController::class, 'getHospitalDoctors']);
+    //show hospitals doctors
+    Route::get('/hospital-doctors', [HospitalController::class, 'getHospitalDoctors']);
 
-//Email vertification
-Route::get('email/verify', [VerificationController::class, 'show'])->name('verification.notice');
-Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
-Route::post('email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
+    //Email vertification
+    Route::get('email/verify', [VerificationController::class, 'show'])->name('verification.notice');
+    Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
+    Route::post('email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
 
-//password
-Route::get('password/confirm', [ConfirmPasswordController::class, 'showConfirmForm'])->name('password.confirm');
-Route::post('password/confirm', [ConfirmPasswordController::class, 'confirm']);
-Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
-Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
-Route::get('password/reset/{token}', [ResetPasswordController::class, 'reset'])->name('password.reset');
-Route::post('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.update');
-
+    //password
+    Route::get('password/confirm', [ConfirmPasswordController::class, 'showConfirmForm'])->name('password.confirm');
+    Route::post('password/confirm', [ConfirmPasswordController::class, 'confirm']);
+    Route::get('password/reset', [ForgotPasswordController::class, 'showLinkRequestForm'])->name('password.request');
+    Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
+    Route::get('password/reset/{token}', [ResetPasswordController::class, 'reset'])->name('password.reset');
+    Route::post('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.update');
+});
 
 Route::group(['prefix'=>'patient'], function() {
     Route::get('/login',[SessionsController::class,'create']);

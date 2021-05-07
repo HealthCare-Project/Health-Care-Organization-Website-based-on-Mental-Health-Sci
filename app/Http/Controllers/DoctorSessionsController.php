@@ -34,9 +34,7 @@ class DoctorSessionsController extends Controller
     */
     public function destroy()
     {
-    
-        Auth::logout();;
-
+        Auth::guard('doctor')->logout();
         return redirect()->to('/');
     }
 }
