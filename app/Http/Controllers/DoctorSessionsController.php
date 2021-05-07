@@ -21,7 +21,7 @@ class DoctorSessionsController extends Controller
     */
     public function store()
     {
-        if (Auth::guard('doctor')->Auth::attempt(request(['email', 'password']) == false)){
+        if (Auth::guard('doctor')->attempt(request(['email', 'password'])) == false){
              return redirect()->back()->withErrors([
                  'message' => 'The email or password is incorrect, please try again'
              ]);

@@ -1,6 +1,18 @@
 @extends('layout.main')
-
 @section('content')
+  @if(auth()->guard('doctor')->check())
+        <li class="nav-item">
+            {{auth()->guard('doctor')->user()->first_name}}
+            {{auth()->guard('doctor')->user()->last_name}}
+
+            </p>
+        </li>
+            <li class="nav-item">
+            <a class="nav-link" href="{{route('session.destroy')}}" style="color:blue;">Log Out</a>
+        </li>
+eeeeeeeeeeeeeeeeeeeeeee
+    @endif
+    eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">

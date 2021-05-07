@@ -6,6 +6,11 @@ use App\Http\Controllers\RegistrationsController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\LayoutsController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\DoctorsController;
+use App\Http\Controllers\DoctorPageController;
+use App\Http\Controllers\DoctorSessionsController;
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
