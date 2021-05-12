@@ -22,14 +22,14 @@ use App\Http\Controllers\ComplaintController;
 |
 */
 Route::get('/application1', function () {
-    return view('application1');
+    return view('applications/application1');
 });
 
 Route::get('/pathological-history', function () {
-    return view('pathological-history');
+    return view('applications/pathological-history');
 });
 Route::get('/application2', function () {
-    return view('application2');
+    return view('applications/application2');
 });
 
 
