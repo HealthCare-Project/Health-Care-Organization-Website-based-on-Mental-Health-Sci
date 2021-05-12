@@ -1,4 +1,4 @@
-@extends('includes.main')
+@extends('layout.main')
 
 @section('content')
    @if(auth()->guard('doctor')->check())

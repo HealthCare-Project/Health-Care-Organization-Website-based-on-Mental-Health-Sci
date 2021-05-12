@@ -1,3 +1,3 @@
 showing
-{{$complaint->title}}
-{{$complaint->description}}
+{{ $complaint->title }}
+{{ $complaint->description }}
