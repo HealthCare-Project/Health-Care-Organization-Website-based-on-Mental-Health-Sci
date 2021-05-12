@@ -1,0 +1,122 @@
+body{
+	padding: 0;
+	margin: 0;
+	font-family: "Montserrat", sans-serif;
+}
+
+body section#doc-profile-container{
+	width: 50%;
+	background-color: #00aaea;
+	color: white;
+	margin: 25px;
+	border-radius: 2px;
+	align-self: flex-start;  
+
+}
+
+section#doc-profile-container .doc-profile{
+	display: flex;
+}
+section#doc-profile-container .doc-profile img{
+	border-radius: 50%;
+}
+section#doc-profile-container .doc-profile article{
+	margin: 15px;
+}
+
+section#doc-profile-container .doc-profile article#doc-info div{
+	margin: 3px 0 3px;
+}
+section#doc-profile-container .doc-profile article#doc-info div#intro{
+	margin: 0px 0px 21px 0px;
+}
+
+section#doc-profile-container .doc-profile article#doc-info div#intro h2#name{
+	margin-bottom: 3px;
+}
+section#doc-profile-container .doc-profile article#doc-info .doc-info-attribute{
+	display: flex;
+	width: 61%;
+	justify-content: space-between;
+}
+section#doc-profile-container .doc-profile article#doc-info .doc-info-attribute span:first-child{
+	font-weight: 700;
+
+}
+
+section#doc-profile-container .doc-profile article#doc-info div#specialties{
+
+}
+section#doc-profile-container .doc-profile article#doc-info div#specialties span{
+	border: 1px solid white;
+	padding: 6px;
+	letter-spacing: .3px;
+	color: white;
+	font-weight: 700;
+	border-radius: 2%;
+	cursor: pointer;
+	margin: 0px 2px 5px 0px;
+  	display: inline-flex;
+}
+section#doc-profile-container .doc-profile article#doc-info div#specialties span:hover{
+	background-color: #006d96;
+}
+
+/* reviews */
+#profile-page-container{
+	display: flex;
+}
+section#reviews-cont{
+	width: 40%;
+	background-color: white;
+	border: 4px solid black;
+}
+section#reviews-cont h3{
+	margin: 38px ​0 0 15px;
+	color: #ce0000;
+	font-size: 1.5em;
+	text-align: center;
+	font-weight: 700;
+
+}
+
+section#reviews-cont .reviewer{
+	display: flex;
+	margin: 15px;
+	background-color: #eaeaea;
+	padding: 15px;
+}
+section#reviews-cont .reviewer article{
+	display: flex;
+	flex-direction: column;
+	margin: 0px 0px 0px 15px;
+}
+section#reviews-cont .reviewer .reviewer-info{
+	display: flex;
+	flex-direction: column;
+}
+
+
+section#reviews-cont .reviewer .reviewer-info .checked {
+  color: orange;
+}
+
+section#reviews-cont .reviewer .reviewer-info span.reviewer-name{
+  margin-bottom: 5px;
+}
+button#book-doc{
+	color:white;
+	background-color: #FE405C;
+	border: none;
+	padding: 6px;
+	width: 85%;
+	text-align: center;
+	font-weight: 700;
+	letter-spacing: 0.1px;
+	font-size: 1.2em;
+	border-radius: 11px;
+	cursor: pointer;
+}
+button#book-doc:hover{
+	background-color: #0089bd;
+}

@@ -16,7 +16,7 @@ class SessionsController extends Controller
     //
     public function create(){
         $patient = Auth::guard('patient');
-        return view('sessions.login', ["patient" => $patient]);
+        return view('patient-auth.sessions.login', ["patient" => $patient]);
     }
     public function store(){
         $remember_me  = ( !empty( $request->remember_me ) )? TRUE : FALSE;
@@ -35,7 +35,7 @@ class SessionsController extends Controller
         return redirect()->to('/login')->with('message', 'IT WORKS!');
     }
     public function forgotPassword(){
-        return view("sessions.forgotPassword");
+        return view("patient-auth.sessions.forgotPassword");
     }
     public function RestorePassword(Request $request){
         $user = Patient::where('email', request("email"))->get()->first();
@@ -51,7 +51,7 @@ class SessionsController extends Controller
              ->where('token', $token)->first();
 
              if ( !$tokenData ) return redirect()->to('/'); //redirect them anywhere you want if the token does not exist.
-             return view('sessions.password_reset')->with("token", $tokenData->token);
+             return view('patient-auth.sessions.password_reset')->with("token", $tokenData->token);
     }
 
     public function PasswordReset(Request $request, $token){

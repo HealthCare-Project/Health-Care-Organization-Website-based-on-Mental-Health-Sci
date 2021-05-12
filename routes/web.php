@@ -9,7 +9,7 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\DoctorsController;
 use App\Http\Controllers\DoctorPageController;
 use App\Http\Controllers\DoctorSessionsController;
-
+use App\Http\Controllers\ComplaintController;
 
 /*
 |--------------------------------------------------------------------------
@@ -105,6 +105,8 @@ Route::group(['prefix'=>'doctor'], function() {
     Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
     Route::get('password/reset/{token}', [ResetPasswordController::class, 'reset'])->name('password.reset');
     Route::post('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.update');
+    Route::get("{id}", [DoctorPageController::class, "show"])->name("doc-profile-show");
+
 });
 
 Route::group(['prefix'=>'patient'], function() {
@@ -125,3 +127,9 @@ Route::group(['prefix'=>'patient'], function() {
     Route::post('reset-password/{token}',
     [SessionsController::class, 'PasswordReset'])->name("new-password");
 });
+
+#
+Route::get('complaints', [ComplaintController::class, 'index']);
+Route::get('complaints/create', [ComplaintController::class, 'create']);
+Route::post('complaints/create',[ComplaintController::class,'store'])->name('complaint.store');
+Route::get('complaints/{id}', [ComplaintController::class,'show'])->name("show.complaint");

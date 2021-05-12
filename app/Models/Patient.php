@@ -55,4 +55,9 @@ class Patient extends Authenticatable implements MustVerifyEmail
         $this->attributes['password'] = bcrypt($password);
     }
 
+
+    public function complaints(){
+        return $this->hasMany(Complaint::class);
+    }
+
 }

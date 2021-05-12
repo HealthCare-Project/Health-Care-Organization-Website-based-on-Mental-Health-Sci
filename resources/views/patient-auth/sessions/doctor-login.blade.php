@@ -49,4 +49,14 @@
                 @endif
             </div>
     </form>
+    @if (count($errors) > 0)
+    eeeeeeeeeeeeeeew
+    <div class="error">
+        <ul>
+            @foreach ($errors->all() as $error)
+                <li>{{ $error }}</li>
+            @endforeach
+        </ul>
+    </div>
+@endif
 @endsection

@@ -12,7 +12,7 @@ class RegistrationsController extends Controller
 
     public function create()
     {
-        return view('registrations.create');
+        return view('patient-auth.registrations.create');
     }
     public function store(Request $request){
     $validated = $request->validate([

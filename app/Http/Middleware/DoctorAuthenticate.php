@@ -21,7 +21,7 @@ class DoctorAuthenticate
     {
         //return to login page if doctor is not logged in
         if (! $request->expectsJson()) {
-            return redirect()->to('/doctor-login');
+            return redirect()->to('/doctor/login');
         }
         else
             return $next($request);
