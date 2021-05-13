@@ -68,7 +68,11 @@ class Doctor extends Authenticatable implements MustVerifyEmail
     public function hospitals(){
         return $this->belongsTo(Hospital::class, 'hospital_id');
     }
-
-
+    public function complaintcomments(){
+        return $this->hasMany(ComplaintComment::class);
+    }
+    public function complaints(){
+        return $this->hasMany(Complaint::class);
+    }
 }
  

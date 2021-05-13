@@ -13,7 +13,7 @@ class DoctorSessionsController extends Controller
     */
     public function create()
     {
-        return view('sessions.doctor-login');
+        return view('patient-auth.sessions.doctor-login');
     }
 
     /*

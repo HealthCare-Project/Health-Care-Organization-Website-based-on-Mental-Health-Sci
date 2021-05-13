@@ -10,6 +10,7 @@ use App\Http\Controllers\DoctorsController;
 use App\Http\Controllers\DoctorPageController;
 use App\Http\Controllers\DoctorSessionsController;
 use App\Http\Controllers\ComplaintController;
+use App\Http\Controllers\ComplaintsCommentsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -133,3 +134,4 @@ Route::get('complaints', [ComplaintController::class, 'index']);
 Route::get('complaints/create', [ComplaintController::class, 'create']);
 Route::post('complaints/create',[ComplaintController::class,'store'])->name('complaint.store');
 Route::get('complaints/{id}', [ComplaintController::class,'show'])->name("show.complaint");
+Route::post('complaints/{id}', [ComplaintsCommentsController::class,'store'])->name("complaint.comment");
