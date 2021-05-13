@@ -1,4 +1,4 @@
-@extends('includes.main')
+@extends('layout.main')
 @section('content')
   <!-- ***** Breadcrumb Area Start ***** -->
   <div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url(img/bg-img/12.jpg);">

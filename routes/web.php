@@ -23,14 +23,14 @@ use App\Http\Controllers\ComplaintsCommentsController;
 |
 */
 Route::get('/application1', function () {
-    return view('application1');
+    return view('applications/application1');
 });
 
 Route::get('/pathological-history', function () {
-    return view('pathological-history');
+    return view('applications/pathological-history');
 });
 Route::get('/application2', function () {
-    return view('application2');
+    return view('applications/application2');
 });
 
 
@@ -93,6 +93,11 @@ Route::group(['prefix'=>'doctor'], function() {
 
     //show hospitals doctors
     Route::get('/hospital-doctors', [HospitalController::class, 'getHospitalDoctors']);
+
+    //pathological history
+    Route::get('pathological-history', [PathologicalHistoryController::class, 'index']);
+    Route::post('pathological-history/create', [PathologicalHistoryController::class, 'store'])->name('form.store');
+    Route::get('pathological-history/show', [PathologicalHistoryController::class,'show']);
 
     //Email vertification
     Route::get('email/verify', [VerificationController::class, 'show'])->name('verification.notice');

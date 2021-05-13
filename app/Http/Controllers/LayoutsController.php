@@ -6,32 +6,29 @@ use Illuminate\Http\Request;
 
 class LayoutsController extends Controller
 {
+    //home page
     public function index(){
-        return view('layouts.index');
+        return view('pages.index');
     }
 
     public function timeTable(){
-        return view('layouts.timetable');
-    }
-    
-    public function relatives(){
-        return view('layouts.relatives');
+        return view('pages.timetable');
     }
 
     public function service(){
-        return view('layouts.service');
+        return view('pages.service');
     }
 
     public function blog(){
-        return view('layouts.blog');
+        return view('pages.blog');
     }
 
     public function blogDetails(){
-        return view('layouts.blog-details');
+        return view('pages.blog-details');
     }
  
     public function application(){
-        return view('layouts.application');
+        return view('applications.application');
     }
 
     /*

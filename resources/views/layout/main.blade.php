@@ -14,9 +14,9 @@
   <link rel="icon" href="{{asset('img/core-img/favicon.ico')}}">
 
   <!-- Core Stylesheet -->
-  <link rel="stylesheet" type="text/css" href="{{asset('style.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('css/styleforgot.css')}}">
-  <link rel="stylesheet" type="text/css" href="{{asset('css/stylelogin.css')}}">
+  <link rel="stylesheet" href="{{asset('style.css')}}">
+
+
 </head>
 
 <body>
@@ -94,8 +94,8 @@
                             <ul class="dropdown">
                               <li><a href="#">- Our Enclopiedia</a> 
                                 <ul class="dropdown">
-                                  <li><a href="blog">- Dieseas</a> </li>
-                                  <li><a href="#">- Famous Cases</a></li>
+                                  <li><a href="posts">- Dieseas</a> </li>
+                                  <li><a href="posts">- Famous Cases</a></li>
                                 </ul></li>
                               
                             </ul>
@@ -133,12 +133,13 @@
                   <li><a href="timetable">TimeTable</a></li>
                   <li><a href="#">Applications</a>
                     <ul class="dropdown">
-                      <li><a href="application1">- Calculate Your Weight</a></li>
+                      <li><a href="application1">- Weight Calculator</a></li>
+                      <li><a href="application2">- Calories Calculator</a></li>
                       <li><a href="pathological-history">- Pathological History</a></li>
                       <li><a href="doctor-register">- doctor-register BETA</a></li>
                     </ul>
                   </li>
-                  <li><a href="about">About</a></li>
+                  
                   
 
                 </ul>
@@ -168,7 +169,7 @@
             <a href="index" class="d-block mb-4"><img src="{{url('img/core-img/logo.png')}}" style="    width: 184px;
               margin-left: 15px;
               margin-top: -26px;"></a>
-            <p>Etiam sutor risus, dapibus act elefend katen, lacinia sitamet denim. Mauris sagittis kansa interdum dignissim.</p>
+            
             
           </div>
         </div>
@@ -242,8 +243,6 @@
       </div>
     </div>
   </footer>
-
-  
   <!-- ***** Footer Area End ***** -->
 
   <!-- ******* All JS ******* -->
