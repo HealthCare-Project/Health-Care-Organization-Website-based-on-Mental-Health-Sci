@@ -11,6 +11,8 @@ use App\Http\Controllers\DoctorPageController;
 use App\Http\Controllers\DoctorSessionsController;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\ComplaintsCommentsController;
+use App\Http\Controllers\PathologicalHistoryController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +28,9 @@ Route::get('/application1', function () {
     return view('applications/application1');
 });
 
-Route::get('/pathological-history', function () {
-    return view('applications/pathological-history');
-});
+#Route::get('/pathological-history', function () {
+ #   return view('applications/pathological-history');
+#});
 Route::get('/application2', function () {
     return view('applications/application2');
 });
@@ -94,11 +96,6 @@ Route::group(['prefix'=>'doctor'], function() {
     //show hospitals doctors
     Route::get('/hospital-doctors', [HospitalController::class, 'getHospitalDoctors']);
 
-    //pathological history
-    Route::get('pathological-history', [PathologicalHistoryController::class, 'index']);
-    Route::post('pathological-history/create', [PathologicalHistoryController::class, 'store'])->name('form.store');
-    Route::get('pathological-history/show', [PathologicalHistoryController::class,'show']);
-
     //Email vertification
     Route::get('email/verify', [VerificationController::class, 'show'])->name('verification.notice');
     Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
@@ -132,6 +129,13 @@ Route::group(['prefix'=>'patient'], function() {
 
     Route::post('reset-password/{token}',
     [SessionsController::class, 'PasswordReset'])->name("new-password");
+
+    //pathological history
+#   Route::get('pathological-history', [PathologicalHistoryController::class, 'create']);
+    Route::get('{id}/pathological-history/create', [PathologicalHistoryController::class, 'create']);
+    Route::post('{id}/pathological-history/create', [PathologicalHistoryController::class, 'store'])->name('pathhistory.store');
+
+    Route::get('pathological-history/show', [PathologicalHistoryController::class,'show']);
 });
 
 #

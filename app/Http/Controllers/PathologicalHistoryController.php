@@ -14,21 +14,14 @@ class PathologicalHistoryController extends Controller
         $this->middleware('auth:patient')->only("create");
     }
 
-    /**
-     * Display a listing of the resource.
-     * 
-     * @return \Illuminate\Http\Response
-     */
     public function index(){
-        return view('pathological_history.create');
+#        return view('pathological_history.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+
+    public function create($id){
+        return view('pathological.create', ["patient" => $id]);
+    }
     public function store(Request $request){
         
         /*
@@ -76,12 +69,7 @@ class PathologicalHistoryController extends Controller
         return redirect()->view('pathological_history.show');
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+
     public function show(){
 
         $data = DB::table('pathological_histories')->get();
@@ -89,13 +77,6 @@ class PathologicalHistoryController extends Controller
         
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function update(Request $request, $id)
     {
         $pathologicalHistory = PathologicalHistory::find($id);

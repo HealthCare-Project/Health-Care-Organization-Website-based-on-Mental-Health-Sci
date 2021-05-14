@@ -63,5 +63,8 @@ class Patient extends Authenticatable implements MustVerifyEmail
     public function complaintcomments(){
         return $this->hasMany(ComplaintComment::class);
     }
-
+    
+    public function phone(){
+        return $this->hasOne(PathologicalHistory::class);
+    }
 }
