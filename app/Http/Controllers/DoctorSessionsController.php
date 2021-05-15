@@ -13,10 +13,8 @@ class DoctorSessionsController extends Controller
     */
     public function create()
     {
-        return view('patient-auth.sessions.doctor-login');
-
-        return view('doctor-auth.sessions.login');
-
+        $doctor = Auth::guard('doctor');
+        return view('doctor-auth.sessions.login', ["doctor" => $doctor]);
     }
 
     /*

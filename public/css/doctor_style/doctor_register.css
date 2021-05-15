@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    background-image: url("/img/doctor_img/image10.png");
+    background-size: 100%;
+}
+
+.box2 {
+    width: 300px;
+    padding: 25px 50px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    ;
+    transform: translate(-50%, -50%);
+    background-image: url("/img/doctor_img/image12.png");
+    background-size: 120%;
+    text-align: center;
+}
+
+.box2 h2 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 27px;
+    margin: 20px auto;
+}
+
+.box2 input[type="text"],
+.box2 input[type="number"],
+.box2 input[type="email"],
+.box2 input[type="password"] {
+    margin: 6px auto;
+    border: 2px solid #9c9b9b;
+    display: block;
+    width: 250px;
+    outline: none;
+    color: black;
+    background-color: #ebe7e7e3;
+    text-align: left;
+    padding: 6px 8px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.box2 .gender,
+.box2 .governorate {
+    border: 2px solid #9c9b9b;
+    margin: 6px auto;
+    display: block;
+    width: 270px;
+    outline: none;
+    color: black;
+    background-color: #ebe7e7e3;
+    text-align: left;
+    padding: 6px 4px;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.box2 input[type="text"]:focus,
+.box2 input[type="number"]:focus,
+.box2 input[type="password"]:focus,
+.box2 input[type="email"]:focus {
+    border: 3px solid #db8624;
+    width: 268px;
+}
+
+.box2 .gender:focus,
+.box2 .governorate:focus {
+    border: 3px solid #db8624;
+    width: 288px;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+label {
+    color: white;
+    height: 38px;
+    width: 180px;
+    border-radius: 8px;
+    background-color: #8cdb24;
+    margin: 8px auto;
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+.box2 button[type="submit"] {
+    display: block;
+    margin: 8px auto;
+    text-align: center;
+    width: 160px;
+    font-size: 15px;
+    border: 2px solid #25b3eb;
+    padding: 10px 30px;
+    outline: none;
+    color: white;
+    background-color: #706d6d;
+    border-radius: 14px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+
+.box2 button[type="submit"]:hover {
+    background-color: #25b3eb;
+}
