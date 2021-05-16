@@ -16,7 +16,10 @@ use App\Http\Controllers\Auth\ConfirmPasswordController;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\ComplaintsCommentsController;
 use App\Http\Controllers\PathologicalHistoryController;
-
+use App\Http\Controllers\RelativesArticleController;
+use App\Http\Controllers\DoctorArticleController;
+use App\Http\Controllers\NewsArticleController;
+use App\Http\Controllers\FamousCaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -75,6 +78,22 @@ Route::get('/service', [LayoutsController::class, 'service']);
 ////
 Route::get('posts',[PostsController::class,'index']);
 Route::get('posts/{id}',[PostsController::class,'view']);
+
+////
+Route::get('famouscases',[FamousCaseController::class,'index']);
+Route::get('famouscases/{id}',[FamousCaseController::class,'view']);
+
+////
+Route::get('newsarticles',[NewsArticleController::class,'index']);
+Route::get('newsarticles/{id}',[NewsArticleController::class,'view']);
+
+////
+Route::get('relativesarticles',[RelativesArticleController::class,'index']);
+Route::get('relativesarticles/{id}',[RelativesArticleController::class,'view']);
+
+////
+Route::get('doctorarticles',[DoctorArticleController::class,'index']);
+Route::get('doctorarticles/{id}',[DoctorArticleController::class,'view']);
 
 Route::get('/application', [LayoutsController::class, 'application']);
 
