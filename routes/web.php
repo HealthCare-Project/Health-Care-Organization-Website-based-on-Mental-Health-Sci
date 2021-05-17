@@ -138,8 +138,7 @@ Route::group(['prefix'=>'patient'], function() {
 #   Route::get('pathological-history', [PathologicalHistoryController::class, 'create']);
     Route::get('{id}/pathological-history/create', [PathologicalHistoryController::class, 'create']);
     Route::post('{id}/pathological-history/create', [PathologicalHistoryController::class, 'store'])->name('pathhistory.store');
-
-    Route::get('pathological-history/show', [PathologicalHistoryController::class,'show']);
+    Route::get('pathological-history/show/{id}', [PathologicalHistoryController::class,'show']);
 });
 
 #
