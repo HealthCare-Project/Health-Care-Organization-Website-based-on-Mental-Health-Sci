@@ -6,9 +6,7 @@ use App\Http\Controllers\RegistrationsController;
 use App\Http\Controllers\SessionsController;
 use App\Http\Controllers\LayoutsController;
 use App\Http\Controllers\EmailController;
-use App\Http\Controllers\DoctorsController;
-use App\Http\Controllers\DoctorPageController;
-use App\Http\Controllers\DoctorSessionsController;
+use App\Http\Controllers\doctor\DoctorPageController;
 use App\Http\Controllers\Auth\VerificationController;
 use App\Http\Controllers\Auth\ResetPasswordController;
 use App\Http\Controllers\Auth\ForgotPasswordController;
@@ -97,21 +95,7 @@ Route::get('doctorarticles/{id}',[DoctorArticleController::class,'view']);
 
 Route::get('/application', [LayoutsController::class, 'application']);
 
-Route::group(['prefix'=>'doctor'], function() {
-
-    //doctor register 
-    Route::get('register', [DoctorsController::class, 'index']);
-    Route::post('register', [DoctorsController::class, 'store'])->name('doctor.store');
-
-    //doctor login
-    Route::get('login', [DoctorSessionsController::class, 'create']);
-    Route::post('login',[DoctorSessionsController::class,'store'])->name('doctor.login');
-
-    //doctor logout
-    Route::get('/logout', [DoctorSessionsController::class, 'destroy'])->name("doctor.logout");
-
-    //doctor page 
-//  Route::get('/doctor', [DoctorPageController::class, 'index']);
+    Route::group(['prefix'=>'doctor'], function() {
 
     //show hospitals
     Route::get('/hospital', [HospitalController::class, 'showHospitals']);
@@ -131,7 +115,7 @@ Route::group(['prefix'=>'doctor'], function() {
     Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
     Route::get('password/reset/{token}', [ResetPasswordController::class, 'reset'])->name('password.reset');
     Route::post('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.update');
-    Route::get("{id}", [DoctorPageController::class, "show"])->name("doc-profile-show");
+    //Route::get("{id}", [DoctorPageController::class, "show"])->name("doc-profile-show");
 
 });
 

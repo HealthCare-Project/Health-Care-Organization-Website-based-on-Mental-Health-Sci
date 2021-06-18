@@ -6,7 +6,7 @@
     <title> Doctor Registeration </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/doctor_register.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/doctor_style/doctor_register.css') }}">
 </head>
 
 <body>
