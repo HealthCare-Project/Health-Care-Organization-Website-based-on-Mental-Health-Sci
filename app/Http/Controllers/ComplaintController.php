@@ -14,17 +14,20 @@ class ComplaintController extends Controller
     }
 
     public function index(){
-       $complaints = Complaint::take(5)->get();
-       return view('complaints.index', with(['complaints'=>$complaints]));
+        if (auth()->guard('doctor')->check()) {
+           $complaints = Complaint::take(5)->get();
+           return view('complaints.index', with(['complaints'=>$complaints]));
+       }else{
+           return redirect()->to('/')->with('warning','Access denied.');
+       }
     }
 
     public function create(){
-        if(auth()->guard('doctor')->check()){
-            return redirect()->to('/');
-        }elseif (auth()->guard('patient')->check()) {
+        if (auth()->guard('patient')->check()) {
             return view('complaints.create');
+        }else{
+                return redirect()->to('/')->with('warning','Access denied.');
         }
-
     }
 
     public function store(Request $request){
@@ -50,7 +53,7 @@ class ComplaintController extends Controller
                 'complaint' => Complaint::findOrFail($id),
             ]);}
             else{
-                return redirect("/");
+                return redirect("/")->with("warning", "Access denied.");
             };
         }elseif (auth()->guard('doctor')->check()) {
             return view('complaints.show', ['complaint' => Complaint::findOrFail($id),]);       

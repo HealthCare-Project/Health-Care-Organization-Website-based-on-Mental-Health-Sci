@@ -22,17 +22,15 @@ class SessionsController extends Controller
         $remember_me  = ( !empty( $request->remember_me ) )? TRUE : FALSE;
 
         if (Auth::guard('patient')->attempt(request(['email', 'password'])) == false) {
-            return back()->withErrors([
-                'message' => 'The email or password is incorrect, please try again'
-            ]);
+            return back()->with('error','Something was wrong!');
         }
         
-        return redirect()->to('/');
+        return redirect()->to('/')->with("success", "Login was successful");
     }
     public function destroy(){
         Auth::guard('patient')->logout();
         
-        return redirect()->to('/login')->with('message', 'IT WORKS!');
+        return redirect()->to('/patient/login')->with('success', 'Logged out successfully!');
     }
     public function forgotPassword(){
         return view("patient-auth.sessions.forgotPassword");

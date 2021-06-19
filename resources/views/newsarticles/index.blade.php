@@ -33,25 +33,25 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-12 col-lg-8">
-				@foreach($posts as $post)
-				<a href="{{url('posts',$post['id'])}}">
+				@foreach($newsarticles as $newsarticle)
+				<a href="{{url('newsarticles',$newsarticle['id'])}}">
 					<!-- Single Blog Item -->
 					<div class="single-blog-item style-2 d-flex flex-wrap align-items-center mb-50">
 						<!-- Blog Thumbnail -->
 						<div class="blog-thumbnail">
 
-							<img src="{{url($post['feature_image'])}}" />
+							<img src="{{url($newsarticle['feature_image'])}}" />
 						</div>
 					</div>
 				</a>
 				<!-- Blog Content -->
 				<div class="blog-content">
-					<a href="./pressure.html" class="post-title">{{$post['title']}}</a>
+					<a href="#" class="post-title">{{$newsarticle['title']}}</a>
 					<p>Many people suffer from blood pressure, a disease that increases blood pressure, which rushes from the blood vessels
 						of the body parts ...</p>
 					<div class="post-meta">
 						<a href="#">
-							<i class="icon_clock_alt"></i> {{$post['publish_date']}}</a>
+							<i class="icon_clock_alt"></i> {{$newsarticle['publish_date']}}</a>
 						<a href="#">
 							<i class="icon_chat_alt"></i> 3 Comments</a>
 					</div>

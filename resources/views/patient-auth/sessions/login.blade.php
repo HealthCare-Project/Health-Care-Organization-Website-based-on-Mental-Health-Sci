@@ -1,10 +1,7 @@
 <title> Login </title>
-@if ($message = Session::get('error'))
-    <div class="alert alert-danger alert-block">
-        <button type="button" class="close" data-dismiss="alert">×</button>
-        <strong>{{ $message }}</strong>
-    </div>
-@endif
+
+@include('flash-message')
+
 <link rel="stylesheet" type="text/css" href="{{ asset('css/stylelogin.css') }}">
 @if (auth()->guard('patient')->check())
     <li class="nav-item">
@@ -33,5 +30,5 @@
     <input type="checkbox"> <span> Remember me </span>
     <p class="forgot"> <a href="{{ route('session.forgot') }}"> Forgot Your Password? </a> </p>
     <input type="submit" name="login" value="Login">
-    <p class="message"> Don't have an account? <a href="signup.html"> Sign up </a></p>
+    <p class="message"> Don't have an account? <a href="/patient/register"> Sign up </a></p>
 </form>

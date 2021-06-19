@@ -13,10 +13,8 @@ class DoctorSessionsController extends Controller
     */
     public function create()
     {
-        return view('patient-auth.sessions.doctor-login');
-
-        return view('doctor-auth.sessions.login');
-
+        $doctor = Auth::guard('doctor');
+        return view('doctor-auth.sessions.login', ["doctor" => $doctor]);
     }
 
     /*
@@ -24,7 +22,7 @@ class DoctorSessionsController extends Controller
     */
     public function store()
     {
-        if (Auth::guard('doctor')->Auth::attempt(request(['email', 'password'])) == false){
+        if(Auth::guard('doctor')->attempt(request(['email', 'password'])) == false){
              return redirect()->back()->withErrors([
                  'message' => 'The email or password is incorrect, please try again'
              ]);
@@ -37,8 +35,7 @@ class DoctorSessionsController extends Controller
     */
     public function destroy()
     {
-        Auth::guard('doctor')->logout;
-        
-        return redirect()->to('/');
+        Auth::guard('doctor')->logout();
+        return redirect()->to('/')->with('success', 'Logged out successfully!');        
     }
 }

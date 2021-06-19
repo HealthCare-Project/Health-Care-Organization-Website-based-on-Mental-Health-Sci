@@ -1,0 +1,33 @@
+[33mcommit f52e012ec12ee7917be050af6e047d38203d4688[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m)[m
+Merge: 6f328b2 4392df2
+Author: Ahmed-Ibrahim99 <ahmedmaghraby1999@gmail.com>
+Date:   Mon May 17 22:00:01 2021 +0200
+
+    Merge branch 'main' of https://github.com/Ahmed-Ibrahim99/HealthCareORG
+
+[33mcommit 6f328b2c09993ec46a38caf2f999ad22702b818d[m
+Author: Ahmed-Ibrahim99 <ahmedmaghraby1999@gmail.com>
+Date:   Mon May 17 21:59:21 2021 +0200
+
+    changes in pathological history
+
+[33mcommit 4392df2a83e942e5e2f03ba525064c0d16fc6c6d[m
+Author: bassemmaher <76818543+bassemmaher@users.noreply.github.com>
+Date:   Sun May 16 14:45:35 2021 +0200
+
+    New Article Pages "Famouscases , news , doctors articles , relatives articles "
+    
+    NOTE : some XAMPP Versions need to rename table in database
+    example : newsarticles --> news_articles , relativesarticles --> relatives_articles
+
+[33mcommit a8ce6dfe0da683ebc54618b2ca3d31a9ea24c686[m
+Author: Ahmed-Ibrahim99 <ahmedmaghraby1999@gmail.com>
+Date:   Sat May 15 17:16:02 2021 +0200
+
+    added forgotPassword to doctor views
+
+[33mcommit ae4931f99b9c66e1730f69df911e0864fb3ecf67[m
+Author: Ahmed-Ibrahim99 <ahmedmaghraby1999@gmail.com>
+Date:   Sat May 15 16:50:14 2021 +0200
+
+    added doctor views + ui package in composer.json

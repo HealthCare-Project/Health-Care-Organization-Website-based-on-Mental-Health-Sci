@@ -6,7 +6,7 @@ body{
 }
 .box2{
   width: 300px;
-  padding: 40px;
+  padding: 25px 40px;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -19,12 +19,12 @@ body{
   text-transform: uppercase;
   font-weight: 500;
 }
-.box2 input[type = "email"],.box2 input[type = "text"],.box2 input[type = "password"]{
+.box2 input[type = "email"],.box2 input[type = "text"],.box2 input[type = "password"],.box2 input[type = "number"]{
   display: block;
-  margin: 20px auto;
+  margin: 8px auto;
   text-align: center;
   border: 2px solid #4f799c;
-  padding: 14px 10px;
+  padding: 10px 8px;
   width: 220px;
   outline: none;
   color: black;
@@ -33,7 +33,7 @@ body{
   transition: 0.25s;
   font-size: 15px;
 }
-.box2 input[type = "email"]:focus,.box2 input[type = "text"]:focus,.box2 input[type = "password"]:focus{
+.box2 input[type = "email"]:focus,.box2 input[type = "text"]:focus,.box2 input[type = "password"]:focus,.box2 input[type = "number"]:focus{
   width: 280px;
   border-color: #bacac1;
 }
@@ -49,10 +49,10 @@ body{
 }
 .box2 input[type = "submit"]{
   display: block;
-  margin: 20px auto;
+  margin: 8px auto;
   text-align: center;
   border: 2px solid #2ecc71;
-  padding: 14px 40px;
+  padding: 12px 40px;
   outline: none;
   color: white;
   background-color: #818080;

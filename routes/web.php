@@ -9,8 +9,17 @@ use App\Http\Controllers\EmailController;
 use App\Http\Controllers\DoctorsController;
 use App\Http\Controllers\DoctorPageController;
 use App\Http\Controllers\DoctorSessionsController;
+use App\Http\Controllers\Auth\VerificationController;
+use App\Http\Controllers\Auth\ResetPasswordController;
+use App\Http\Controllers\Auth\ForgotPasswordController;
+use App\Http\Controllers\Auth\ConfirmPasswordController;
 use App\Http\Controllers\ComplaintController;
 use App\Http\Controllers\ComplaintsCommentsController;
+use App\Http\Controllers\PathologicalHistoryController;
+use App\Http\Controllers\RelativesArticleController;
+use App\Http\Controllers\DoctorArticleController;
+use App\Http\Controllers\NewsArticleController;
+use App\Http\Controllers\FamousCaseController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,9 +35,9 @@ Route::get('/application1', function () {
     return view('applications/application1');
 });
 
-Route::get('/pathological-history', function () {
-    return view('applications/pathological-history');
-});
+#Route::get('/pathological-history', function () {
+ #   return view('applications/pathological-history');
+#});
 Route::get('/application2', function () {
     return view('applications/application2');
 });
@@ -70,6 +79,22 @@ Route::get('/service', [LayoutsController::class, 'service']);
 Route::get('posts',[PostsController::class,'index']);
 Route::get('posts/{id}',[PostsController::class,'view']);
 
+////
+Route::get('famouscases',[FamousCaseController::class,'index']);
+Route::get('famouscases/{id}',[FamousCaseController::class,'view']);
+
+////
+Route::get('newsarticles',[NewsArticleController::class,'index']);
+Route::get('newsarticles/{id}',[NewsArticleController::class,'view']);
+
+////
+Route::get('relativesarticles',[RelativesArticleController::class,'index']);
+Route::get('relativesarticles/{id}',[RelativesArticleController::class,'view']);
+
+////
+Route::get('doctorarticles',[DoctorArticleController::class,'index']);
+Route::get('doctorarticles/{id}',[DoctorArticleController::class,'view']);
+
 Route::get('/application', [LayoutsController::class, 'application']);
 
 Route::group(['prefix'=>'doctor'], function() {
@@ -93,11 +118,6 @@ Route::group(['prefix'=>'doctor'], function() {
 
     //show hospitals doctors
     Route::get('/hospital-doctors', [HospitalController::class, 'getHospitalDoctors']);
-
-    //pathological history
-    Route::get('pathological-history', [PathologicalHistoryController::class, 'index']);
-    Route::post('pathological-history/create', [PathologicalHistoryController::class, 'store'])->name('form.store');
-    Route::get('pathological-history/show', [PathologicalHistoryController::class,'show']);
 
     //Email vertification
     Route::get('email/verify', [VerificationController::class, 'show'])->name('verification.notice');
@@ -132,6 +152,12 @@ Route::group(['prefix'=>'patient'], function() {
 
     Route::post('reset-password/{token}',
     [SessionsController::class, 'PasswordReset'])->name("new-password");
+
+    //pathological history
+#   Route::get('pathological-history', [PathologicalHistoryController::class, 'create']);
+    Route::get('{id}/pathological-history/create', [PathologicalHistoryController::class, 'create']);
+    Route::post('{id}/pathological-history/create', [PathologicalHistoryController::class, 'store'])->name('pathhistory.store');
+    Route::get('pathological-history/show/{id}', [PathologicalHistoryController::class,'show']);
 });
 
 #

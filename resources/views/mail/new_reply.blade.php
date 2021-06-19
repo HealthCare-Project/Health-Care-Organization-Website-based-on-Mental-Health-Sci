@@ -1,0 +1,1 @@
+New Email for you <a href="http://homestead.test/complaints/{{$email_data['thread']->id}}">Here</a>

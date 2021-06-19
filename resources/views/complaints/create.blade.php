@@ -1,3 +1,6 @@
+@extends('layout.main')
+@section('content')
+
 <form method="POST" action="{{ route('complaint.store') }}">
     {{ csrf_field() }}
     <label for="title">Title</label>
@@ -15,12 +18,10 @@
                 <li>{{ $error }}</li>
             @endforeach
         </ul>
-<<<<<<< HEAD
-</div>
-    @endif
-
-
-=======
     </div>
 @endif
->>>>>>> 3e63c86df37a0d7a2111a125fb4e655e03ee5be5
+
+</div>
+
+
+@endsection

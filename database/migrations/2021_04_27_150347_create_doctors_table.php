@@ -19,7 +19,7 @@ class CreateDoctorsTable extends Migration
             $table->string('first_name');
             $table->string("last_name");
             $table->integer('age');
-            $table->enum('gender', ['male', 'female']);
+            $table->enum('gender', ['Male', 'Female']);
             $table->string('email')->unique();
             $table->string('password');
             $table->timestamp('email_verified_at')->nullable();

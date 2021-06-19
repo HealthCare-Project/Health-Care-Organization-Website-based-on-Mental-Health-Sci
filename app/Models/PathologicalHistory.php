@@ -47,4 +47,8 @@ class PathologicalHistory extends Model
     public function patients(){
     	return $this->belongsTo(Patient::class, 'patient_id', 'id');
     }
+
+    public function user(){
+        return $this->belongsTo(Patient::class, 'patient_id', 'id');
+    }
 }

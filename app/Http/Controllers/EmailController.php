@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 use Mail;
 use App\Mail\VerificationEmail;
 use App\Mail\ForgotPassword;
+use App\Mail\NewReply;
+
 use DB;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
@@ -36,4 +38,12 @@ class EmailController extends Controller
         Mail::to($tokenData->email)->send(new ForgotPassword($tokenData->token));
     }
 
+    public static function NewReplyEmail($author, $email, $thread){
+        $data = [
+            "email" => $email,
+            "author" => $author,
+            "thread" => $thread,
+        ];
+        Mail::to($email)->send(new NewReply($data));
+    }
 }

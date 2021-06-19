@@ -42,7 +42,7 @@ class RegistrationsController extends Controller
 
     EmailController::sendSignUpEmail($user->first_name, $user->last_name, $user->email, 
         $user->verification_code);
-    return redirect()->to('/');
+    return redirect()->to('/')->with('success','Please check your email for verification');
     // The blog post is valid...
 	}
     public function verifyUser(Request $request){
@@ -52,6 +52,7 @@ class RegistrationsController extends Controller
             $user->is_verified = 1;
             $user->save();
         };
-    #        return redirect()->route("/login")->with(session()->flash('alert-success', "Your account has been verified"));
+    return redirect()->to('/')->with('success','Verification compelete!');
+
     }
 }

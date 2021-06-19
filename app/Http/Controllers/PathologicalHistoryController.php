@@ -19,8 +19,14 @@ class PathologicalHistoryController extends Controller
      * 
      * @return \Illuminate\Http\Response
      */
-    public function index(){
-        return view('pathological_history.create');
+    public function index()
+    {
+        return view('pathological.show');
+    }
+
+
+    public function create($id){
+        return view('pathological.create', ["patient" => $id]);
     }
 
     /**
@@ -45,8 +51,8 @@ class PathologicalHistoryController extends Controller
             'Lsugar_test' => 'required|string',
             'blood_pressure_sys' => 'required|numeric',
             'blood_pressure_dyas' => 'required|numeric',
-            'smoke' => 'nullable',
-            'alcohol' => 'nullable',
+            'smoke' => 'nullable|string',
+            'alcohol' => 'nullable|string',
             'surgical_history' => 'nullable|string',
         ]);
 
@@ -73,23 +79,24 @@ class PathologicalHistoryController extends Controller
         /*
         |    Redirect the patient to the show pathological history route
         */
-        return redirect()->view('pathological_history.show');
+        return redirect()->view('pathological.show');
     }
 
     /**
-     * Display the specified resource.
+     * Display the pathological history of patient with specific id.
      *
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show(){
-
-        $data = DB::table('pathological_histories')->get();
-        return view('pathological_history.show', ['pathological_histories'=>$data]);
-        
+    public function show($id)
+    {
+        $pathologicalHistory = PathologicalHistory::with(['patient'=>function($data){
+            $data->select('first_name', 'age', 'id');
+        }])->findOrFail($id);
+        return view('pathological_history.show', compact('pathologicalHistory'));
     }
 
-    /**
+     /**
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request

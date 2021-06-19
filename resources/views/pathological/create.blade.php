@@ -32,7 +32,7 @@
     <!-- ***** Breadcrumb Area End ***** -->
     <!-- ***** Fill Patient Information Area ***** -->
 
-    <form method="POST" action="{{ route('form.store') }}" enctype="multipart/form-data">
+    <form method="POST" action="{{ route('pathhistory.store', ['id' => $patient]) }}" enctype="multipart/form-data">
         @csrf
 
         <fieldset>
