@@ -1,3 +1,29 @@
+<<<<<<< HEAD
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+@if (auth()->guard('doctor')->check())
+    <li class="nav-item">
+        {{ auth()->guard('doctor')->user()->first_name }}
+        {{ auth()->guard('doctor')->user()->last_name }}
+
+        </p>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('doctor.logout') }}" style="color:blue;">Log Out</a>
+    </li>
+@endif
+@include('flash-message')
+
+<head>
+    <meta charset="utf-8">
+    <title> Login </title>
+    <link rel="stylesheet" href="{{ asset('css/doctor_style/doctor_login.css') }}">
+</head>
+
+<body>
+    <form class="box2" method="POST" action="{{ route('doctor.login') }}">
+||||||| fe8038c
 @extends('layout.main')
 
 @section('content')
@@ -14,6 +40,31 @@
     @endif
     <h2>Doctor Log In</h2>
     <form method="POST" action="{{ route('doctor.login') }}">
+=======
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+@if (auth()->guard('doctor')->check())
+    <li class="nav-item">
+        {{ auth()->guard('doctor')->user()->first_name }}
+        {{ auth()->guard('doctor')->user()->last_name }}
+
+        </p>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('doctor.logout') }}" style="color:blue;">Log Out</a>
+    </li>
+@endif
+
+<head>
+    <meta charset="utf-8">
+    <title> Login </title>
+    <link rel="stylesheet" href="{{ asset('css/doctor_style/doctor_login.css') }}">
+</head>
+
+<body>
+    <form class="box2" method="POST" action="{{ route('doctor.login') }}">
+>>>>>>> 0eceb0e52d6e5bf3b90b09a3d41348be4bebb2a7
         @csrf
         <h2> sign in </h2>
         <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email"

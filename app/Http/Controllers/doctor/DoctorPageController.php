@@ -1,10 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\doctor;
 
+use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Models\Post;
 use App\Models\Doctor;
+use App\Models\Post;
+
 
 class DoctorPageController extends Controller
 {
@@ -12,7 +14,7 @@ class DoctorPageController extends Controller
   public function __construct()
   {
     //doctor must be authenticated
- //   $this->middleware('doctor.auth');
+    //$this->middleware('doctor.auth');
   }
 
   /*

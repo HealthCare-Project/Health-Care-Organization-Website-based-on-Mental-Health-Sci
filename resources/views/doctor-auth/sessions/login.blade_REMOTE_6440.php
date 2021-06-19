@@ -1,19 +1,26 @@
-@extends('layout.main')
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
 
-@section('content')
-   @if(auth()->guard('doctor')->check())
-        <li class="nav-item">
-            {{auth()->guard('doctor')->user()->first_name}}
-            {{auth()->guard('doctor')->user()->last_name}}
+@if (auth()->guard('doctor')->check())
+    <li class="nav-item">
+        {{ auth()->guard('doctor')->user()->first_name }}
+        {{ auth()->guard('doctor')->user()->last_name }}
 
-            </p>
-        </li>
-            <li class="nav-item">
-            <a class="nav-link" href="{{route('doctor.logout')}}" style="color:blue;">Log Out</a>
-        </li>
-    @endif
-    <h2>Doctor Log In</h2>
-    <form method="POST" action="{{ route('doctor.login') }}">
+        </p>
+    </li>
+    <li class="nav-item">
+        <a class="nav-link" href="{{ route('doctor.logout') }}" style="color:blue;">Log Out</a>
+    </li>
+@endif
+
+<head>
+    <meta charset="utf-8">
+    <title> Login </title>
+    <link rel="stylesheet" href="{{ asset('css/doctor_style/doctor_login.css') }}">
+</head>
+
+<body>
+    <form class="box2" method="POST" action="{{ route('doctor.login') }}">
         @csrf
         <h2> sign in </h2>
         <input type="email" name="email" placeholder="Email" value="{{ old('email') }}" required autocomplete="email"
