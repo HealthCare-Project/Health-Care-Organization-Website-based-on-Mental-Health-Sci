@@ -6,6 +6,9 @@
 	<meta name="description" content="Dento - Dentist &amp; Medical HTML Template">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="file:///E:/fontawesome/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 	<!-- Title -->
 	<title>HealthCare </title>
@@ -15,7 +18,7 @@
 
 	<!-- Core Stylesheet -->
 	<link rel="stylesheet" href="{{asset('style.css')}}">
-
+	<link rel="stylesheet" href="{{asset('styleheader.css')}}">
 
 </head>
 
@@ -29,471 +32,92 @@
 
 	<!-- ***** Header Area Start ***** -->
 	<header class="header-area">
-		<!-- Top Header Area -->
-		<div class="top-header-area">
-			<div class="container h-100">
-				<div class="row h-100 align-items-center">
-					<!-- Top Content -->
-					<div class="col-6 col-md-9 col-lg-8">
-						<div class="top-header-content">
-							<a href="#" data-toggle="tooltip" title="Your health is Our">
-								<i></i>
-								<span>With us و your health Is safe, follow us</span>
-							</a>
-
-						</div>
-					</div>
-					<!-- Top Header Social Info -->
-					<div class="col-6 col-md-3 col-lg-4">
-						<div class="top-header-social-info text-right">
-							<a href="www.facebook.com" data-toggle="tooltip" data-placement="bottom" title="Facebook">
-								<i class="fa fa-facebook"></i>
-							</a>
-							<a href="www.twitter.com" data-toggle="tooltip" data-placement="bottom" title="Twitter">
-								<i class="fa fa-twitter"></i>
-							</a>
-							<a href="#" data-toggle="tooltip" data-placement="bottom" title="Google Plus">
-								<i class="fa fa-google-plus"></i>
-							</a>
-							<a href="#" data-toggle="tooltip" data-placement="bottom" title="Linkedin">
-								<i class="fa fa-linkedin"></i>
-							</a>
-							<a href="#" data-toggle="tooltip" data-placement="bottom" title="Pinterest">
-								<i class="fa fa-pinterest"></i>
-							</a>
-							<a style="    min-inline-size: min-content;" href="./index-ar.html" class="btn dento-btn booking-btn">
-								<i>ع</i>
-							</a>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<!-- Top Header End -->
-
-		<!-- Main Header Start -->
-		<div class="main-header-area">
-			<div class="classy-nav-container breakpoint-off">
-				<div class="container">
-					<!-- Classy Menu -->
-					<nav class="classy-navbar justify-content-between" id="dentoNav">
-
-
-
-						<!-- Logo -->
-						<a class="nav-brand" href="index.html">
-							<img src="{{url('img/core-img/logo.png')}}" alt="Italian Trulli" style="    width: 184px;
-              margin-left: 15px;
-<<<<<<< HEAD
-              margin-top: -26px;">
-						</a>
-
-						<!-- Navbar Toggler -->
-						<div class="classy-navbar-toggler">
-							<span class="navbarToggler">
-								<span></span>
-								<span></span>
-								<span></span>
-							</span>
-						</div>
-
-						<!-- Menu -->
-						<div class="classy-menu">
-
-							<!-- Close Button -->
-							<div class="classycloseIcon">
-								<div class="cross-wrap">
-									<span class="top"></span>
-									<span class="bottom"></span>
-								</div>
-							</div>
-
-							<!-- Nav Start -->
-							<div class="classynav">
-								<ul id="nav">
-									<li>
-										<a href="/">Home</a>
-									</li>
-									<li>
-										<a href="#">Mental Health</a>
-										<ul class="dropdown">
-											<ul class="dropdown">
-												<li>
-													<a href="#">- For You</a>
-													<ul class="dropdown">
-														<li>
-															<a href="#">- Our Enclopiedia</a>
-															<ul class="dropdown">
-																<li>
-																	<a href="posts">- Dieseas</a>
-																</li>
-																<li>
-																	<a href="famouscases">- Famous Cases</a>
-																</li>
-															</ul>
-														</li>
-
-													</ul>
-												</li>
-												<li>
-													<a href="newsarticles">- News</a>
-												</li>
-												<li>
-													<a href="doctorarticles">- For Doctors</a>
-												</li>
-												<li>
-													<a href="relativesarticles">- For Relatives</a>
-												</li>
-											</ul>
-									</li>
-									</ul>
-									</li>
-
-									<li>
-										<a href="#">Departments</a>
-										<ul class="dropdown">
-											<ul class="dropdown">
-
-												<li>
-													<a href="internamedicine">- Internal Medicine</a>
-												</li>
-												<li>
-													<a href="pediatric">- Pediatric</a>
-												</li>
-												<li>
-													<a href="rheumatology">- Rheumatology</a>
-												</li>
-												<li>
-													<a href="oncology">- Oncology</a>
-												</li>
-												<li>
-													<a href="nephrology">- Nephrology</a>
-												</li>
-												<li>
-													<a href="hematology">- Hematology </a>
-												</li>
-												<li>
-													<a href="endocrinology">- Endocrinology</a>
-												</li>
-												<li>
-													<a href="cardiology">- Cardiology</a>
-												</li>
-												<li>
-													<a href="neurology">- Neurology</a>
-												</li>
-												<li>
-													<a href="psychiaty">- Psychiaty</a>
-												</li>
-												<li>
-													<a href="dentist">- Dentist</a>
-												</li>
-
-									</li>
-
-
-									</ul>
-									</li>
-									</ul>
-									</li>
-									<li>
-										<a href="timetable">TimeTable</a>
-									</li>
-									<li>
-										<a href="#">Applications</a>
-										<ul class="dropdown">
-											<li>
-												<a href="application1">- Weight Calculator</a>
-											</li>
-											<li>
-												<a href="application2">- Calories Calculator</a>
-											</li>
-											<li>
-												<a href="pathological-history">- Pathological History</a>
-											</li>
-											<li>
-												<a href="doctor-register">- doctor-register BETA</a>
-											</li>
-										</ul>
-									</li>
-
-
-
-								</ul>
-							</div>
-							<!-- Nav End -->
-						</div>
-
-						<!-- Booking Now Button -->
-						<a href="contact" class="btn dento-btn booking-btn">Visit US</a>
-						</a>
-
-
-					</nav>
-				</div>
-			</div>
-		</div>
-	</header>
-	@include('flash-message')
-	<!-- ***** Header Area End ***** -->
-	@yield('content')
-
-	<!-- ***** Footer Area Start ***** -->
-	<footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url(img/bg-img/3.jpg);">
-		<div class="container">
-			<div class="row">
-				<!-- Single Footer Widget -->
-				<div class="col-12 col-sm-6 col-lg-4">
-					<div class="single-footer-widget">
-						<a href="index" class="d-block mb-4">
-							<img src="{{url('img/core-img/logo.png')}}" style="    width: 184px;
-||||||| fe8038c
-              margin-top: -26px;"></a>
-
-            <!-- Navbar Toggler -->
-            <div class="classy-navbar-toggler">
-              <span class="navbarToggler"><span></span><span></span><span></span></span>
-            </div>
-
-            <!-- Menu -->
-            <div class="classy-menu">
-
-              <!-- Close Button -->
-              <div class="classycloseIcon">
-                <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-              </div>
-
-              <!-- Nav Start -->
-              <div class="classynav">
-                <ul id="nav">
-                  <li><a href="/">Home</a></li>
-                  <li><a href="#">Mental Health</a>
-                    <ul class="dropdown">
-                        <ul class="dropdown">
-                          <li><a href="#">- For You</a>
-                            <ul class="dropdown">
-                              <li><a href="#">- Our Enclopiedia</a> 
-                                <ul class="dropdown">
-                                  <li><a href="posts">- Dieseas</a> </li>
-                                  <li><a href="posts">- Famous Cases</a></li>
-                                </ul></li>
-                              
-                            </ul>
-                          </li>
-                          <li><a href="doctors">- For Doctors</a></li>
-                          <li><a href="relatives">- For Relatives</a></li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  
-                  <li><a href="#">Departments</a>
-                    <ul class="dropdown">
-                        <ul class="dropdown">
-                          
-                          <li><a href="internamedicine">- Internal Medicine</a></li>
-                              <li><a href="pediatric">- Pediatric</a></li>
-                              <li><a href="rheumatology">- Rheumatology</a></li>
-                              <li><a href="oncology">- Oncology</a></li>
-                              <li><a href="nephrology">- Nephrology</a></li>
-                              <li><a href="hematology">- Hematology </a></li>
-                              <li><a href="endocrinology">- Endocrinology</a></li>
-                              <li><a href="cardiology">- Cardiology</a></li>
-                              <li><a href="neurology">- Neurology</a></li>
-                              <li><a href="psychiaty">- Psychiaty</a></li>
-                              <li><a href="dentist">- Dentist</a></li>
-
-                          </li>
-                          
-                          
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li><a href="timetable">TimeTable</a></li>
-                  <li><a href="#">Applications</a>
-                    <ul class="dropdown">
-                      <li><a href="application1">- Weight Calculator</a></li>
-                      <li><a href="application2">- Calories Calculator</a></li>
-                      <li><a href="pathological-history">- Pathological History</a></li>
-                      <li><a href="doctor-register">- doctor-register BETA</a></li>
-                    </ul>
-                  </li>
-                  
-                  
-
-                </ul>
-              </div>
-              <!-- Nav End -->
-            </div>
-
-            <!-- Booking Now Button -->
-            <a href="contact" class="btn dento-btn booking-btn">Visit US</a></a>
-            
+	<nav>
+      <div class="logo">HealthCare</div>
+      <label for="btn" class="icon">
+        <span class="fa fa-bars"></span>
+      </label>
+      <input type="checkbox" id="btn">
+      <ul>
+        <li><label class="show">Home</label>
+          <a href="/">Home</a>
+        </li>
+        <li>
+          <label for="btn-1" class="show">My Health +</label>
+          <a href="#">My Health <i class="fas fa-caret-down"></i></a>
+          <input type="checkbox" id="btn-1">
+          <ul>
+		  <li>
+            <label for="btn-2" class="show1">- Encyclopedia +</label>
+              <a href="#">- Encyclopedia <i class="fas fa-caret-right"></i></a>
+              <input type="checkbox" id="btn-2">
+              <ul>
+                <li><a href="posts">- Diseases </a></li>
+                <li><a href="famouscases">- Famous Cases</a></li></ul>
+			<li><a href="newsarticles">- Health News</a></li>
+            <li><a href="doctorarticles">- For Relatives</a></li>
+            <li><a href="relativesarticles">- For Doctors</a></li>
            
-          </nav>
-        </div>
-      </div>
-    </div>
-  </header>
-  <!-- ***** Header Area End ***** -->
-@yield('content')
-
-  <!-- ***** Footer Area Start ***** -->
-  <footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url(img/bg-img/3.jpg);">
-    <div class="container">
-      <div class="row">
-        <!-- Single Footer Widget -->
-        <div class="col-12 col-sm-6 col-lg-4">
-          <div class="single-footer-widget">
-            <a href="index" class="d-block mb-4"><img src="{{url('img/core-img/logo.png')}}" style="    width: 184px;
-=======
-              margin-top: -26px;">
-						</a>
-
-						<!-- Navbar Toggler -->
-						<div class="classy-navbar-toggler">
-							<span class="navbarToggler">
-								<span></span>
-								<span></span>
-								<span></span>
-							</span>
-						</div>
-
-						<!-- Menu -->
-						<div class="classy-menu">
-
-							<!-- Close Button -->
-							<div class="classycloseIcon">
-								<div class="cross-wrap">
-									<span class="top"></span>
-									<span class="bottom"></span>
-								</div>
-							</div>
-
-							<!-- Nav Start -->
-							<div class="classynav">
-								<ul id="nav">
-									<li>
-										<a href="/">Home</a>
-									</li>
-									<li>
-										<a href="#">Mental Health</a>
-										<ul class="dropdown">
-											<ul class="dropdown">
-												<li>
-													<a href="#">- For You</a>
-													<ul class="dropdown">
-														<li>
-															<a href="#">- Our Enclopiedia</a>
-															<ul class="dropdown">
-																<li>
-																	<a href="posts">- Dieseas</a>
-																</li>
-																<li>
-																	<a href="famouscases">- Famous Cases</a>
-																</li>
-															</ul>
-														</li>
-
-													</ul>
-												</li>
-												<li>
-													<a href="newsarticles">- News</a>
-												</li>
-												<li>
-													<a href="doctorarticles">- For Doctors</a>
-												</li>
-												<li>
-													<a href="relativesarticles">- For Relatives</a>
-												</li>
-											</ul>
-									</li>
-									</ul>
-									</li>
-
-									<li>
-										<a href="#">Departments</a>
-										<ul class="dropdown">
-											<ul class="dropdown">
-
-												<li>
-													<a href="internamedicine">- Internal Medicine</a>
-												</li>
-												<li>
-													<a href="pediatric">- Pediatric</a>
-												</li>
-												<li>
-													<a href="rheumatology">- Rheumatology</a>
-												</li>
-												<li>
-													<a href="oncology">- Oncology</a>
-												</li>
-												<li>
-													<a href="nephrology">- Nephrology</a>
-												</li>
-												<li>
-													<a href="hematology">- Hematology </a>
-												</li>
-												<li>
-													<a href="endocrinology">- Endocrinology</a>
-												</li>
-												<li>
-													<a href="cardiology">- Cardiology</a>
-												</li>
-												<li>
-													<a href="neurology">- Neurology</a>
-												</li>
-												<li>
-													<a href="psychiaty">- Psychiaty</a>
-												</li>
-												<li>
-													<a href="dentist">- Dentist</a>
-												</li>
-
-									</li>
-
-
-									</ul>
-									</li>
-									</ul>
-									</li>
-									<li>
-										<a href="timetable">TimeTable</a>
-									</li>
-									<li>
-										<a href="#">Applications</a>
-										<ul class="dropdown">
-											<li>
-												<a href="application1">- Weight Calculator</a>
-											</li>
-											<li>
-												<a href="application2">- Calories Calculator</a>
-											</li>
-											<li>
-												<a href="pathological-history">- Pathological History</a>
-											</li>
-											<li>
-												<a href="doctor-register">- doctor-register BETA</a>
-											</li>
-										</ul>
-									</li>
-
-
-
-								</ul>
-							</div>
-							<!-- Nav End -->
-						</div>
-
-						<!-- Booking Now Button -->
-						<a href="contact" class="btn dento-btn booking-btn">Visit US</a>
-						</a>
-
-
-					</nav>
-				</div>
-			</div>
-		</div>
+              
+            </li>
+          </ul>
+        </li>
+        <li>
+          <label for="btn-3" class="show">Departments +</label>
+          <a href="#">Departments <i class="fas fa-caret-down"></i></a>
+          <input type="checkbox" id="btn-3">
+          <ul>
+            <li><a href="internamedicine">- Internal Medicine</a></li>
+            <li><a href="pediatric">- Pediatric</a></li>
+            <li><a href="rheumatology">- Rheumatology</a></li>
+            <li><a href="oncology">- Oncology</a></li>
+            <li><a href="nephrology">- Nephrology</a></li>
+            <li><a href="hematology">- Hematology</a></li>
+            <li><a href="endocrinology">- Endocrinology</a></li>
+            <li><a href="cardiology">- Cardiology</a></li>
+            <li><a href="neurology">- Neurology</a></li>
+            <li><a href="psychiaty">- Psychiaty</a></li>
+            <li><a href="surgery">- Surgery</a></li>
+            <li><a href="dentist">- Dentistry</a></li>
+          </ul>
+        </li>
+        <li>
+          <label for="btn-4" class="show">Timetable</label>
+          <a href="timetable">Timetable</a>
+        </li>
+        <li>
+          <label for="btn-5" class="show">Applications +</label>
+          <a href="#">Applications<i class="fas fa-caret-down"></i></a>
+          <input type="checkbox" id="btn-5">
+          <ul>
+            <li><a href="application1">- Calculate Your Weight</a></li>
+			<li><a href="application2">- Calculate Your Calories</a></li>
+            <li><a href="#">- Pathological History</a></li>
+            <li><a href="#">- Make Appointment</a></li>
+            <li><a href="#">- Post Encyclopedia (Dr)</a></li>
+            <li><a href="#">- Post Timetable (Dr)</a></li>
+          </ul>
+        </li>
+        <li>
+          <label for="btn-6" class="show">Login +</label>
+          <a href="#">Login <i class="fas fa-caret-down"></i></a>
+          <input type="checkbox" id="btn-6">
+          <ul>
+            <li><a href="#">- Doctor</a></li>
+            <li><a href="#">- Patient</a></li>
+          </ul>
+        </li>
+        <li>
+          <label for="btn-7" class="show">Registration (Sign-up) +</label>
+          <a href="#">Registration (Sign-up) <i class="fas fa-caret-down"></i></a>
+          <input type="checkbox" id="btn-7">
+          <ul>
+            <li><a href="#">- Doctor</a></li>
+            <li><a href="#">- Patient</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
 	</header>
 	<!-- ***** Header Area End ***** -->
 	@yield('content')
@@ -507,7 +131,6 @@
 					<div class="single-footer-widget">
 						<a href="index" class="d-block mb-4">
 							<img src="{{url('img/core-img/logo.png')}}" style="    width: 184px;
->>>>>>> 0eceb0e52d6e5bf3b90b09a3d41348be4bebb2a7
               margin-left: 15px;
               margin-top: -26px;">
 						</a>
