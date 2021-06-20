@@ -5,29 +5,28 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Complaint extends Model
+class Review extends Model
 {
     use HasFactory;
+    protected $table = 'reviews';
+
 
    protected $fillable = [
         'description',
-        'title',
         'patient_id',
+        'doctor_id',
+    ];
+    protected $hidden = [
+        'patient_id',
+        'doctor_id',
+        'review_id',
     ];
 
-    protected $hidden = [
-    	'patient_id',
-	];
     public function patient(){
     	return $this->belongsTo(Patient::class, 'patient_id', 'id');
     }
+
     public function doctor(){
-        return $this->belongsTo(Patient::class, 'doctor_id', 'id');
-    }
-    public function comments(){
-        return $this->hasMany(ComplaintComment::class);
-    }
-    public function reviews(){
-        return $this->hasMany(Review::class);
+    	return $this->belongsTo(Doctor::class, 'doctor_id', 'id');
     }
 }

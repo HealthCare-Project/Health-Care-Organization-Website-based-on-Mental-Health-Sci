@@ -74,5 +74,12 @@ class Doctor extends Authenticatable implements MustVerifyEmail
     public function complaints(){
         return $this->hasMany(Complaint::class);
     }
+
+    public function doctors(){
+        return $this->hasMany(Complaint::class);
+    }
+    public function reviews(){
+        return $this->hasMany(Review::class);
+    }
 }
  

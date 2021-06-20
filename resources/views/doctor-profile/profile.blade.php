@@ -88,6 +88,25 @@
                             consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
                             cillum dolore eu fugiat nulla pariatur.</p>
                     </div>
+
+                   @if(auth()->guard('patient')->check())
+                        <h3>Leave a Review</h3>
+                        <form method="POST" action="{{ route('review.store', ['id' => $doctor->id]) }}">
+                            {{ csrf_field() }}
+                            <label for="text">Description</label>
+                            <textarea for="description" name="description" rows="4" cols="50"></textarea>
+                            <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+                        </form>
+                    @endif
+            @if($doctor->reviews)
+            dwfffffffffffffffffffffffffffffffff
+                @foreach($doctor->reviews as $layanan)
+                    dwdwdwdddddddddddddddddddddddddddddddddddddddddddd
+                @endforeach  
+                {{$doctor->reviews}}
+            @endif
+
+
                 </article>
             </div>
         </section>

@@ -73,7 +73,7 @@ class DoctorsController extends Controller
 
         Auth::login($doctor);
 
-        return redirect()->to('doctor');
+        return redirect()->to('doctor/login');
         
     }
 

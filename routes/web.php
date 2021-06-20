@@ -20,6 +20,8 @@ use App\Http\Controllers\RelativesArticleController;
 use App\Http\Controllers\DoctorArticleController;
 use App\Http\Controllers\NewsArticleController;
 use App\Http\Controllers\FamousCaseController;
+use App\Http\Controllers\ReviewController;
+
 
 /*
 |--------------------------------------------------------------------------
@@ -115,7 +117,7 @@ Route::get('doctorarticles/{id}',[DoctorArticleController::class,'view']);
 
 Route::get('/application', [LayoutsController::class, 'application']);
 
-    Route::group(['prefix'=>'doctor'], function() {
+Route::group(['prefix'=>'doctor'], function() {
 
     //show hospitals
     Route::get('/hospital', [HospitalController::class, 'showHospitals']);
@@ -135,7 +137,13 @@ Route::get('/application', [LayoutsController::class, 'application']);
     Route::post('password/email', [ForgotPasswordController::class, 'sendResetLinkEmail'])->name('password.email');
     Route::get('password/reset/{token}', [ResetPasswordController::class, 'reset'])->name('password.reset');
     Route::post('password/reset', [ResetPasswordController::class, 'showResetForm'])->name('password.update');
-    //Route::get("{id}", [DoctorPageController::class, "show"])->name("doc-profile-show");
+    Route::get('login', [DoctorSessionsController::class, 'create'])->name("doctor.login");
+    Route::post('login', [DoctorSessionsController::class, 'store'])->name('doctor.login');
+    Route::get('/logout', [DoctorSessionsController::class,'destroy'])->name("doctor.logout");
+    Route::get("{id}", [DoctorPageController::class, "show"])->name("doc-profile-show");
+    Route::post('{id}',[ReviewController::class,'store'])->name('review.store');
+
+
 
 });
 
@@ -170,3 +178,5 @@ Route::get('complaints/create', [ComplaintController::class, 'create']);
 Route::post('complaints/create',[ComplaintController::class,'store'])->name('complaint.store');
 Route::get('complaints/{id}', [ComplaintController::class,'show'])->name("show.complaint");
 Route::post('complaints/{id}', [ComplaintsCommentsController::class,'store'])->name("complaint.comment");
+
+
