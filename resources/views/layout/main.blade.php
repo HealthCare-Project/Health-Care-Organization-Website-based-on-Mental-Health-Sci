@@ -19,7 +19,7 @@
 	<!-- Core Stylesheet -->
 	<link rel="stylesheet" href="{{asset('style.css')}}">
 	<link rel="stylesheet" href="{{asset('styleheader.css')}}">
-
+	<link rel="stylesheet" href="{{asset('1b-ticker.css')}}">
 </head>
 
 <body>
@@ -31,7 +31,7 @@
 	</div>
 
 	<!-- ***** Header Area Start ***** -->
-	<header class="header-area">
+	<header  class="header-area">
 	<nav>
       <div class="logo">HealthCare</div>
       <label for="btn" class="icon">
@@ -55,8 +55,8 @@
                 <li><a href="posts">- Diseases </a></li>
                 <li><a href="famouscases">- Famous Cases</a></li></ul>
 			<li><a href="newsarticles">- Health News</a></li>
-            <li><a href="doctorarticles">- For Relatives</a></li>
-            <li><a href="relativesarticles">- For Doctors</a></li>
+            <li><a href="relativesarticles">- For Relatives</a></li>
+            <li><a href="doctorarticles">- For Doctors</a></li>
            
               
             </li>
@@ -91,7 +91,7 @@
           <input type="checkbox" id="btn-5">
           <ul>
             <li><a href="application1">- Weight Calculatour</a></li>
-			<li><a href="application2">- Calories Calculatour</a></li>
+			<li><a href="application2">- Calories</a></li>
             <li><a href="#">- Pathological History</a></li>
             <li><a href="#">- Make Appointment</a></li>
             <li><a href="#">- Post Encyclopedia (Dr)</a></li>
@@ -118,12 +118,19 @@
         </li>
       </ul>
     </nav>
+<div class="breadcumb-area bg-img bg-gradient-overlay" style=" background-image: url(img/bg-img/4952578.jpg);">
+	<div class="tcontainer"><div class="ticker-wrap"><div class="ticker-move">
+    <div class="ticker-item"> Egypt : Egypt’s President Sisi Receives COVID-19 Vaccine</div>
+    <div class="ticker-item"> Egypt : Total cases: 277K New Cases:+566 Recovered:205K </div>
+    <div class="ticker-item"> USA : Biden thanks Americans as U.S. hits 300M COVID-19 vaccine shots in 150 days</div>
+    <div class="ticker-item"> Weather : Cairo: 33/20  Alex. : 27/18  Aswan 40/29</div>
+  </div></div></div></div>
 	</header>
 	<!-- ***** Header Area End ***** -->
 	@yield('content')
 
 	<!-- ***** Footer Area Start ***** -->
-	<footer class="footer-area bg-img bg-gradient-overlay" style="background-image: url(img/bg-img/3.jpg);">
+	<footer style="margin-top: 32px" class="footer-area bg-img bg-gradient-overlay" style="background-image: url(img/bg-img/3.jpg);">
 		<div class="container">
 			<div class="row">
 				<!-- Single Footer Widget -->
@@ -178,7 +185,7 @@
 						<h5 class="widget-title">Quick Link</h5>
 
 						<!-- Quick Links Nav -->
-						<nav>
+						<div>
 							<ul class="quick-links">
 								<li>
 									<a href="#">About</a>
@@ -211,7 +218,7 @@
 									<a href="#">Legals</a>
 								</li>
 							</ul>
-						</nav>
+</div>
 					</div>
 				</div>
 

@@ -6,7 +6,7 @@
         <!-- Welcome Slides -->
         <div class="welcome-slides owl-carousel">
             <!-- Single Welcome Slide -->
-            <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax"
+            <div class="welcome-welcome-slide bg-img  jarallax"
                 style="background-image: url(img/bg-img/1.jpg);">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
@@ -32,7 +32,7 @@
             </div>
 
             <!-- Single Welcome Slide -->
-            <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax"
+            <div class="welcome-welcome-slide bg-img  jarallax"
                 style="background-image: url(img/bg-img/2.jpg);">
                 <div class="container h-100">
                     <div class="row h-100 align-items-center">
