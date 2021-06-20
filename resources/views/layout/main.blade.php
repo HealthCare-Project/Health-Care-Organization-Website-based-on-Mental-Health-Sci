@@ -90,8 +90,8 @@
           <a href="#">Applications<i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-5">
           <ul>
-            <li><a href="application1">- Calculate Your Weight</a></li>
-			<li><a href="application2">- Calculate Your Calories</a></li>
+            <li><a href="application1">- Weight Calculatour</a></li>
+			<li><a href="application2">- Calories Calculatour</a></li>
             <li><a href="#">- Pathological History</a></li>
             <li><a href="#">- Make Appointment</a></li>
             <li><a href="#">- Post Encyclopedia (Dr)</a></li>
