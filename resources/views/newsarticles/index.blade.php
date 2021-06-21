@@ -1,15 +1,24 @@
+<head>
+<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="apple-touch-icon" href="assets/img/apple-icon.png">
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico">
+    <!-- Load Require CSS -->
+    <!-- Font CSS -->
+    <link href="assets/css/boxicon.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Load Tempalte CSS -->
+    <link rel="stylesheet" href="{{asset('poststyles/templatemo.css')}}">
+    <link rel="stylesheet" href="{{asset('poststyles/custom.css')}}">
+        <link rel="stylesheet" href="{{asset('poststyles/1b-ticker.css')}}">
+    <link rel="stylesheet" href="{{asset('poststyles/bootstrap.min.css')}}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{asset('poststyles/boxicon.min.css')}}">
+</head>
+<body style="background-color:whitesmoke;">
 @extends('layout.main') @section('content')
 
 <!-- ***** Breadcrumb Area Start ***** -->
-<div class="breadcumb-area bg-img bg-gradient-overlay" style="background-image: url(img/bg-img/34.jpg);">
-	<div class="container h-100">
-		<div class="row h-100 align-items-center">
-			<div class="col-12">
-				<h2 class="title">Our Enclopedia</h2>
-			</div>
-		</div>
-	</div>
-</div>
 <div class="breadcumb--con">
 	<div class="container">
 		<div class="row">
@@ -20,150 +29,52 @@
 							<a href="#">
 								<i class="fa fa-home"></i> Home</a>
 						</li>
-						<li class="breadcrumb-item active" aria-current="page">Our Enclopedia</li>
+						<li class="breadcrumb-item active" aria-current="page">My Health</li>
+
+						<li class="breadcrumb-item active" aria-current="page">Health News</li>
 					</ol>
 				</nav>
 			</div>
 		</div>
 	</div>
 </div>
+<!-- ***** Breadcrumb Area END ****
+
 <!-- ***** Breadcrumb Area END ***** -->
 
-<section class="dento-blog-area mt-50">
-	<div class="container">
-		<div class="row">
-			<div class="col-12 col-lg-8">
-				@foreach($newsarticles as $newsarticle)
-				<a href="{{url('newsarticles',$newsarticle['id'])}}">
-					<!-- Single Blog Item -->
-					<div class="single-blog-item style-2 d-flex flex-wrap align-items-center mb-50">
-						<!-- Blog Thumbnail -->
-						<div class="blog-thumbnail">
 
-							<img src="{{url($newsarticle['feature_image'])}}" />
-						</div>
-					</div>
-				</a>
-				<!-- Blog Content -->
-				<div class="blog-content">
-					<a href="#" class="post-title">{{$newsarticle['title']}}</a>
-					<p>Many people suffer from blood pressure, a disease that increases blood pressure, which rushes from the blood vessels
-						of the body parts ...</p>
-					<div class="post-meta">
-						<a href="#">
-							<i class="icon_clock_alt"></i> {{$newsarticle['publish_date']}}</a>
-						<a href="#">
-							<i class="icon_chat_alt"></i> 3 Comments</a>
-					</div>
-				</div>
-				@endforeach
-			</div>
-			<!-- Dento Sidebar Area -->
-			<div class="col-12 col-lg-4">
-				<div class="dento-sidebar">
-
-					<!-- Single Widget Area -->
-					<div class="single-widget-area search-widget">
-						<form action="#" method="post">
-							<input type="search" name="search" class="form-control" placeholder="Search ...">
-							<button type="submit">
-								<i class="icon_search"></i>
-							</button>
-						</form>
-					</div>
-
-					<!-- Single Widget Area -->
-					<div class="single-widget-area catagories-widget">
-						<h5 class="widget-title">Categories</h5>
-
-						<!-- catagories list -->
-						<ul class="catagories-list">
-							<li>
-								<a href="#">Dentistry Articles</a>
-							</li>
-							<li>
-								<a href="#">Oral Health</a>
-							</li>
-							<li>
-								<a href="#">Dental Technology</a>
-							</li>
-							<li>
-								<a href="#">Kids Care Dental</a>
-							</li>
-							<li>
-								<a href="#">Healthy Smiles, Inside &amp; Out</a>
-							</li>
-						</ul>
-					</div>
-
-					<!-- Single Widget Area -->
-					<div class="single-widget-area news-widget">
-						<h5 class="widget-title">Recent News</h5>
-
-						<!-- Single News Area -->
-						<div class="single-news-area d-flex align-items-center">
-							<div class="blog-thumbnail">
-								<img src="./img/bg-img/21.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<a href="#" class="post-title">Tooth decay: why good dental hygiene is important</a>
-								<span class="post-date">28 Sep 2018</span>
-							</div>
-						</div>
-
-						<!-- Single News Area -->
-						<div class="single-news-area d-flex align-items-center">
-							<div class="blog-thumbnail">
-								<img src="./img/bg-img/22.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<a href="#" class="post-title">Six reasons your breath might smell like poop</a>
-								<span class="post-date">28 Sep 2018</span>
-							</div>
-						</div>
-
-						<!-- Single News Area -->
-						<div class="single-news-area d-flex align-items-center">
-							<div class="blog-thumbnail">
-								<img src="./img/bg-img/23.jpg" alt="">
-							</div>
-							<div class="blog-content">
-								<a href="#" class="post-title">Everything you need to know about sinus infection</a>
-								<span class="post-date">28 Sep 2018</span>
-							</div>
-						</div>
-					</div>
-
-					<!-- Single Widget Area -->
-					<div class="single-widget-area adds-widget">
-						<a href="#">
-							<img class="w-100" src="./img/bg-img/adds.png" alt="">
-						</a>
-					</div>
-
-				</div>
-			</div>
+    <!-- Start Our Work -->
+	
+    <div >
+	
 
 
+        <div style=" margin-right: 80px; margin-left: 80px;  " class="row projects gx-lg-5">
+			@foreach($newsarticles as $newsarticle)
+            <a href="{{url('newsarticles',$newsarticle['id'])}}" class="col-sm-6 col-lg-4 text-decoration-none project marketing social business">
+                <div class="service-work overflow-hidden card mb-5 mx-5 m-sm-0">
+                    <img style="height: 194px;" class="card-img-top" src="{{url($newsarticle['feature_image'])}}" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title light-300 text-dark">{{$newsarticle['title']}}</h5>
+                        <p class="card-text light-300 text-dark">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                            sed do eiusmod tempor incididunt ut labore et dolor.
+                        </p>
+                        <span class="text-decoration-none text-primary light-300">
+						{{$newsarticle['publish_date']}} <i class='bx bxs-hand-right ms-1'></i>
+                          </span>
+						  
+                    </div>
+					
+                </div>
+				
+            </a>
+			
+			@endforeach	
+    </section>
+</div>
+</div>
 
-			<!-- Pagination -->
-			<nav class="dento-pagination mb-100">
-				<ul class="pagination">
-					<li class="page-item active">
-						<a class="page-link" href="#">1</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">2</a>
-					</li>
-					<li class="page-item">
-						<a class="page-link" href="#">
-							<i class="fa fa-angle-right"></i>
-						</a>
-					</li>
-				</ul>
-			</nav>
-		</div>
-	</div>
-</section>
 <!-- *****Blog Area End ***** -->
 @endsection
+</body>
