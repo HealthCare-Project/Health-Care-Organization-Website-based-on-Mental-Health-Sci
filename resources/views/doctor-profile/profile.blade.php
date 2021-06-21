@@ -41,71 +41,47 @@
         </section>
 
         <section id="reviews-cont">
-            <h3>Reviews</h3>
-            <div class="reviewer">
-                <div>
-                    <img src="profile.png" alt="prof" height="70" width="70">
-                </div>
-                <article>
-                    <div class="reviewer-info">
-                        <span class="reviewer-name">Name Name</span>
-                        <div>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star"></span>
-                            <span class="fa fa-star"></span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur.</p>
-                    </div>
-                </article>
-            </div>
-            <div class="reviewer">
-                <div>
-                    <img src="profile.png" alt="prof" height="70" width="70">
-                </div>
-                <article>
-                    <div class="reviewer-info">
-                        <span class="reviewer-name">Name Name</span>
-                        <div>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                            <span class="fa fa-star checked"></span>
-                        </div>
-                    </div>
-                    <div class="review-content">
-                        <p>ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                            tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                            quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                            cillum dolore eu fugiat nulla pariatur.</p>
-                    </div>
+            <h3 id="reviews-word">Reviews</h3>
+                @if($doctor->reviews)
+                    @foreach($doctor->reviews as $review)
+                    <div class="reviewer">
+                        <article>
+                            <div class="reviewer-info">
+                                <span class="reviewer-name">{{$review->patient->first_name}} {{$review->patient->last_name}}</span>
+                                <span class="reviewe-data">{{$review->created_at->diffForHumans()}}</span>
+                                <div>   
+                                    @if(substr($review->rating, 0, 1) != 0)
+                                        @foreach(range(1, substr($review->rating, 0, 1)) as $r)
+                                        <span class="fa fa-star checked"></span>
+                                        @endforeach
+                                    @endif
+                                    @if(substr($review->rating, 2, 3))
+                                        <span class="fa fa-star-half-o checked"></span>
+                                    @endif
+                                </div>
+                            </div>
+                            <div class="review-content">
+                                <p>{{$review->description}}</p>
+                            </div>
+                        </article>
+                    </div> <!-- reviewer !-->
+                    @endforeach  
+                @endif
 
                    @if(auth()->guard('patient')->check())
+                    <div id = "leaving-reviews-section">
                         <h3>Leave a Review</h3>
                         <form method="POST" action="{{ route('review.store', ['id' => $doctor->id]) }}">
                             {{ csrf_field() }}
                             <label for="text">Description</label>
-                            <textarea for="description" name="description" rows="4" cols="50"></textarea>
-                            <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+                            <textarea for="description" name="description" id="review-textarea"></textarea>
+                            <div id="reviews-area-flexed">
+                                <input id="review-rating-entry" type="number" name="rating" for="rating" placeholder="Rating from 1 to 5" min=".5" max="5" step=".5">
+                                <button id="review-submit-button" type="submit">Submit</button>
+                            </div>
                         </form>
                     @endif
-            @if($doctor->reviews)
-            dwfffffffffffffffffffffffffffffffff
-                @foreach($doctor->reviews as $layanan)
-                    dwdwdwdddddddddddddddddddddddddddddddddddddddddddd
-                @endforeach  
-                {{$doctor->reviews}}
-            @endif
-
+                    </div> <!-- leaving-reviews-section end !-->
 
                 </article>
             </div>
@@ -113,3 +89,5 @@
     </div>
 
 @endsection
+ 
+

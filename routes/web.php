@@ -129,7 +129,9 @@ Route::group(['prefix'=>'doctor'], function() {
     Route::get('email/verify', [VerificationController::class, 'show'])->name('verification.notice');
     Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
     Route::post('email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
-
+    //doctor register 
+    Route::get('register', [DoctorsController::class, 'index']);
+    Route::post('register', [DoctorsController::class, 'store'])->name('doctor.store');
     //password
     Route::get('password/confirm', [ConfirmPasswordController::class, 'showConfirmForm'])->name('password.confirm');
     Route::post('password/confirm', [ConfirmPasswordController::class, 'confirm']);
@@ -142,7 +144,6 @@ Route::group(['prefix'=>'doctor'], function() {
     Route::get('/logout', [DoctorSessionsController::class,'destroy'])->name("doctor.logout");
     Route::get("{id}", [DoctorPageController::class, "show"])->name("doc-profile-show");
     Route::post('{id}',[ReviewController::class,'store'])->name('review.store');
-
 
 
 });

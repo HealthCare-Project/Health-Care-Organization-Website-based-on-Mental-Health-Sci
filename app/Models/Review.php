@@ -15,6 +15,7 @@ class Review extends Model
         'description',
         'patient_id',
         'doctor_id',
+        'rating',
     ];
     protected $hidden = [
         'patient_id',
