@@ -103,8 +103,8 @@
           <a href="#">Login <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-6">
           <ul>
-            <li><a href="#">- Doctor</a></li>
-            <li><a href="#">- Patient</a></li>
+            <li><a href="{{route('doctor.login')}}">- Doctor</a></li>
+            <li><a href="{{route('session.login')}}">- Patient</a></li>
           </ul>
         </li>
         <li>

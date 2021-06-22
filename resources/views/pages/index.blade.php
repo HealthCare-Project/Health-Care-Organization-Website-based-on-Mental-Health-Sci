@@ -440,7 +440,7 @@
                             </div>
                             <!-- Dentist Info -->
                             <div class="dentist-info bg-gradient-overlay">
-                                <h5>Michael Barley</h5>
+                                <h5><a href="http://homestead.test/doctor/1">Michael Barley</a></h5>
                                 <p>Implant Expert</p>
                             </div>
                         </div>
@@ -461,7 +461,7 @@
                             </div>
                             <!-- Dentist Info -->
                             <div class="dentist-info bg-gradient-overlay">
-                                <h5>Michael Barley</h5>
+                                <h5><a href="http://homestead.test/doctor/1">Michael Barley</a></h5>
                                 <p>Implant Expert</p>
                             </div>
                         </div>
@@ -482,7 +482,7 @@
                             </div>
                             <!-- Dentist Info -->
                             <div class="dentist-info bg-gradient-overlay">
-                                <h5>Michael Barley</h5>
+                                <h5><a href="http://homestead.test/doctor/1">Michael Barley</a></h5>
                                 <p>Implant Expert</p>
                             </div>
                         </div>

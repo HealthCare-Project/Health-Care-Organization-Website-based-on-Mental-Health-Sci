@@ -1,6 +1,9 @@
 @extends('layout.main')
 
 <link rel="stylesheet" type="text/css" href="{{ asset('css/doc-profile.css') }}">
+<script type="text/javascript" src="{{ asset('js/jquery.min.js') }}"></script>
+<script type="text/javascript" src="{{ asset('js/rater/rater.min.js') }}" async></script>
+<script type="text/javascript" src="{{ asset('js/testrater.js') }}" async></script>
 <title>{{ $doctor->first_name }} {{ $doctor->last_name }}</title>
 
 @section('content')
@@ -76,11 +79,13 @@
                             <label for="text">Description</label>
                             <textarea for="description" name="description" id="review-textarea"></textarea>
                             <div id="reviews-area-flexed">
-                                <input id="review-rating-entry" type="number" name="rating" for="rating" placeholder="Rating from 1 to 5" min=".5" max="5" step=".5">
+                                <input id="review-rating-entry" type="hidden" name="rating" for="rating" placeholder="Rating from 1 to 5" min=".5" max="5" step=".5">
+                                <div id="rate-plugin" data-rate-value=6></div>
                                 <button id="review-submit-button" type="submit">Submit</button>
                             </div>
                         </form>
                     @endif
+
                     </div> <!-- leaving-reviews-section end !-->
 
                 </article>
