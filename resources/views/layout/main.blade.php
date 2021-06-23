@@ -34,21 +34,21 @@
 	<header  class="header-area">
 	<nav>
       <div class="logo">HealthCare</div>
-      <label for="btn" class="icon">
+      <label for="btn" class="iconheader">
         <span class="fa fa-bars"></span>
       </label>
       <input type="checkbox" id="btn">
       <ul>
-        <li><label class="show">Home</label>
+        <li><label class="showheader">Home</label>
           <a href="/">Home</a>
         </li>
         <li>
-          <label for="btn-1" class="show">My Health +</label>
+          <label for="btn-1" class="showheader">My Health +</label>
           <a href="#">My Health <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-1">
           <ul>
 		  <li>
-            <label for="btn-2" class="show1">- Encyclopedia +</label>
+            <label for="btn-2" class="show1header">- Encyclopedia +</label>
               <a href="#">- Encyclopedia <i class="fas fa-caret-right"></i></a>
               <input type="checkbox" id="btn-2">
               <ul>
@@ -63,7 +63,7 @@
           </ul>
         </li>
         <li>
-          <label for="btn-3" class="show">Departments +</label>
+          <label for="btn-3" class="showheader">Departments +</label>
           <a href="#">Departments <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-3">
           <ul>
@@ -82,11 +82,11 @@
           </ul>
         </li>
         <li>
-          <label for="btn-4" class="show">Timetable</label>
+          <label for="btn-4" class="showheader">Timetable</label>
           <a href="timetable">Timetable</a>
         </li>
         <li>
-          <label for="btn-5" class="show">Applications +</label>
+          <label for="btn-5" class="showheader">Applications +</label>
           <a href="#">Applications<i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-5">
           <ul>
@@ -99,7 +99,7 @@
           </ul>
         </li>
         <li>
-          <label for="btn-6" class="show">Login +</label>
+          <label for="btn-6" class="showheader">Login +</label>
           <a href="#">Login <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-6">
           <ul>
@@ -108,13 +108,17 @@
           </ul>
         </li>
         <li>
-          <label for="btn-7" class="show">Registration (Sign-up) +</label>
-          <a href="#">Registration (Sign-up) <i class="fas fa-caret-down"></i></a>
+          <label for="btn-7" class="showheader">Registration +</label>
+          <a href="#">Registration  <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-7">
           <ul>
             <li><a href="#">- Doctor</a></li>
             <li><a href="#">- Patient</a></li>
           </ul>
+        </li>
+		<li>
+          <label for="btn-8" class="showheader">Log out</label>
+          <a href="#">Log out</a>
         </li>
       </ul>
     </nav>
