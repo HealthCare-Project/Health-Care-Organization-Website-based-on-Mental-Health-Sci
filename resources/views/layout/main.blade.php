@@ -94,7 +94,14 @@
 			<li><a href="application2">- Calories</a></li>
             <li><a href="#">- Pathological History</a></li>
             <li><a href="#">- Make Appointment</a></li>
-            <li><a href="#">- Post Encyclopedia (Dr)</a></li>
+            <li><a href="#">- Make an Article<i class="fas fa-caret-right"></i></a>
+              <input type="checkbox" id="btn-2">
+              <ul>
+                <li><a href="postsinsert">- Diseases </a></li>
+                <li><a href="famouscasesinsert">- Famous Cases</a></li>
+				<li><a href="newsarticlesinsert">- Health 1News</a></li>
+				<li><a href="relativesarticlesinsert">- Relatives Articles</a></li>
+				<li><a href="doctorarticlesinsert">- Doctors Articles</a></li></ul></li>
             <li><a href="#">- Post Timetable (Dr)</a></li>
           </ul>
         </li>
@@ -122,7 +129,7 @@
         </li>
       </ul>
     </nav>
-<div class="breadcumb-area bg-img bg-gradient-overlay" style=" background-image: url(img/bg-img/4952578.jpg);">
+<div class="breadcumb-area bg-img bg-gradient-overlay" style=" background-image: url(img/bg-img/4952578.jpg); height:30px">
 	<div class="tcontainer"><div class="ticker-wrap"><div class="ticker-move">
     <div class="ticker-item"> Egypt : Egypt’s President Sisi Receives COVID-19 Vaccine</div>
     <div class="ticker-item"> Egypt : Total cases: 277K New Cases:+566 Recovered:205K </div>

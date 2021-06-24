@@ -929,7 +929,7 @@ ul {
 .breadcumb-area {
   position: relative;
   z-index: 1;
-  height: 30px; }
+  height: 30%; }
   @media only screen and (max-width: 767px) {
     .breadcumb-area {
       height: 130px; } }

@@ -1,0 +1,77 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url('encyclo.jpg');
+    font-family: 'Roboto';
+} 
+.box3{
+    max-width: 90%;
+    background: rgba(175, 75, 241, 0.24);
+    margin: 105px auto;
+    box-shadow: 0 0 20px #48625599;
+    box-sizing: border-box;
+    padding: 30px;
+    background-size: 105%;
+} 
+.box3 p{
+    text-align: center;
+    letter-spacing: 1px;  
+    font-size: 45px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    color: #486255;
+} 
+.box3 input[type = "text"],.box3 .area{
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+    background-color: #ebe7e7e0;
+    border: 2px solid #96a8a8;
+    font-size: 15px;
+    border-radius: 5px;
+    outline: none;
+    transform: all 0.5s ease;
+    font-family: 'roboto';
+}
+.box3 .area{
+    height: 200px;
+} 
+.box3 input[type = "text"]:focus,.box3 .area:focus{
+    border: 2.4px solid #486255;
+}
+input[type = "file"]{
+    display: none;
+}
+label{
+    color: white;
+    height: 38px;
+    width: 180px;
+    border-radius: 8px;
+    background-color: #b641fa;   
+    margin: 5px auto;
+    font-size: 18px;
+    display: flex;
+    outline: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.box3 input[type = "submit"]{
+    display: block;
+    text-align: center;
+    width: 120px;
+    margin: 14px auto;
+    font-size: 17px;
+    border: 2px solid #25b3eb;
+    padding: 8px 15px;
+    outline: none;
+    color: white;
+    background-color: #706d6d;
+    border-radius: 14px;
+    transition: 0.25s;
+    cursor: pointer;
+}
+.box3 input[type = "submit"]:hover{
+    background-color: #25b3eb;
+}
