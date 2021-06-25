@@ -57,13 +57,13 @@ Route::get('/dentist', [LayoutsController::class, 'dentist']);
 Route::get('/oncology', [LayoutsController::class, 'oncology']);
 Route::get('/neurology', [LayoutsController::class, 'neurology']);
 Route::get('/pediatric', [LayoutsController::class, 'pediatric']);
-Route::get('/psychiaty', [LayoutsController::class, 'psychiaty']);
+Route::get('/psychiatry', [LayoutsController::class, 'psychiatry']);
 Route::get('/cardiology', [LayoutsController::class, 'cardiology']);
 Route::get('/hematology', [LayoutsController::class, 'hematology']);
 Route::get('/nephrology', [LayoutsController::class, 'nephrology']);
-Route::get('/rheumatology', [LayoutsController::class, 'rheumatology']);
+Route::get('/surgery', [LayoutsController::class, 'surgery']);
 Route::get('/endocrinology', [LayoutsController::class, 'endocrinology']);
-Route::get('/internal medicine', [LayoutsController::class, 'internal medicine']);
+Route::get('/internal_medicine', [LayoutsController::class, 'internal_medicine']);
 
 
 //home page

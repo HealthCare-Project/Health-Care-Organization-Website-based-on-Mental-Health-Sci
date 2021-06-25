@@ -67,16 +67,16 @@
           <a href="#">Departments <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-3">
           <ul>
-            <li><a href="internamedicine">- Internal Medicine</a></li>
+            <li><a href="internal_medicine">- Internal Medicine</a></li>
             <li><a href="pediatric">- Pediatric</a></li>
-            <li><a href="rheumatology">- Rheumatology</a></li>
+            <li><a href="surgery">- Surgery</a></li>
             <li><a href="oncology">- Oncology</a></li>
             <li><a href="nephrology">- Nephrology</a></li>
             <li><a href="hematology">- Hematology</a></li>
             <li><a href="endocrinology">- Endocrinology</a></li>
             <li><a href="cardiology">- Cardiology</a></li>
             <li><a href="neurology">- Neurology</a></li>
-            <li><a href="psychiaty">- Psychiaty</a></li>
+            <li><a href="psychiatry">- Psychiaty</a></li>
             <li><a href="surgery">- Surgery</a></li>
             <li><a href="dentist">- Dentistry</a></li>
           </ul>
@@ -99,7 +99,7 @@
               <ul>
                 <li><a href="postsinsert">- Diseases </a></li>
                 <li><a href="famouscasesinsert">- Famous Cases</a></li>
-				<li><a href="newsarticlesinsert">- Health 1News</a></li>
+				<li><a href="newsarticlesinsert">- Health News</a></li>
 				<li><a href="relativesarticlesinsert">- Relatives Articles</a></li>
 				<li><a href="doctorarticlesinsert">- Doctors Articles</a></li></ul></li>
             <li><a href="#">- Post Timetable (Dr)</a></li>

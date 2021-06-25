@@ -11,7 +11,7 @@ class DoctorArticleController extends Controller
 {
     public function index()
     {
-        $doctorarticles = DoctorArticle::all();
+        $doctorarticles = DoctorArticle::orderBy('id','desc')->get();
         return view('doctorarticles.index')->with(['doctorarticles'=>$doctorarticles]);
     }
     public function view($id)

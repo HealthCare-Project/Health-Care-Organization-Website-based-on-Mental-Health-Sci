@@ -34,8 +34,8 @@ class LayoutsController extends Controller
     /*
     |    functions for return views of medical department
     */
-    public function internalMedicine(){
-        return view('medical_department.internal medicine');
+    public function internal_medicine(){
+        return view('medical_department.internal_medicine');
     }
     public function cardiology(){
         return view('medical_department.cardiology');
@@ -56,7 +56,7 @@ class LayoutsController extends Controller
         return view('medical_department.oncology');
     }
     public function psychiaty(){
-        return view('medical_department.psychiaty');
+        return view('medical_department.psychiatry');
     }
     public function pediatric(){
         return view('medical_department.pediatric');
@@ -64,7 +64,7 @@ class LayoutsController extends Controller
     public function dentist(){
         return view('medical_department.dentist');
     }
-    public function rheumatology(){
-        return view('medical_department.rheumatology');
+    public function surgery(){
+        return view('medical_department.surgery');
     }
 }
