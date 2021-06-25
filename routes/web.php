@@ -21,6 +21,13 @@ use App\Http\Controllers\DoctorArticleController;
 use App\Http\Controllers\NewsArticleController;
 use App\Http\Controllers\FamousCaseController;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\PostInsertController;
+use App\Http\Controllers\FamousCaseInsertController;
+use App\Http\Controllers\NewsArticleInsertController;
+use App\Http\Controllers\RelativesArticleInsertController;
+use App\Http\Controllers\DoctorArticleInsertController;
+
+
 
 
 /*
@@ -116,7 +123,29 @@ Route::get('doctorarticles',[DoctorArticleController::class,'index']);
 Route::get('doctorarticles/{id}',[DoctorArticleController::class,'view']);
 
 Route::get('/application', [LayoutsController::class, 'application']);
+//
 
+Route::get('postsinsert','App\Http\Controllers\PostInsertController@insertform');
+Route::post('/create','App\Http\Controllers\PostInsertController@insert');
+
+
+//
+
+Route::get('famouscasesinsert','App\Http\Controllers\FamousCaseInsertController@insertform');
+Route::post('/create','App\Http\Controllers\FamousCaseInsertController@insert');
+//
+
+Route::get('newsarticlesinsert','App\Http\Controllers\NewsArticleInsertController@insertform');
+Route::post('/create','App\Http\Controllers\NewsArticleInsertController@insert');
+//
+
+Route::get('relativesarticlesinsert','App\Http\Controllers\RelativesArticleInsertController@insertform');
+Route::post('/create','App\Http\Controllers\RelativesArticleInsertController@insert');
+//
+
+Route::get('doctorarticlesinsert','App\Http\Controllers\DoctorArticleInsertController@insertform');
+Route::post('/create','App\Http\Controllers\DoctorArticleInsertController@insert');
+//
 Route::group(['prefix'=>'doctor'], function() {
 
     //show hospitals
@@ -179,5 +208,4 @@ Route::get('complaints/create', [ComplaintController::class, 'create']);
 Route::post('complaints/create',[ComplaintController::class,'store'])->name('complaint.store');
 Route::get('complaints/{id}', [ComplaintController::class,'show'])->name("show.complaint");
 Route::post('complaints/{id}', [ComplaintsCommentsController::class,'store'])->name("complaint.comment");
-
 
