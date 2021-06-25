@@ -2,7 +2,7 @@
 <html lang="en" dir="ltr">
     <head>
         <title> Forgot Your Password? </title>
-        <link rel="stylesheet" type="text/css" href="{{ asset('css/doctor_style/forgot_password.css') }}">
+        <link rel="stylesheet" type="text/css" href="{{ asset('css/styleforgot.css') }}">
     </head>
 
     <body>

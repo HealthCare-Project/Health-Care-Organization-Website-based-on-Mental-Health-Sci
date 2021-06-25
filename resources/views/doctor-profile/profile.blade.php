@@ -11,7 +11,7 @@
     {{ $doctor->email }}
 
     <div id="profile-page-container">
-        <section id="doc-profile-container">
+<section id="doc-profile-container">
             <div class="doc-profile">
                 <article>
                     <img src="doc1.jpg" width="200" height="200" alt="image">
@@ -19,8 +19,8 @@
                 <article id="doc-info">
                     <h4>Profile</h4>
                     <div id="intro">
-                        <h2 id="name">{{ $doctor->first_name }} {{ $doctor->last_name }}</h2>
-                        <span id="titles">{{ $doctor->specialty }}</span>
+                        <h2 id="name">Dr. Maggy Hudson</h2>
+                        <span id="titles">Surgeon, Oncologist</span>
                         <span id="quals">M.D</span>
                     </div>
                     <div class="doc-info-attribute">

@@ -124,14 +124,14 @@ Route::group(['prefix'=>'doctor'], function() {
 
     //show hospitals doctors
     Route::get('/hospital-doctors', [HospitalController::class, 'getHospitalDoctors']);
-
+    //doctor register 
+    Route::get('register', [DoctorsController::class, 'index'])->name('doctor.store');
+    Route::post('register', [DoctorsController::class, 'store'])->name('doctor.store');
     //Email vertification
     Route::get('email/verify', [VerificationController::class, 'show'])->name('verification.notice');
     Route::get('email/verify/{id}/{hash}', [VerificationController::class, 'verify'])->name('verification.verify');
     Route::post('email/resend', [VerificationController::class, 'resend'])->name('verification.resend');
-    //doctor register 
-    Route::get('register', [DoctorsController::class, 'index']);
-    Route::post('register', [DoctorsController::class, 'store'])->name('doctor.store');
+
     //password
     Route::get('password/confirm', [ConfirmPasswordController::class, 'showConfirmForm'])->name('password.confirm');
     Route::post('password/confirm', [ConfirmPasswordController::class, 'confirm']);
@@ -151,7 +151,7 @@ Route::group(['prefix'=>'doctor'], function() {
 Route::group(['prefix'=>'patient'], function() {
     Route::get('/login',[SessionsController::class,'create']);
 
-    Route::get('/register',[RegistrationsController::class,'create']);
+    Route::get('/register',[RegistrationsController::class,'create'])->name("patient-registeration-page");
     Route::post('/register',[RegistrationsController::class,'store'])->name('register.store');
 
     Route::post('/login',[SessionsController::class,'store'])->name('session.login');

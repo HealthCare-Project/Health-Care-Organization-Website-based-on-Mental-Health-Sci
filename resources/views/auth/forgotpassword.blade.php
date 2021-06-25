@@ -3,8 +3,8 @@
 
 <head>
     <meta charset="utf-8">
-    <title> Forgot Your Password? </title>
-    <link rel="stylesheet" href="styleforgot.css">
+    <title> Forgot Your Password? </title> 
+    <link rel="stylesheet" href="{{ asset('css/styleforgot.css') }}">
 </head>
 
 <body>

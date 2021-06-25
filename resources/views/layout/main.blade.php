@@ -112,8 +112,8 @@
           <a href="#">Registration (Sign-up) <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-7">
           <ul>
-            <li><a href="#">- Doctor</a></li>
-            <li><a href="#">- Patient</a></li>
+            <li><a href="{{ route('doctor.store')}}">- Doctor</a></li>
+            <li><a href="{{ route('patient-registeration-page') }}">- Patient</a></li>
           </ul>
         </li>
       </ul>

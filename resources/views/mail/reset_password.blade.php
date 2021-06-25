@@ -1,5 +1,3 @@
-<a href="http://homestead.test/patients/reset-password/{{ $email_data }}">Here is your token</a>
-
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
 
