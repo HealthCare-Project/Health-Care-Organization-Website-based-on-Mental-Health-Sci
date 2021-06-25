@@ -106,15 +106,6 @@
           </ul>
         </li>
         <li>
-          <label for="btn-6" class="showheader">Login +</label>
-          <a href="#">Login <i class="fas fa-caret-down"></i></a>
-          <input type="checkbox" id="btn-6">
-          <ul>
-            <li><a href="{{route('doctor.login')}}">- Doctor</a></li>
-            <li><a href="{{route('session.login')}}">- Patient</a></li>
-          </ul>
-        </li>
-        <li>
           <label for="btn-7" class="showheader">Registration +</label>
           <a href="#">Registration  <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-7">
@@ -123,10 +114,28 @@
             <li><a href="{{ route('patient-registeration-page') }}">- Patient</a></li>
           </ul>
         </li>
-		<li>
-          <label for="btn-8" class="showheader">Log out</label>
-          <a href="#">Log out</a>
+			@if(!auth()->guard('patient')->check() && !auth()->guard('doctor')->check())
+			   <li>
+          <label for="btn-6" class="showheader">Login +</label>
+          <a href="#">Login <i class="fas fa-caret-down"></i></a>
+          <input type="checkbox" id="btn-6">
+          <ul>
+            <li><a href="{{route('doctor.login')}}">- Doctor</a></li>
+            <li><a href="{{route('session.login')}}">- Patient</a></li>
+          </ul>
         </li>
+        @else
+        <li>
+        @if (auth()->guard('patient')->check())
+            <label for="btn-8" class="showheader">Log out</label>
+          	<a href="{{route('session.destroy')}}">Log out</a>
+          @elseif (auth()->guard('doctor')->check())
+            <label for="btn-8" class="showheader">Log out</label>
+            <a href="{{route('doctor.logout')}}">Log out</a>
+          @endif
+        </li>
+
+        @endif
       </ul>
     </nav>
 <div class="breadcumb-area bg-img bg-gradient-overlay" style=" background-image: url(img/bg-img/4952578.jpg); height:30px">

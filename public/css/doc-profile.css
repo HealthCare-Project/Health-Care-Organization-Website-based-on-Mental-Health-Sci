@@ -26,7 +26,7 @@ section#doc-profile-container .doc-profile article#doc-info div#intro{
 }
 
 section#doc-profile-container .doc-profile article#doc-info div#intro h2#name{
-	margin-bottom: 3px;
+	margin-bottom: 3px !important;
 }
 section#doc-profile-container .doc-profile article#doc-info .doc-info-attribute{
 	display: flex;
@@ -36,6 +36,10 @@ section#doc-profile-container .doc-profile article#doc-info .doc-info-attribute{
 section#doc-profile-container .doc-profile article#doc-info .doc-info-attribute span:first-child{
 	font-weight: 700;
 
+}
+section#doc-profile-container .doc-profile article#doc-info .doc-info-attribute span:nth-of-type(2){
+	font-size: 1.2em;
+	font-weight: 700;
 }
 
 section#doc-profile-container .doc-profile article#doc-info div#specialties{
@@ -67,17 +71,17 @@ section#reviews-cont{
 	padding-bottom: 23px;
 }
 section#reviews-cont h3{
-	margin: 25px 0 25px;
-	color: #ce0000;
-	font-size: 1.6em;
-	text-align: center;
-	font-weight: 700;
+	margin: 25px 0 25px !important;
+	color: #ce0000 !important;
+	font-size: 1.3em !important;
+	text-align: center !important;
+	font-weight: 700 !important;
 }
 
 section#reviews-cont .reviewer{
 	display: flex;
 	margin: 15px;
-	background-color: #eaeaea;
+	background-color: #eaeaea !important;
 	padding: 15px;
 }
 section#reviews-cont .reviewer article{
@@ -120,7 +124,7 @@ button#book-doc{
 	cursor: pointer;
 }
 button#book-doc:hover{
-	background-color: #0089bd;
+	background-color: #ff8193;
 }
 div#leaving-reviews-section{
 	width: 90%;
@@ -173,4 +177,10 @@ div#leaving-reviews-section div#reviews-area-flexed input#review-rating-entry{
 section#reviews-cont div.reviewer article div.review-content p{
 		font-size: 1.1em;
 		color: black;
+}
+
+
+
+article#doc-info h2, article#doc-info h1, article#doc-info h3, article#doc-info h4{
+	color: white !important;
 }

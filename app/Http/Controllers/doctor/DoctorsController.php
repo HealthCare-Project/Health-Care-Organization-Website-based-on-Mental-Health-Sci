@@ -45,7 +45,8 @@ class DoctorsController extends Controller
             'city' => 'required',
             'governorate' => 'required',
             'specialty' => 'required',
-            'doctor_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5048'
+            'doctor_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5048',
+            'availability' => 'required'
         ]);
 
         /*
@@ -68,7 +69,8 @@ class DoctorsController extends Controller
             'city' => request('city'),
             'governorate' => request('governorate'),
             'specialty' => request('specialty'),
-            'doctor_image' => $image
+            'doctor_image' => $image,
+            'availability' => request("availability"),
         ]);
 
         Auth::login($doctor);

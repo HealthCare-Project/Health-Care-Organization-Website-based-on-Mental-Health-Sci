@@ -101,6 +101,7 @@
 
         <input type="text" name="specialty" placeholder="Enter Your Specialty" value="{{ old('specialty') }}"
             required>
+        <input type="text" name="availability" placeholder="Example: 2-5 PM" required>
         @error('specialty')
             <small class="form-text text-danger">{{ $message }}</small>
         @enderror

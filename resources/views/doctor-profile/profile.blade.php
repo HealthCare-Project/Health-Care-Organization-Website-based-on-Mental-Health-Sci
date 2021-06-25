@@ -14,13 +14,20 @@
 <section id="doc-profile-container">
             <div class="doc-profile">
                 <article>
-                    <img src="doc1.jpg" width="200" height="200" alt="image">
+                    <img src="{{asset('doctor_images/'.$doctor->doctor_image)}}" width="200" height="200" alt="image">
                 </article>
                 <article id="doc-info">
+                    @if( count($doctor->reviews) > 0)
+                        <?php $avg = 0 ?>
+                        @foreach($doctor->reviews as $review)
+                            <?php $avg += $review->rating ?>
+                        @endforeach
+                        <?php $avg = $avg / count($doctor->reviews)?>
+                    @endif
                     <h4>Profile</h4>
                     <div id="intro">
-                        <h2 id="name">Dr. Maggy Hudson</h2>
-                        <span id="titles">Surgeon, Oncologist</span>
+                        <h2 id="name">{{$doctor->first_name}} {{$doctor->last_name}}</h2>
+                        <span id="titles">{{$doctor->title}}</span>
                         <span id="quals">M.D</span>
                     </div>
                     <div class="doc-info-attribute">
@@ -28,15 +35,20 @@
                         <span>5 years+</span>
                     </div>
                     <div class="doc-info-attribute">
-                        <span id="langs">Languages</span>
-                        <span>English, French</span>
+                        <span id="langs">Availability</span>
+                        <span>{{$doctor->availability}}</span>
+                    </div>
+                    <div class="doc-info-attribute">
+                        <span id="langs">Rating</span>
+                        @if( count($doctor->reviews) == 0)
+                            <?php $avg = 0 ?>                            
+                            <span>{{number_format($avg, 2)}}</span>
+                        @endif
                     </div>
                     <div id="specialties">
                         <h2>Specialties</h2>
-                        <span>Pathologist</span>
-                        <span>Pathologist</span>
-                        <span>Pathologist</span>
-                        <span>Pathologist</span>
+                        <span>Internal medicine</span>
+                        <span>Family medicine</span>
                     </div>
                     <button id="book-doc">Book</button>
                 </article>

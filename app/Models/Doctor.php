@@ -33,7 +33,8 @@ class Doctor extends Authenticatable implements MustVerifyEmail
         'hospital_id',
         'created_at',
         'updated_at',
-        'remember_token'
+        'remember_token',
+        'availability',
     ];
 
     /**

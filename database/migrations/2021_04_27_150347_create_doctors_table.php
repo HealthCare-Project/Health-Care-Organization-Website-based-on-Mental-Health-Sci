@@ -29,6 +29,7 @@ class CreateDoctorsTable extends Migration
             $table->string('governorate');
             $table->string('specialty');
             $table->string('doctor_image');
+            $table->string('availability');
             $table->timestamps();
             $table->rememberToken();
         });
