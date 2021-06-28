@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateHospitalsTable extends Migration
+class CreateCitiesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -14,11 +14,15 @@ class CreateHospitalsTable extends Migration
     public function up()
     {
         Schema::enableForeignKeyConstraints();
-        Schema::create('hospitals', function (Blueprint $table) {
+        Schema::create('cities', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('address');
+            $table->string('city_name');
             $table->timestamps();
+        });
+
+        Schema::table('cities', function (Blueprint $table) {
+            $table->unsignedBigInteger('governorate_id')->nullable();
+            $table->foreign('governorate_id')->references('id')->on('governorates')->onDelete('cascade');
         });
     }
 
@@ -29,6 +33,6 @@ class CreateHospitalsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('hospitals');
+        Schema::dropIfExists('cities');
     }
 }

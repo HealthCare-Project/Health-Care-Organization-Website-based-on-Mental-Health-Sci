@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Doctor;
 
 class LayoutsController extends Controller
 {
@@ -11,9 +12,14 @@ class LayoutsController extends Controller
         return view('pages.index');
     }
 
+    //timetable
     public function timeTable(){
-        return view('pages.timetable');
+
+        $doctors = Doctor::all();
+        
+        return view('layouts.timetable', ['doctors' => $doctors]);
     }
+    
 
     public function service(){
         return view('pages.service');

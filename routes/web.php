@@ -197,7 +197,6 @@ Route::group(['prefix'=>'patient'], function() {
     [SessionsController::class, 'PasswordReset'])->name("new-password");
 
     //pathological history
-#   Route::get('pathological-history', [PathologicalHistoryController::class, 'create']);
     Route::get('{id}/pathological-history/create', [PathologicalHistoryController::class, 'create']);
     Route::post('{id}/pathological-history/create', [PathologicalHistoryController::class, 'store'])->name('pathhistory.store');
     Route::get('pathological-history/show/{id}', [PathologicalHistoryController::class,'show']);
@@ -210,3 +209,11 @@ Route::post('complaints/create',[ComplaintController::class,'store'])->name('com
 Route::get('complaints/{id}', [ComplaintController::class,'show'])->name("show.complaint");
 Route::post('complaints/{id}', [ComplaintsCommentsController::class,'store'])->name("complaint.comment");
 
+
+//filter
+Route::get('/search', [AppointmentController::class, 'index']);
+Route::get('/getCity', [AppointmentController::class, 'getCity'])->name('getCity');
+Route::get('/getName', [AppointmentController::class, 'getName'])->name('getName');
+Route::get('/getAddress', [AppointmentController::class, 'getAddress'])->name('getAddress');
+Route::get('/getSpeciality', [AppointmentController::class, 'getSpeciality'])->name('getSpeciality');
+Route::get('/getDoctors', [AppointmentController::class, 'getDoctors'])->name('getDoctors');

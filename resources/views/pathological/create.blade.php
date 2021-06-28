@@ -45,13 +45,13 @@
             @enderror
 
             <label for="height">Height</label><br />
-            <input type="text" name="height" placeholder="height" value="{{ old('height') }}">Cm<br />
+            <input type="text" name="height" placeholder="height" value="{{ old('height') }}"> Cm<br />
             @error('height')
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
 
             <label for="weight">Weight</label><br />
-            <input type="text" name="weight" placeholder="weight" value="{{ old('weight') }}">Kg<br />
+            <input type="text" name="weight" placeholder="weight" value="{{ old('weight') }}"> Kg<br />
             @error('weight')
                 <small class="form-text text-danger">{{ $message }}</small>
             @enderror
@@ -91,10 +91,10 @@
         <fieldset>
             <legend>Recent measurements</legend>
             <label for="Lsugar_test">Last sugar test</label>
-            <input type="text" id="Lsugar_test" name="Lsugar_test" size="6">mg/dl <br />
+            <input type="text" id="Lsugar_test" name="Lsugar_test" size="6"> mg/dl <br />
             <label for="Lblood_test">Last pressure measurement</label> <br />
-            SYS <input type="text" name="blood_pressure_sys">mm Hg<br>
-            DIA <input type="text" name="blood_pressure_dyas">mm Hg
+            SYS <input type="text" name="blood_pressure_sys"> mm Hg<br>
+            DIA <input type="text" name="blood_pressure_dyas"> mm Hg
         </fieldset>
 
         <fieldset>
@@ -112,7 +112,9 @@
             <textarea name="surgical_history" cols="50" rows="4"></textarea>
         </fieldset>
 
-        <button type="submit" class="btn btn-primary">Send Your Data</button>
+        <fieldset>
+            <input type="submit" value="Send Your Data">
+        </fieldset>
     </form>
     <!-- ***** Fill Patient Information Area End***** -->
 
