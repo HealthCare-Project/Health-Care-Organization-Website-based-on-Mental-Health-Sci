@@ -125,26 +125,27 @@ Route::get('doctorarticles/{id}',[DoctorArticleController::class,'view']);
 Route::get('/application', [LayoutsController::class, 'application']);
 //
 
-Route::get('postsinsert','App\Http\Controllers\PostInsertController@insertform');
-Route::post('/create','App\Http\Controllers\PostInsertController@insert');
+
+Route::get('postsinsert', [PostInsertController::class, 'insertform']);
+Route::post('/create1', [PostInsertController::class, 'insert']);
+
+//
+Route::get('famouscasesinsert', [FamousCaseInsertController::class, 'insertform']);
+Route::post('/create2', [FamousCaseInsertController::class, 'insert']);
+
+//
+Route::get('newsarticlesinsert', [NewsArticleInsertController::class, 'insertform']);
+Route::post('/create3', [NewsArticleInsertController::class, 'insert']);
+
+//
+Route::get('relativesarticlesinsert', [RelativesArticleInsertController::class, 'insertform']);
+Route::post('/create4', [RelativesArticleInsertController::class, 'insert']);
 
 
 //
+Route::get('doctorarticlesinsert', [DoctorArticleInsertController::class, 'insertform']);
+Route::post('/create5', [DoctorArticleInsertController::class, 'insert']);
 
-Route::get('famouscasesinsert','App\Http\Controllers\FamousCaseInsertController@insertform');
-Route::post('/create','App\Http\Controllers\FamousCaseInsertController@insert');
-//
-
-Route::get('newsarticlesinsert','App\Http\Controllers\NewsArticleInsertController@insertform');
-Route::post('/create','App\Http\Controllers\NewsArticleInsertController@insert');
-//
-
-Route::get('relativesarticlesinsert','App\Http\Controllers\RelativesArticleInsertController@insertform');
-Route::post('/create','App\Http\Controllers\RelativesArticleInsertController@insert');
-//
-
-Route::get('doctorarticlesinsert','App\Http\Controllers\DoctorArticleInsertController@insertform');
-Route::post('/create','App\Http\Controllers\DoctorArticleInsertController@insert');
 //
 Route::group(['prefix'=>'doctor'], function() {
 

@@ -11,7 +11,7 @@ class RelativesArticleController extends Controller
 {
     public function index()
     {
-        $relativesarticles = RelativesArticle::all();
+        $relativesarticles = RelativesArticle::orderBy('id','desc')->get();
         return view('relativesarticles.index')->with(['relativesarticles'=>$relativesarticles]);
     }
     public function view($id)

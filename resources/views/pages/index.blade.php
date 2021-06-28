@@ -14,16 +14,15 @@
                             <!-- Welcome Text -->
                             <div class="welcome-text text-center">
                                 <h2 data-animation="fadeInUp" data-delay="100ms">We Believe Everyone Should Have Easy Access
-                                    To Great Dental Care</h2>
-                                <p data-animation="fadeInUp" data-delay="300ms">As a leading industry innovator, Dento is
-                                    opening up exciting new opportunities for dental professionals, investors, employees &
-                                    suppliers. Contact us to find out what we have to
-                                    offer you.</p>
-                                <div class="welcome-btn-group">
-                                    <a href="#" class="btn dento-btn mx-2" data-animation="fadeInUp" data-delay="500ms">Get
-                                        Started</a>
-                                    <a href="#" class="btn dento-btn mx-2 active" data-animation="fadeInUp"
-                                        data-delay="700ms">Contact Us</a>
+                                    To Great Health Care</h2>
+                                <p data-animation="fadeInUp" data-delay="300ms">Our Organization providing Trusted medical and surgical treatment and nursing care for sick or injured people
+                            and we focus on The Mental health Of The Patient to Get The Full Physical and Psychological
+                            Treatment</p>
+                            <div class="welcome-btn-group">
+                                    <a href="{{ route('patient-registeration-page') }}" class="btn dento-btn mx-2" data-animation="fadeInDown"
+                                        data-delay="500ms">Join Us</a>
+                                    <a href="{{route('session.login')}}"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
+                                        data-delay="700ms">Sign In</a>
                                 </div>
                             </div>
                         </div>
@@ -40,16 +39,15 @@
                             <!-- Welcome Text -->
                             <div class="welcome-text text-center">
                                 <h2 data-animation="fadeInDown" data-delay="100ms">We Believe Everyone Should Have Easy
-                                    Access To Great Dental Care</h2>
-                                <p data-animation="fadeInDown" data-delay="300ms">As a leading industry innovator, Dento is
-                                    opening up exciting new opportunities for dental professionals, investors, employees &
-                                    suppliers. Contact us to find out what we have to
-                                    offer you.</p>
+                                    Access To Great Health Care</h2>
+                                <p data-animation="fadeInDown" data-delay="300ms">Our Organization providing Trusted medical and surgical treatment and nursing care for sick or injured people
+                            and we focus on The Mental health Of The Patient to Get The Full Physical and Psychological
+                            Treatment </p>
                                 <div class="welcome-btn-group">
-                                    <a href="#" class="btn dento-btn mx-2" data-animation="fadeInDown"
-                                        data-delay="500ms">Get Started</a>
-                                    <a href="#" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
-                                        data-delay="700ms">Contact Us</a>
+                                    <a href="{{ route('patient-registeration-page') }}" class="btn dento-btn mx-2" data-animation="fadeInDown"
+                                        data-delay="500ms">Join Us</a>
+                                    <a href="{{route('session.login')}}"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
+                                        data-delay="700ms">Sign In</a>
                                 </div>
                             </div>
                         </div>
@@ -166,250 +164,26 @@
     <!-- Dento Service Area Start -->
     <section class="dento-service-area section-padding-100-0 bg-img bg-gradient-overlay jarallax clearfix"
         style="background-image: url('img/bg-img/39.jpg');">
-        <div class="container">
-            <div class="row align-items-center">
-                <!-- Service Content -->
-                <div class="col-12 col-lg-6">
-                    <div class="service-content mb-30">
-                        <!-- Section Heading -->
-                        <div class="section-heading white">
-                            <h2>Our Services</h2>
-                            <div class="line"></div>
-                        </div>
-
-                        <div class="row">
-                            <!-- Single Service -->
-                            <div class="col-6 col-md-4">
-                                <div class="single-service mb-70">
-                                    <img src="./img/core-img/s1.png" alt="">
-                                    <h6>Teeth Whitening</h6>
-                                </div>
-                            </div>
-
-                            <!-- Single Service -->
-                            <div class="col-6 col-md-4">
-                                <div class="single-service mb-70">
-                                    <img src="./img/core-img/s2.png" alt="">
-                                    <h6>Missing Teeth</h6>
-                                </div>
-                            </div>
-
-                            <!-- Single Service -->
-                            <div class="col-6 col-md-4">
-                                <div class="single-service mb-70">
-                                    <img src="./img/core-img/s3.png" alt="">
-                                    <h6>Teeth Whitening</h6>
-                                </div>
-                            </div>
-
-                            <!-- Single Service -->
-                            <div class="col-6 col-md-4">
-                                <div class="single-service mb-70">
-                                    <img src="./img/core-img/s4.png" alt="">
-                                    <h6>Cosmetic Dentistry</h6>
-                                </div>
-                            </div>
-
-                            <!-- Single Service -->
-                            <div class="col-6 col-md-4">
-                                <div class="single-service mb-70">
-                                    <img src="./img/core-img/s5.png" alt="">
-                                    <h6>Examination</h6>
-                                </div>
-                            </div>
-
-                            <!-- Single Service -->
-                            <div class="col-6 col-md-4">
-                                <div class="single-service mb-70">
-                                    <img src="./img/core-img/s1.png" alt="">
-                                    <h6>Teeth Pain</h6>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+      
 
                 <!-- Video Area -->
-                <div class="col-12 col-lg-6">
                     <div class="dento-video-area mb-100">
                         <img src="./img/bg-img/38.jpg" alt="">
                         <!-- Play Button -->
-                        <a href="./vid/1.mp4" class="video-play-button"><i class="fa fa-play" aria-hidden="true"></i></a>
+                        <a href="/videos/healthcare.mp4" class="video-play-button"><i class="fa fa-play" aria-hidden="true"></i></a>
                     </div>
                 </div>
-            </div>
+            
         </div>
     </section>
     <!-- Dento Service Area End -->
 
-    <!-- Dento Pricing Table Area Start -->
-    <section class="dento-pricing-table-area section-padding-100">
-        <div class="container">
-            <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center">
-                        <h2>TimeTable</h2>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <div class="col-12">
-                    <div class="dento-price-table table-responsive">
-                        <table class="table table-borderless mb-0">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Service Names</th>
-                                    <th scope="col">Days</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">ُEmergency</th>
-                                    <td>The 7 days</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">Neurology</th>
-                                    <td>Monday</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">Cardiovascular </th>
-                                    <td> The 7 days</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">Respiratory </th>
-                                    <td>Tuesday</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">Skin</th>
-                                    <td>Sunday,Monday,Tuesday</td>
-
-                                </tr>
-
-                                <tr>
-                                    <th scope="row">Orthopedic </th>
-                                    <td>sunday,Wednessday</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Oral and maxillofacial</th>
-                                    <td>Monday</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">Oral and maxillofacial</th>
-                                    <td>Saturday</td>
-
-                                </tr>
-                                <tr>
-                                    <th scope="row">Dentistry</th>
-                                    <td>Friday</td>
-
-                                </tr>
-
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
-
-                <div class="col-12">
-                    <div class="more-btn text-center mt-50">
-                        <a href="timetable.html" class="btn dento-btn">Read More <i
-                                class="fa fa-angle-double-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+          
     <!-- Dento Pricing Table Area End -->
 
     <!-- Book An Oppointment Area Start -->
-    <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix"
-        style="background-image: url('img/bg-img/12.jpg');">
-        <div class="container">
-            <div class="row">
-                <!-- Section Heading -->
-                <div class="col-12">
-                    <div class="section-heading text-center white">
-                        <h2>Book An Apointment</h2>
-                        <div class="line"></div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="row">
-                <div class="col-12">
-                    <!-- Appointment Form -->
-                    <div class="appointment-form">
-                        <form action="#" method="post">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group mb-30">
-                                        <input type="text" name="your-name" class="form-control" placeholder="Your Name"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-30">
-                                        <input type="text" name="your-phone" class="form-control" placeholder="Your Phone"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-30">
-                                        <input type="email" name="your-email" class="form-control" placeholder="Your Email"
-                                            required>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-30">
-                                        <input type="text" name="your-address" class="form-control"
-                                            placeholder="Your Address">
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-30">
-                                        <select name="your-scheldule" class="form-control">
-                                            <option value="Choose Your Scheldule">Choose Your Scheldule</option>
-                                            <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                                            <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                                            <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                                            <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="form-group mb-30">
-                                        <select name="your-time" class="form-control">
-                                            <option value="Choose Your Time">Choose Your Scheldule</option>
-                                            <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                                            <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                                            <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                                            <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="col-12">
-                                    <div class="form-group mb-30">
-                                        <textarea name="your-message" class="form-control"
-                                            placeholder="Your Message"></textarea>
-                                    </div>
-                                </div>
-                                <div class="col-12 text-center">
-                                    <button type="submit" class="btn dento-btn">Booking Now</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
     <!-- Book An Oppointment Area End -->
 
     <!-- ***** Dento Dentist Area Start ***** -->
@@ -419,7 +193,7 @@
                 <!-- Section Heading -->
                 <div class="col-12">
                     <div class="section-heading text-center">
-                        <h2>Our Dentist</h2>
+                        <h2>Our Doctors</h2>
                         <div class="line"></div>
                     </div>
                 </div>
@@ -532,61 +306,10 @@
                         </div>
 
                         <!-- Single Testimonials Slide -->
-                        <div class="single-testimonial-slide d-flex align-items-center">
-                            <!-- Thumbnail -->
-                            <div class="testimonial-thumb">
-                                <img src="./img/bg-img/8.jpg" alt="">
-                            </div>
-                            <!-- Content -->
-                            <div class="testimonial-content">
-                                <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent
-                                    the working day beforehand. I also had a call confirming appointment. I have been a
-                                    patient ever since. My dentist is very reassuring and
-                                    very helpful. Excellent treatment and advice.”</h5>
-                                <h6>Arron Ramsey</h6>
-                                <p>Dental Patient</p>
-                            </div>
-                        </div>
-                        <!-- Testimonials Slides -->
-                        <div class="testimonials-slides owl-carousel">
-                            <!-- Single Testimonials Slide -->
-                            <div class="single-testimonial-slide d-flex align-items-center">
-                                <!-- Thumbnail -->
-                                <div class="testimonial-thumb">
-                                    <img src="./img/bg-img/8.jpg" alt="">
-                                </div>
-                                <!-- Content -->
-                                <div class="testimonial-content">
-                                    <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is
-                                        sent the working day beforehand. I also had a call confirming appointment. I have
-                                        been a patient ever since. My dentist is very reassuring and
-                                        very helpful. Excellent treatment and advice.”</h5>
-                                    <h6>Arron Ramsey</h6>
-                                    <p>Dental Patient</p>
-                                </div>
-                            </div>
+
+
                             <!-- Testimonials Slides -->
-                            <div class="testimonials-slides owl-carousel">
-                                <!-- Single Testimonials Slide -->
-                                <div class="single-testimonial-slide d-flex align-items-center">
-                                    <!-- Thumbnail -->
-                                    <div class="testimonial-thumb">
-                                        <img src="./img/bg-img/8.jpg" alt="">
-                                    </div>
-                                    <!-- Content -->
-                                    <div class="testimonial-content">
-                                        <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS
-                                            is sent the working day beforehand. I also had a call confirming appointment. I
-                                            have been a patient ever since. My dentist is very reassuring and
-                                            very helpful. Excellent treatment and advice.”</h5>
-                                        <h6>Arron Ramsey</h6>
-                                        <p>Dental Patient</p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
     </section>
     <!-- ***** Testimonials Area End ***** -->
 

@@ -11,7 +11,7 @@ class FamousCaseController extends Controller
 {
     public function index()
     {
-        $famouscases = FamousCase::all();
+        $famouscases = FamousCase::orderBy('id','desc')->get();
         return view('famouscases.index')->with(['famouscases'=>$famouscases]);
     }
     public function view($id)

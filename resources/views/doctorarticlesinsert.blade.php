@@ -26,7 +26,7 @@
 
 <div  class="container">
   
-  <form action = "/create" method = "post" class="box3"  action="/action_page.php">
+  <form action = "/create5" method = "post" class="box3"  action="/action_page.php">
 
   <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
 

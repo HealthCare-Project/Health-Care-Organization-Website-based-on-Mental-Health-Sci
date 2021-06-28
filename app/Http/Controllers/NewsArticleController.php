@@ -11,7 +11,7 @@ class NewsArticleController extends Controller
 {
     public function index()
     {
-        $newsarticles = NewsArticle::all();
+        $newsarticles = NewsArticle::orderBy('id','desc')->get();
         return view('newsarticles.index')->with(['newsarticles'=>$newsarticles]);
     }
     public function view($id)
