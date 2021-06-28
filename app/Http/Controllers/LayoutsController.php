@@ -17,7 +17,7 @@ class LayoutsController extends Controller
 
         $doctors = Doctor::all();
         
-        return view('layouts.timetable', ['doctors' => $doctors]);
+        return view('pages.timetable', ['doctors' => $doctors]);
     }
     
 
