@@ -35,29 +35,29 @@
         <input type="password" name="password_confirmation" placeholder="Confirm Password"
             value="{{ old('password_confirmation') }}" required>
 
-        <input type="number" name="age" placeholder="Age" value="{{ old('age') }}" required>
+        <input type="number" name="age" placeholder="Your Age" value="{{ old('age') }}" required>
         @error('age')
             <small class="form-text text-danger">{{ $message }}</small>
         @enderror
 
         <select class="gender" name="gender">
-            <option selected>Select Gender</option>
+            <option disabled selected> Select your Gender </option>
             <option value="Male" @if (old('gender') == 'Male') {{ 'selected' }} @endif>Male</option>
             <option value="Female" @if (old('gender') == 'Female') {{ 'selected' }} @endif>Female</option>
         </select>
 
-        <input type="text" name="phone" placeholder="Phone" value="{{ old('phone') }}" required>
+        <input type="text" name="phone" placeholder="Phone Number" value="{{ old('phone') }}" required>
         @error('phone')
             <small class="form-text text-danger">{{ $message }}</small>
         @enderror
 
-        <input type="text" name="address" placeholder="Address" value="{{ old('address') }}" required>
+        <input type="text" name="address" placeholder="Your Address" value="{{ old('address') }}" required>
         @error('address')
             <small class="form-text text-danger">{{ $message }}</small>
         @enderror
 
         <select class="governorate" name="governorate" id="main_menu" onchange="populate(this.id, 'sub_menu')">
-            <option value="ch" disabled selected>Choose a governorate...</option>
+            <option value="ch" disabled selected>Select a Governorate</option>
             <option value="Alexandria" @if (old('governorate') == 'Alexandria') {{ 'selected' }} @endif>Alexandria</option>
             <option value="Aswan" @if (old('governorate') == 'Aswan') {{ 'selected' }} @endif>Aswan</option>
             <option value="Asyut" @if (old('governorate') == 'Asyut') {{ 'selected' }} @endif>Asyut</option>
@@ -65,34 +65,24 @@
             <option value="Beni Suef" @if (old('governorate') == 'Beni Suef') {{ 'selected' }} @endif>Beni Suef</option>
             <option value="Cairo" @if (old('governorate') == 'Cairo') {{ 'selected' }} @endif>Cairo</option>
             <option value="Dakahlia" @if (old('governorate') == 'Dakahlia') {{ 'selected' }} @endif>Dakahlia</option>
-            <option value="Damietta" @if (old('governorate') == 'Damietta') {{ 'selected' }} @endif>Damietta</option>
             <option value="Faiyum" @if (old('governorate') == 'Faiyum') {{ 'selected' }} @endif>Faiyum</option>
-            <option value="Gharbia" @if (old('governorate') == 'Gharbia') {{ 'selected' }} @endif>Gharbia</option>
             <option value="Giza" @if (old('governorate') == 'Giza') {{ 'selected' }} @endif>Giza</option>
             <option value="Ismailia" @if (old('governorate') == 'Ismailia') {{ 'selected' }} @endif>Ismailia</option>
-            <option value="Kafr El Sheikh" @if (old('governorate') == 'Kafr El Sheikh') {{ 'selected' }} @endif>Kafr El Sheikh</option>
-            <option value="Luxor" @if (old('governorate') == 'Luxor') {{ 'selected' }} @endif>Luxor</option>
-            <option value="Matruh" @if (old('governorate') == 'Matruh') {{ 'selected' }} @endif>Matruh</option>
+            <option value="Marsa Matruh" @if (old('governorate') == 'Marsa Matruh') {{ 'selected' }} @endif>Marsa Matruh</option>
             <option value="Minya" @if (old('governorate') == 'Minya') {{ 'selected' }} @endif>Minya</option>
             <option value="Monufia" @if (old('governorate') == 'Monufia') {{ 'selected' }} @endif>Monufia</option>
-            <option value="New Valley" @if (old('governorate') == 'New Valley') {{ 'selected' }} @endif>New Valley</option>
-            <option value="North Sinai" @if (old('governorate') == 'North Sinai') {{ 'selected' }} @endif>North Sinai</option>
-            <option value="Port Said" @if (old('governorate') == 'Port Said') {{ 'selected' }} @endif>Port Said</option>
-            <option value="Qalyubia" @if (old('governorate') == 'Qalyubia') {{ 'selected' }} @endif>Qalyubia</option>
             <option value="Qena" @if (old('governorate') == 'Qena') {{ 'selected' }} @endif>Qena</option>
             <option value="Red Sea" @if (old('governorate') == 'Red Sea') {{ 'selected' }} @endif>Red Sea</option>
-            <option value="Sharqia" @if (old('governorate') == 'Sharqia') {{ 'selected' }} @endif>Sharqia</option>
             <option value="Sohag" @if (old('governorate') == 'Sohag') {{ 'selected' }} @endif>Sohag</option>
             <option value="South Sinai" @if (old('governorate') == 'South Sinai') {{ 'selected' }} @endif>South Sinai</option>
-            <option value="Suez" @if (old('governorate') == 'Suez') {{ 'selected' }} @endif> Suez</option>
         </select>
 
         <select class="city" name="city" id="sub_menu">
-            <option selected> City </option>
+            <option selected> Select a City </option>
         </select>
 
         <select class="specialty" name="specialty" placeholder="Enter Your Specialty" value="{{ old('specialty') }}">
-            <option disabled selected>Enter Your Specialty...</option>
+            <option disabled selected>Enter Your Specialty</option>
             <option value="Internal Medicine" @if (old('specialty') == 'Internal Medicine') {{ 'selected' }} @endif> Internal Medicine</option>
             <option value="Pediatric" @if (old('specialty') == 'Pediatric') {{ 'selected' }} @endif> Pediatric</option>
             <option value="Rheumatology" @if (old('specialty') == 'Rheumatology') {{ 'selected' }} @endif> Rheumatology</option>
@@ -106,6 +96,11 @@
             <option value="Surgery" @if (old('specialty') == 'Surgery') {{ 'selected' }} @endif> Surgery</option>
             <option value="Dentistry" @if (old('specialty') == 'Dentistry') {{ 'selected' }} @endif> Dentistry</option>
         </select>
+
+        <input type = "text" name = "hospital" placeholder = "Hospital Name" value = "{{ old('hospital') }}" required>
+        @error('hospital')
+            <small class="form-text text-danger">{{ $message }}</small>
+        @enderror
 
         <select class="work_day" name="work_day">
             <option disabled selected> Select Your Work Day</option>
@@ -178,9 +173,9 @@
             {
                 var optionArray = ['Damanhour|Damanhour', 'Kafr El Dawwar|Kafr El Dawwar', 'Mahmoudiyah|Mahmoudiyah', 'Abu El Matamir|Abu El Matamir', 'Natrn Valley|Natrn Valley', 'Hosh Essa|Hosh Essa'];
             }
-            else if(s1.value == 'Matruh')
+            else if(s1.value == 'Marsa Matruh')
             {
-                var optionArray = ['Mersa Matruh City|Mersa Matruh City', 'El Dabaa|El Dabaa', 'El Alamein|El Alamein', 'North Coast|North Coast', 'Siwa Oasis|Siwa Oasis'];
+                var optionArray = ['Matruh City|Matruh City', 'El Dabaa|El Dabaa', 'El Alamein|El Alamein', 'North Coast|North Coast', 'Siwa Oasis|Siwa Oasis'];
             }
             else if(s1.value == 'Asyut')
             {
@@ -214,7 +209,7 @@
             {
                 var optionArray = ['Qena Center|Qena Center', 'New Qena City|New Qena City', 'Luxor City|Luxor City', 'Dishna|Dishna', 'Nag Hammadi|Nag Hammadi', 'Qus|Qus'];
             }
-            else if(s1.value == 'Bani Suef')
+            else if(s1.value == 'Beni Suef')
             {
                 var optionArray = ['Beni Suef City|Beni Suef City', 'New Beni Suef City|New Beni Suef City', 'El Wasta|El Wasta', 'Biba|Biba', 'Nasser City|Nasser City', 'Ihnasiya|Ihnasiya', 'Sumusta El Waqf|Sumusta El Waqf', 'El Fashn|El Fashn'];
             }
