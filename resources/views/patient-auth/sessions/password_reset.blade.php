@@ -6,5 +6,5 @@
     <p class="message"> Enter a new password for your account. </p>
     <input type="password" name="password" placeholder="New Password" required>
     <input type="password" name="password_confirmation" placeholder="Confirm New Password" required>
-    <button type="submit" value="Submit">Submit</button>
+    <input type="submit" name='submit' value="Submit">
 </form>

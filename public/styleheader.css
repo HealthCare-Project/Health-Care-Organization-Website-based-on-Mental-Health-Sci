@@ -88,14 +88,16 @@ nav ul ul ul li{
   top: -70px;
   left: 220px;
 }
-
-.showheader,.show1header,.iconheader,input[type = "checkbox"]
-{
+.showheader,.show1header,.iconheader,input[type = "checkbox"]{
   display: none;
 }
-.fa-caret-right{
+.encyclo .fa-caret-right{
   font-size: 15px;
   margin-left: 65px;
+}
+.makearticle .fa-caret-right{
+  font-size: 15px;
+  margin-left: 48px;
 }
 @media all and (max-width: 968px) {
   nav ul{
@@ -106,7 +108,7 @@ nav ul ul ul li{
     padding-left: 64px;
     width: 100%;
   }
-  .show + a,.show1 + a, ul{ 
+  .showheader + a,.show1header + a, ul{ 
     display: none;
   }
   nav ul li,nav ul ul li{
@@ -116,28 +118,30 @@ nav ul ul ul li{
   nav ul li a:hover{
     box-shadow: none;
   }
-  .show{
+  .showheader{
     display: block;
     color: black;
     font-size: 18px;
     font-weight: 500;
     padding: 0 20px;
+    margin: 0;
     line-height: 70px;
     cursor: pointer;
   }
-  .show1{
+  .show1header{
     display: block;
     color: black;
     font-size: 16px;
     font-weight: 500;
     padding: 0 40px;
+    margin: 0;
     line-height: 50px;
     cursor: pointer;
   }
-  .show:hover,.show1:hover{
+  .showheader:hover,.show1header:hover{
     color: #4aaaeb;
   }
-  .icon{
+  .iconheader{
     display: block;
     color: #3498db;
     position: absolute;
