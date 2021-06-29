@@ -2,21 +2,22 @@ body {
     margin: 0;
     padding: 0;
     font-family: sans-serif;
-    background-image: url("/img/doctor_img/image10.png");
+    background-image: url("/img/doctor_register_img/image10.png");
     background-size: 100%;
 }
 
 .box2 {
-    width: 300px;
-    padding: 25px 50px;
+    width: 330px;
+    padding: 15px 45px;
     position: absolute;
     top: 50%;
     left: 50%;
     ;
     transform: translate(-50%, -50%);
-    background-image: url("/img/doctor_img/image12.png");
-    background-size: 120%;
+    background-image: url("/img/doctor_register_img/image12.png");
+    background-size: 130%;
     text-align: center;
+    border-radius: 8px;
 }
 
 .box2 h2 {
@@ -24,14 +25,14 @@ body {
     text-transform: uppercase;
     font-weight: 550;
     font-size: 27px;
-    margin: 20px auto;
+    margin: 18px auto;
 }
 
 .box2 input[type="text"],
 .box2 input[type="number"],
 .box2 input[type="email"],
 .box2 input[type="password"] {
-    margin: 6px auto;
+    margin: 2px auto;
     border: 2px solid #9c9b9b;
     display: block;
     width: 250px;
@@ -39,22 +40,26 @@ body {
     color: black;
     background-color: #ebe7e7e3;
     text-align: left;
-    padding: 6px 8px;
+    padding: 5px 8px;
     border-radius: 8px;
     font-size: 15px;
 }
 
 .box2 .gender,
-.box2 .governorate {
+.box2 .governorate,
+.box2 .work_time,
+.box2 .work_day,
+.box2 .city,
+.box2 .specialty {
     border: 2px solid #9c9b9b;
-    margin: 6px auto;
+    margin: 2px auto;
     display: block;
     width: 270px;
     outline: none;
     color: black;
     background-color: #ebe7e7e3;
     text-align: left;
-    padding: 6px 4px;
+    padding: 5px 4px;
     border-radius: 8px;
     font-size: 15px;
 }
@@ -68,7 +73,11 @@ body {
 }
 
 .box2 .gender:focus,
-.box2 .governorate:focus {
+.box2 .governorate:focus,
+.box2 .work_time:focus,
+.box2 .work_day:focus,
+.box2 .city:focus,
+.box2 .specialty:focus {
     border: 3px solid #db8624;
     width: 288px;
 }
@@ -91,7 +100,7 @@ label {
     cursor: pointer;
 }
 
-.box2 button[type="submit"] {
+.box2 input[type="submit"] {
     display: block;
     margin: 8px auto;
     text-align: center;
@@ -107,6 +116,6 @@ label {
     cursor: pointer;
 }
 
-.box2 button[type="submit"]:hover {
+.box2 input[type="submit"]:hover {
     background-color: #25b3eb;
 }
