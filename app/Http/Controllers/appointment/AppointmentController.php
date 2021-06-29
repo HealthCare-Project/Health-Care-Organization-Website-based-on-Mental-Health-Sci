@@ -34,7 +34,7 @@ class AppointmentController extends Controller
     public function getCity(Request $request)
     {
 
-            $cities[] = DB::table('cities')
+        $cities[] = DB::table('cities')
             ->where('governorate_id', $request->id)
             ->select('id', 'city_name')
             ->distinct()
@@ -46,7 +46,7 @@ class AppointmentController extends Controller
     //fetch hospital names
     public function getName(Request $request)
     {
-            $Names[] = DB::table('hospitals')
+        $Names[] = DB::table('hospitals')
             ->where('city_id', $request->id)
             ->select('id', 'name')
             ->distinct()
@@ -61,7 +61,7 @@ class AppointmentController extends Controller
     //get doctors speciality
     public function getSpeciality(Request $request)
     {
-            $doctorSpeciality[] = DB::table('doctors')
+        $doctorSpeciality[] = DB::table('doctors')
             ->where('hospital_id', $request->id)
             ->select('id', 'specialty')
             ->distinct()
@@ -70,19 +70,43 @@ class AppointmentController extends Controller
         return response()->json($doctorSpeciality);
     }
 
+    // //get doctors info
+    // public function getDoctors(Request $request)
+    // {
+
+    //     $doctorsInfo[] = DB::table('doctors')
+    //         ->where('id', $request->id)
+    //         ->select('doctor_image', 'first_name', 'last_name', 'phone', 'id')
+    //         ->distinct()
+    //         ->get();
+
+    //     return response()->json($doctorsInfo);
+    // }
+
+
     //get doctors info
     public function getDoctors(Request $request)
     {
 
-        $doctorsInfo[] = DB::table('doctors')
-            ->where('id', $request->id)
-            ->select('doctor_image', 'first_name', 'last_name', 'phone', 'id')
-            ->distinct()
-            ->get();
+        $doctors = Doctor::with('speciality');
+        if ($request->has('city_id')) {
+            if ($request->get('city_id') != null)
+                $doctors = $doctors->where('city_id', $request->get('city_id'));
+        }
 
-        return response()->json($doctorsInfo);
+        if ($request->has('governorate_id')) {
+            if ($request->get('governorate_id') != null)
+                $doctors = $doctors->where('governorate_id', $request->get('governorate_id'));
+        }
+
+
+        if ($request->has('speciality_id')) {
+            if ($request->get('speciality_id') != null)
+                $doctors = $doctors->where('speciality_id', $request->get('speciality_id'));
+        }
+
+        return response()->json($doctors->get());
     }
-
 
     /**
      * Show the form for creating a new resource.

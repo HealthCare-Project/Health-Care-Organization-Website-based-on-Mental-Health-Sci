@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title> Forgot Your Password? </title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/styleforgot.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/doctor_style/forgot_password.css') }}">
 </head>
 
 <body>

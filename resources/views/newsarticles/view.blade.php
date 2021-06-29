@@ -4,7 +4,7 @@
 	<img src="{{ url($newsarticle['feature_image']) }}" />
 	<div>{{ $newsarticle['publish_date'] }}</div>
 
-	<p>{{ $newsarticle['content'] }}</p>
+	<p>{!! $newsarticle['content'] !!}</p>
 
 	<a href="{{ url('newsarticles') }}">back</a>
 </div>

@@ -1,3 +1,5 @@
+@extends('layout.main') @section('content')
+
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +16,10 @@
     <link rel="stylesheet" href="{{asset('poststyles/bootstrap.min.css')}}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('poststyles/boxicon.min.css')}}">
+        <link rel="stylesheet" href="{{asset('poststyles/boxicon.min.css')}}">
+
 </head>
 <body style="background-color:whitesmoke;">
-@extends('layout.main') @section('content')
 
 <!-- ***** Breadcrumb Area Start ***** -->
 <div class="breadcumb--con">

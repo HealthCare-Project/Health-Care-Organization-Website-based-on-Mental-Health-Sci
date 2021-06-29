@@ -26,6 +26,7 @@ use App\Http\Controllers\FamousCaseInsertController;
 use App\Http\Controllers\NewsArticleInsertController;
 use App\Http\Controllers\RelativesArticleInsertController;
 use App\Http\Controllers\DoctorArticleInsertController;
+use App\Http\Controllers\appointment\AppointmentController;
 
 
 
@@ -217,3 +218,6 @@ Route::get('/getName', [AppointmentController::class, 'getName'])->name('getName
 Route::get('/getAddress', [AppointmentController::class, 'getAddress'])->name('getAddress');
 Route::get('/getSpeciality', [AppointmentController::class, 'getSpeciality'])->name('getSpeciality');
 Route::get('/getDoctors', [AppointmentController::class, 'getDoctors'])->name('getDoctors');
+
+
+

@@ -6,6 +6,9 @@ use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
+use \App\Models\City;
+use \App\Models\Speciality;
+use \App\Models\Governorate;
 
 class Doctor extends Authenticatable implements MustVerifyEmail
 {   
@@ -35,6 +38,9 @@ class Doctor extends Authenticatable implements MustVerifyEmail
         'updated_at',
         'remember_token',
         'availability',
+        'city_id',
+        'governorate_id',
+        'speciality_id'
     ];
 
     /**
@@ -42,13 +48,11 @@ class Doctor extends Authenticatable implements MustVerifyEmail
      *
      * @var array
      */
-    protected $hidden = [
-        'id',
+    protected $hidden = [        
         'password',
         'remember_token',
         'created_at',
-        'updated_at',
-        'hospital_id'
+        'updated_at'        
     ];
 
     /**
@@ -69,6 +73,18 @@ class Doctor extends Authenticatable implements MustVerifyEmail
     public function hospitals(){
         return $this->belongsTo(Hospital::class, 'hospital_id');
     }
+
+    public function city(){
+        return $this->belongsTo(City::class, 'city_id');
+    }
+
+    public function speciality(){
+        return $this->belongsTo(Speciality::class, 'speciality_id');
+    }
+    public function governorate(){
+        return $this->belongsTo(Governorate::class, 'governorate_id');
+    }
+
     public function complaintcomments(){
         return $this->hasMany(ComplaintComment::class);
     }
