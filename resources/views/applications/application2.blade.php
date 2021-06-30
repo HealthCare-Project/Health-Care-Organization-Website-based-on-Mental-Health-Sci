@@ -45,7 +45,7 @@
 
         <br />
 
-        <div class="container">
+        <div class="container" style="padding: 20px">
             <!-- Form Card -->
             <div class="card">
                 <div class="card-content">
