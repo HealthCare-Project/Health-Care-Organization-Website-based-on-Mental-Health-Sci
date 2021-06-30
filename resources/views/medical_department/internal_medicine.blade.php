@@ -1,633 +1,296 @@
 @extends('layout.main')
 @section('content')
 
-  <!-- ***** Welcome Area Start ***** -->
-  <section class="welcome-area">
-    <!-- Welcome Slides -->
-    <div class="welcome-slides owl-carousel">
-      <!-- Single Welcome Slide -->
-      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url(img/bg-img/1.jpg);">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-12">
-              <!-- Welcome Text -->
-              <div class="welcome-text text-center">
-                <h2 data-animation="fadeInUp" data-delay="100ms">We Believe Everyone Should Have Easy Access To Great Dental Care</h2>
-                <p data-animation="fadeInUp" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
-                  offer you.</p>
-                <div class="welcome-btn-group">
-                  <a href="#" class="btn dento-btn mx-2" data-animation="fadeInUp" data-delay="500ms">Get Started</a>
-                  <a href="#" class="btn dento-btn mx-2 active" data-animation="fadeInUp" data-delay="700ms">Contact Us</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+<!-- Title section -->
+<style>
+html {
+  scroll-behavior: smooth;
+}
 
-      <!-- Single Welcome Slide -->
-      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url(img/bg-img/2.jpg);">
-        <div class="container h-100">
-          <div class="row h-100 align-items-center">
-            <div class="col-12">
-              <!-- Welcome Text -->
-              <div class="welcome-text text-center">
-                <h2 data-animation="fadeInDown" data-delay="100ms">We Believe Everyone Should Have Easy Access To Great Dental Care</h2>
-                <p data-animation="fadeInDown" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
-                  offer you.</p>
-                <div class="welcome-btn-group">
-                  <a href="#" class="btn dento-btn mx-2" data-animation="fadeInDown" data-delay="500ms">Get Started</a>
-                  <a href="#" class="btn dento-btn mx-2 active" data-animation="fadeInDown" data-delay="700ms">Contact Us</a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ***** Welcome Area End ***** -->
+.about-section{
+  margin-bottom:60px
+}
 
-  <!-- ****** About Us Area Start ******* -->
-  <section class="dento-about-us-area section-padding-100-0">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- About Us Thumbnail -->
-        <div class="col-12 col-md-6">
-          <div class="about-us-thumbnail mb-50">
-            <img src="./img/bg-img/37.jpg" alt="">
-          </div>
-        </div>
-        <!-- About Content -->
-        <div class="col-12 col-md-6">
-          <div class="about-us-content mb-50">
-            <!-- Section Heading -->
-            <div class="section-heading">
-              <h2>We are</h2>
-              <div class="line"></div>
-            </div>
-            <p> institution providing medical and surgical treatment and nursing care for sick or injured people and we focus on The Mental health Of The Patient to Get The Full Physical and Psychological Treatment </p>
+.title-section{
 
-            <!-- Single Skills Area -->
-            <div class="single-skills-area mt-30">
-              <h6> Our Experience</h6>
-              <div id="bar1" class="barfiller">
-                <span class="tip"></span>
-                <span class="fill" data-percentage="80"></span>
-              </div>
-            </div>
+  padding:50px 0px;
 
-            <!-- Single Skills Area -->
-            <div class="single-skills-area mt-30">
-              <h6>Modern Equipment</h6>
-              <div id="bar2" class="barfiller">
-                <span class="tip"></span>
-                <span class="fill" data-percentage="65"></span>
-              </div>
-            </div>
+}
 
-            <!-- Single Skills Area -->
-            <div class="single-skills-area mt-30">
-              <h6>Friendly Staff</h6>
-              <div id="bar3" class="barfiller">
-                <span class="tip"></span>
-                <span class="fill" data-percentage="85"></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ****** About Us Area End ****** -->
+.content-list{
+  text-transform:capitalize;
+}
+
+.content-card{
+  margin-top:20px;
+  cursor: pointer;
+}
+
+.content-card:hover h5 i{
+  color:#3498db
+}
+
+.content-card:hover p a{
+  color:#3498db
+}
+
+.content-card p{
+  font-size:17px;
+  font-weight:500;
+}
+
+#reasons ol li{
+  list-style:auto;
+  font-size:17px;
+  font-weight:500;
+}
+
+.reasons-section{
+  background: whitesmoke;
+  padding: 50px 30px;
+}
+.reasons-section h3{
+  text-align:center
+}
+
+.treadmint-section{
+
+  padding: 50px 30px;
+}
+.treadmint-section h3{
+  text-align:center
+}
+.treadmint-section ol li{
+  list-style:auto;
+  font-size:17px;
+  font-weight:500;
+}
+
+
+.refrence-section .doc-card img{
+  height:150px;
+  width:150px;
+  display:block;border-radius: 50%;
+}
+</style>
+
+
+
+
+<section class="about-section">
+<div class="title-section">
+  <div class="container">
+    <h1 class="text-center ">
+    internal medicine
+    </h1>
+  </div>
+</div>
 
   <div class="container">
-    <div class="dento-border clearfix"></div>
+    <div class="row">
+      <div class="col-6">
+
+      <h3>
+      About
+      </h3>
+
+      <p>
+      There are many systemic diseases that affect the motor performance of the digestive system.
+
+      Gastrointestinal diseases listed below are the most common diseases or the most affecting the motor functioning of the digestive system.
+      </p>
+      <div class="content-list row">
+
+        <div class="content-card col-3 col-md-3">
+        <h5 class="text-center"><a href="#reasons"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
+        <p class="text-center"><a href="#reasons"> Diseases</a></p>
+        </div>
+
+        <div class="content-card col-3 col-md-3">
+        <h5 class="text-center"><a href="#treadmint"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
+        <p class="text-center"><a href="#treadmint">treadmint</a></p>
+        </div>
+
+        <div class="content-card col-3 col-md-3">
+        <h5 class="text-center"><a href="#refrence"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
+        <p class="text-center"><a href="#refrence"> refrence </a></p>
+        </div>
+
+        <div class="content-card col-3 col-md-3">
+        <h5 class="text-center"><a href="#timetable"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
+        <p class="text-center"><a href="#timetable"> timetable </a></p>
+        </div>
+
+     <!--    <ul>
+        <li><a href="#">reasons</a></li>
+        <li><a href="#">treadmint</a></li>
+        <li><a href="#">refrence</a></li>
+        <li><a href="#">timetable</a></li>
+        </ul> -->
+      </div>
+
+      <!-- <button class="btn btn-outline-info"><a href="time table">move to time table</a></button> -->
+      </div>
+
+
+
+      <div class="col-6">
+        <img src="https://static.webteb.net/images/content/tbl_diseases_disease_1269_91533a5ec18-abb6-4e3c-8c64-73b0012beadf.jpg" alt="img">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Start reasons sections -->
+
+<section class="reasons-section">
+
+  <div class="container" id="reasons">
+    <h3>Diseases</h3>
+    <p>
+    <ol>
+      <li>Rheumatic Diseases</li>
+
+      <p>
+      Diffuse Systemic Sclerosis is characterized by the growth of connective tissue and scarring (Cicatrization) in many organs.
+
+        82% of people with this disease suffer from an infection in the digestive system.
+
+        The primary damage is a severe disturbance of esophageal motility, which is represented by a sharp decrease in the functioning of the esophagus and its sphincter, leading to the development of severe gastroesophageal reflux. Later, narrowing and ulcers can appear in the esophagus, and even the appearance of pre-cancerous changes in the esophageal mucosa (Barrett's esophagus). In addition, severe disruption of the small intestine, rectal prolapse, and loss of voluntary control of the anal sphincter may occur.
+      </p>
+
+      <li>malignant tumors</li>
+      <p>
+      The most common disorder caused by metastases in the gastrointestinal tract, which can have its primary source from the lungs, breasts, ovaries or from malignant melanoma, is obstruction of the small intestine.
+
+      There are other phenomena, as well: Paraneoplastic syndrome, which is mainly embodied in intestinal obstruction, constipation and disturbances in the swallowing process (Dysphagia).
+
+      These disorders result from direct damage to the nerve plexus responsible for the sebaceous system by metastases, by the formation of antibodies against neuronal compounds, or as a result of the secretion of hormones that affect intestinal motility.
+      </p>
+      <li>Endocrinic</li>
+      <p>
+      Diabetes: In this disease, it is very common to have damage to the digestive system, with all its components: swallowing problems (dysphagia), damage to the motor performance of the esophagus, gastroparesis / diabetic gastroparesis (Gastroparesis diabeticorum), disturbances in the work of the esophagus Small intestine and colon: abdominal pain, constipation, diarrhea and loss of sphincter control. These disorders occur as a result of injury to the autonomic nervous system (diabetic autonomic neuropathy).
+      Hypothyroidism: It is mainly characterized by the appearance of constipation, rectal prolapse and stool stones.
+      Hyperthyroidism: It is characterized by vomiting, diarrhea, abdominal pain and a sharp drop in weight.
+      Hyperparathyroidism: It is characterized by a high level of calcium in the blood, which causes constipation, nausea and vomiting.
+  </p>
+      <li>Neurological diseases</li>
+      <p>
+      Spinal injuries: Gastrointestinal diseases vary according to the severity of the spinal injury. Injury to the cervical vertebrae (Vertebrae cervicales) causes disturbances in gastric emptying. Patients who have paralysis of the four limbs are more likely to be affected than those who have paralysis of the two legs only. Gastroesophageal reflux disease, constipation and incontinence (involuntary descent of urine or stool / incontinence) - are common among these patients.
+      Extrapyramidal diseases (Parkinson's disease): The main symptoms of these diseases are: problems swallowing (dysphagia), hypersalivation, difficulties in emptying the stomach and constipation caused by disturbances in the movement of the colon or disorders in the intestines. defecation;
+      Multiple sclerosis: Gastrointestinal disorders are very common among patients with multiple sclerosis. The most common disorders are: swallowing problems (dysphagia), constipation and fecal incontinence (fecal incontinence).
+      Degenerative diseases (atrophy) of the muscles / nerves: Diseases of this group result in disturbances in swallowing, disturbances in the functioning of the esophagus, constipation and loss of control of the anal sphincter.
+      Trauma and stroke: Trauma (injury to the brain) may cause intracranial/intracranial hypertension, which is reflected in vomiting. As for the disorders caused by stroke, most of them are in swallowing (oropharyngeal dysphagia), as well as constipation, which is secondary to physical inactivity.
+      </p>
+    </ol>
+    
+    </p>
   </div>
 
-  <!-- Cool Facts Area Start -->
-  <section class="dento-cta-area">
-    <div class="container">
-      <div class="row">
-        <!-- Cool Facts Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-cta text-center mt-50 mb-100">
-            <i class="icon_genius"></i>
-            <h2><span class="counter">20</span></h2>
-            <h5>Years Of Experience</h5>
-          </div>
-        </div>
+</section>
 
-        <!-- Cool Facts Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-cta text-center mt-50 mb-100">
-            <i class="icon_heart_alt"></i>
-            <h2><span class="counter">700</span>+</h2>
-            <h5>Happy Patients</h5>
-          </div>
-        </div>
 
-        <!-- Cool Facts Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-cta text-center mt-50 mb-100">
-            <i class="icon_book_alt"></i>
-            <h2><span class="counter">120</span></h2>
-            <h5>Certificate</h5>
-          </div>
-        </div>
 
-        <!-- Cool Facts Area -->
-        <div class="col-12 col-sm-6 col-lg-3">
-          <div class="single-cta text-center mt-50 mb-100">
-            <i class="icon_id"></i>
-            <h2><span class="counter">40</span>+</h2>
-            <h5>Dentist</h5>
-          </div>
+<section class="treadmint-section">
+
+  <div class="container" id="treadmint">
+    <h3>treadmint</h3>
+    <p>
+    <ol>
+      <li>Echinacea</li>
+
+      <p>
+        It is one of the best-selling medicinal plants in the United States today, and its origin is the Native American culture.
+
+        Its importance lies in the fact that it helps prevent colds and treat wounds, and is also believed to have a beneficial effect on upper respiratory infections, cancer and more.
+      </p>
+
+      <li>dandelion</li>
+
+      <p>
+      Originated in Asia, it is used within herbal medicine to cleanse the liver and digestive system, increase bile secretion, and help lower blood sugar due to its ability to stimulate pancreatic cells.
+      </p>
+
+
+      <li>nettle</li>
+      <p>
+      The herb helps to clean the body, treat infections, intestinal pain, irritable bowel, liver disease, urinary tract infections, and treat kidney and skin problems.
+  </p>
+
+
+      <li>Green tea</li>
+      <p>
+      It contains substances called catechins, which are one of the best sources of natural antioxidants.
+
+Green tea helps break down fats, prevent mutations in cells that can become cancerous, and is known to act as a stimulant and tonic.
+      </p>
+    </ol>
+    
+    </p>
+  </div>
+
+</section>
+
+
+
+
+
+<section class="refrence-section">
+
+  <div class="container" id="refrence">
+    <h3 class="text-center">refrence</h3>
+
+    <div class="row">
+      <div class="col-6 doc-card">
+        <div class="pic">
+          <img class="img-fluid ml-auto mr-auto" src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGRvY3RvcnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="doc">
+          <span class="text-center"> <p>Dr/ Ragab mohsen </p></span>
+        </div>
+        <div class="advice">
+          <p> Dr/ Ragab advice to use ansulin for Diabetics ,
+          Decrease the effects of symptoms of high blood sugar , such as fatigue and frequent need to urinate.
+          Reduce the risk of developing diabetic complications.
+
+          </p>
         </div>
       </div>
+
+
+      <div class="col-6 doc-card">
+      <div class="pic">
+          <img class="img-fluid ml-auto mr-auto" src="https://t4.ftcdn.net/jpg/03/20/52/31/360_F_320523164_tx7Rdd7I2XDTvvKfz2oRuRpKOPE5z0ni.jpg" alt="doc">
+          <span class="text-center"> <p>Dr/ ayman ashraf </p></span>
+        </div>
+        <div class="advice">
+          <p>
+          Dr/ Ayman advice to use degistion for Digestive disorders ,
+          Learn what you can do to prevent symptoms. Learn what you can do to get on top of you Crohn's Disease and reduce symptoms
+          
+          </p>
+        </div>
+      
+      </div>
+
+
     </div>
-  </section>
-  <!-- Cool Facts Area End -->
+  </div>
 
-  <!-- Dento Service Area Start -->
-  <section class="dento-service-area section-padding-100-0 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url('img/bg-img/39.jpg');">
-    <div class="container">
-      <div class="row align-items-center">
-        <!-- Service Content -->
-        <div class="col-12 col-lg-6">
-          <div class="service-content mb-30">
-            <!-- Section Heading -->
-            <div class="section-heading white">
-              <h2>Our Services</h2>
-              <div class="line"></div>
-            </div>
 
-            <div class="row">
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="./img/core-img/s1.png" alt="">
-                  <h6>Teeth Whitening</h6>
-                </div>
-              </div>
 
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="./img/core-img/s2.png" alt="">
-                  <h6>Missing Teeth</h6>
-                </div>
-              </div>
 
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="./img/core-img/s3.png" alt="">
-                  <h6>Teeth Whitening</h6>
-                </div>
-              </div>
+</section>
 
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="./img/core-img/s4.png" alt="">
-                  <h6>Cosmetic Dentistry</h6>
-                </div>
-              </div>
 
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="./img/core-img/s5.png" alt="">
-                  <h6>Examination</h6>
-                </div>
-              </div>
 
-              <!-- Single Service -->
-              <div class="col-6 col-md-4">
-                <div class="single-service mb-70">
-                  <img src="./img/core-img/s1.png" alt="">
-                  <h6>Teeth Pain</h6>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Video Area -->
-        <div class="col-12 col-lg-6">
-          <div class="dento-video-area mb-100">
-            <img src="./img/bg-img/38.jpg" alt="">
-            <!-- Play Button -->
-            <a href="./vid/1.mp4" class="video-play-button"><i class="fa fa-play" aria-hidden="true"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Dento Service Area End -->
 
-  <!-- Dento Pricing Table Area Start -->
-  <section class="dento-pricing-table-area section-padding-100">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center">
-            <h2>TimeTable</h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-12">
-          <div class="dento-price-table table-responsive">
-              <table class="table table-borderless mb-0">
-                <thead>
-                  <tr>
-                    <th scope="col">Service Names</th>
-                    <th scope="col">Days</th>
-                  </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <th scope="row">ُEmergency</th>
-                        <td>The 7 days</td>
-                       
-                      </tr>
-                      <tr>
-                          <th scope="row">Neurology</th>
-                          <td>Monday</td>
-                         
-                        </tr>
-                  <tr>
-                    <th scope="row">Cardiovascular </th>
-                    <td> The 7 days</td>
-                  
-                  </tr>
-                  <tr>
-                    <th scope="row">Respiratory </th>
-                    <td>Tuesday</td>
-                    
-                  </tr>
-                  <tr>
-                    <th scope="row">Skin</th>
-                    <td>Sunday,Monday,Tuesday</td>
-                    
-                  </tr>
-                  
-                  <tr>
-                    <th scope="row">Orthopedic </th>
-                    <td>sunday,Wednessday</td>
-                  </tr>
-                  <tr>
-                    <th scope="row">Oral and maxillofacial</th>
-                    <td>Monday</td>
-                    
-                  </tr>
-                  <tr>
-                      <th scope="row">Oral and maxillofacial</th>
-                      <td>Saturday</td>
-                      
-                    </tr>
-                    <tr>
-                        <th scope="row">Dentistry</th>
-                        <td>Friday</td>
-                        
-                      </tr>
-  
-                </tbody>
-              </table>
-          </div>
-        </div>
 
-        <div class="col-12">
-          <div class="more-btn text-center mt-50">
-            <a href="timetable.html" class="btn dento-btn">Read More <i class="fa fa-angle-double-right"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Dento Pricing Table Area End -->
 
-  <!-- Book An Oppointment Area Start -->
-  <section class="book-an-oppointment-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url('img/bg-img/12.jpg');">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center white">
-            <h2>Book An Apointment</h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <div class="col-12">
-          <!-- Appointment Form -->
-          <div class="appointment-form">
-            <form action="#" method="post">
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-name" class="form-control" placeholder="Your Name" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-phone" class="form-control" placeholder="Your Phone" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="email" name="your-email" class="form-control" placeholder="Your Email" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <input type="text" name="your-address" class="form-control" placeholder="Your Address">
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <select name="your-scheldule" class="form-control">
-                      <option value="Choose Your Scheldule">Choose Your Scheldule</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group mb-30">
-                    <select name="your-time" class="form-control">
-                      <option value="Choose Your Time">Choose Your Scheldule</option>
-                      <option value="9 AM to 10 AM">9 AM to 10 AM</option>
-                      <option value="11 AM to 12 PM">11 AM to 12 PM</option>
-                      <option value="2 PM to 4 PM">2 PM to 4 PM</option>
-                      <option value="8 PM to 10 PM">8 PM to 10 PM</option>
-                    </select>
-                  </div>
-                </div>
-                <div class="col-12">
-                  <div class="form-group mb-30">
-                    <textarea name="your-message" class="form-control" placeholder="Your Message"></textarea>
-                  </div>
-                </div>
-                <div class="col-12 text-center">
-                  <button type="submit" class="btn dento-btn">Booking Now</button>
-                </div>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- Book An Oppointment Area End -->
 
-  <!-- ***** Dento Dentist Area Start ***** -->
-  <section class="dentist-area section-padding-100-0">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center">
-            <h2>Our Dentist</h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
 
-      <div class="row">
-        <!-- Single Dentist Area -->
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="single-dentist-area mb-100">
-            <img src="./img/bg-img/9.png" alt="">
-            <!-- Dentist Content -->
-            <div class="dentist-content">
-              <!-- Social Info -->
-              <div class="dentist-social-info">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-              </div>
-              <!-- Dentist Info -->
-              <div class="dentist-info bg-gradient-overlay">
-                <h5>Michael Barley</h5>
-                <p>Implant Expert</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Single Dentist Area -->
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="single-dentist-area mb-100">
-            <img src="./img/bg-img/10.png" alt="">
-            <!-- Dentist Content -->
-            <div class="dentist-content">
-              <!-- Social Info -->
-              <div class="dentist-social-info">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-              </div>
-              <!-- Dentist Info -->
-              <div class="dentist-info bg-gradient-overlay">
-                <h5>Michael Barley</h5>
-                <p>Implant Expert</p>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- Single Dentist Area -->
-        <div class="col-12 col-sm-6 col-md-4">
-          <div class="single-dentist-area mb-100">
-            <img src="./img/bg-img/11.png" alt="">
-            <!-- Dentist Content -->
-            <div class="dentist-content">
-              <!-- Social Info -->
-              <div class="dentist-social-info">
-                <a href="#"><i class="fa fa-facebook"></i></a>
-                <a href="#"><i class="fa fa-twitter"></i></a>
-                <a href="#"><i class="fa fa-google-plus"></i></a>
-              </div>
-              <!-- Dentist Info -->
-              <div class="dentist-info bg-gradient-overlay">
-                <h5>Michael Barley</h5>
-                <p>Implant Expert</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ***** Dento Dentist Area End ***** -->
 
-  <!-- ***** Testimonials Area Start ***** -->
-  <section class="testimonials-area section-padding-100 bg-img bg-gradient-overlay jarallax clearfix" style="background-image: url('img/bg-img/7.jpg');">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <!-- Testimonials Slides -->
-          <div class="testimonials-slides owl-carousel">
-            <!-- Single Testimonials Slide -->
-            <div class="single-testimonial-slide d-flex align-items-center">
-              <!-- Thumbnail -->
-              <div class="testimonial-thumb">
-                <img src="./img/bg-img/sharawy.png" alt="">
-              </div>
-              <!-- Content -->
-              <div class="testimonial-content">
-                <h5>“Do not forget that God is close to you to the extent that makes you cruel Do not defeat the world does not break you humans..”</h5>
-                <h6> His Eminence Imam Mohamed Metwaly el sharawy</h6>
-                <p> former Egyptian minister of Endowments and Muslim jurist</p>
-              </div>
-            </div>
-
-            <!-- Single Testimonials Slide -->
-            <div class="single-testimonial-slide d-flex align-items-center">
-              <!-- Thumbnail -->
-              <div class="testimonial-thumb">
-                <img src="./img/bg-img/benedictxvi.jpg" alt="">
-              </div>
-              <!-- Content -->
-              <div class="testimonial-content">
-                <h5>“It is not by sidestepping or fleeing from suffering that we are healed, but rather by our capacity for accepting it, maturing through it ..”</h5>
-                <h6>Holiness Pope Benedict XVI</h6>
-                <p>Pope Of Vatican and Bishop of Rome No. 265t</p>
-              </div>
-            </div>
-
-            <!-- Single Testimonials Slide -->
-            <div class="single-testimonial-slide d-flex align-items-center">
-              <!-- Thumbnail -->
-              <div class="testimonial-thumb">
-                <img src="./img/bg-img/8.jpg" alt="">
-              </div>
-              <!-- Content -->
-              <div class="testimonial-content">
-                <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
-                  very helpful. Excellent treatment and advice.”</h5>
-                <h6>Arron Ramsey</h6>
-                <p>Dental Patient</p>
-              </div>
-            </div>
-            <!-- Testimonials Slides -->
-          <div class="testimonials-slides owl-carousel">
-            <!-- Single Testimonials Slide -->
-            <div class="single-testimonial-slide d-flex align-items-center">
-              <!-- Thumbnail -->
-              <div class="testimonial-thumb">
-                <img src="./img/bg-img/8.jpg" alt="">
-              </div>
-              <!-- Content -->
-              <div class="testimonial-content">
-                <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
-                  very helpful. Excellent treatment and advice.”</h5>
-                <h6>Arron Ramsey</h6>
-                <p>Dental Patient</p>
-              </div>
-            </div>
-            <!-- Testimonials Slides -->
-          <div class="testimonials-slides owl-carousel">
-            <!-- Single Testimonials Slide -->
-            <div class="single-testimonial-slide d-flex align-items-center">
-              <!-- Thumbnail -->
-              <div class="testimonial-thumb">
-                <img src="./img/bg-img/8.jpg" alt="">
-              </div>
-              <!-- Content -->
-              <div class="testimonial-content">
-                <h5>“I'd been avoiding the dentist for years due to bad experiences. A reminder SMS is sent the working day beforehand. I also had a call confirming appointment. I have been a patient ever since. My dentist is very reassuring and
-                  very helpful. Excellent treatment and advice.”</h5>
-                <h6>Arron Ramsey</h6>
-                <p>Dental Patient</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ***** Testimonials Area End ***** -->
-
-  <!-- ***** Blog Area Start ***** -->
-  <section class="dento-blog-area section-padding-100-0 clearfix">
-    <div class="container">
-      <div class="row">
-        <!-- Section Heading -->
-        <div class="col-12">
-          <div class="section-heading text-center">
-            <h2>Do you know !</h2>
-            <div class="line"></div>
-          </div>
-        </div>
-      </div>
-
-      <div class="row">
-        <!-- Single Blog Item -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="single-blog-item mb-100">
-            <a href="./blog-details.html">
-              <img src="./img/bg-img/4.jpg" alt="">
-            </a>
-            <!-- Blog Content -->
-            <div class="blog-content">
-              <a href="./blog-details.html" class="post-title">How your mouth bacteria can harm your lungs</a>
-              <p>Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo diam ...</p>
-              <div class="post-meta">
-                <a href="#"><i class="icon_clock_alt"></i> 28 Sep 2018</a>
-                <a href="#"><i class="icon_chat_alt"></i> 3 Comments</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Blog Item -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="single-blog-item mb-100">
-            <a href="./blog-details.html">
-              <img src="./img/bg-img/5.jpg" alt="">
-            </a>
-            <!-- Blog Content -->
-            <div class="blog-content">
-              <a href="./blog-details.html" class="post-title">What is the best kind of toothpaste to use?</a>
-              <p>Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo diam ...</p>
-              <div class="post-meta">
-                <a href="#"><i class="icon_clock_alt"></i> 28 Sep 2018</a>
-                <a href="#"><i class="icon_chat_alt"></i> 3 Comments</a>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Single Blog Item -->
-        <div class="col-12 col-md-6 col-lg-4">
-          <div class="single-blog-item mb-100">
-            <a href="./blog-details.html">
-              <img src="./img/bg-img/6.jpg" alt="">
-            </a>
-            <!-- Blog Content -->
-            <div class="blog-content">
-              <a href="./blog-details.html" class="post-title">Why you should avoid sipping your drinks</a>
-              <p>Donec tempor, lorem et euismod eleifend, est lectus laoreet ante, sed accusan justo diam ...</p>
-              <div class="post-meta">
-                <a href="#"><i class="icon_clock_alt"></i> 28 Sep 2018</a>
-                <a href="#"><i class="icon_chat_alt"></i> 3 Comments</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-  <!-- ***** Blog Area End ***** -->
 @endsection
