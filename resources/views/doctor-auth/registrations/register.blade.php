@@ -41,7 +41,7 @@
         @enderror
 
         <select class="gender" name="gender">
-            <option disabled selected> Select your Gender </option>
+            <option disabled selected> Select a Gender </option>
             <option value="Male" @if (old('gender') == 'Male') {{ 'selected' }} @endif>Male</option>
             <option value="Female" @if (old('gender') == 'Female') {{ 'selected' }} @endif>Female</option>
         </select>
@@ -57,28 +57,28 @@
         @enderror
 
         <select class="governorate_id" name="governorate_id">
-            <option selected>Choose a governorate...</option>
+            <option selected>Select a Governorate</option>
             @foreach ($governorates as $governorate)
                 <option value="{{$governorate->id}}">{{$governorate->governorate_name}}</option>
             @endforeach
         </select>
 
         <select class="city_id" name="city_id">
-            <option selected> Select City</option>
+            <option selected> Select a City</option>
             @foreach ($cities as $city)
                 <option value="{{$city->id}}">{{$city->city_name}}</option>
             @endforeach
         </select>
 
         <select class="speciality_id" name="speciality_id">
-            <option disabled selected>Select Speciality</option>
+            <option disabled selected>Select a Speciality</option>
             @foreach ($specialities as $specialty)
                 <option value="{{$specialty->id}}">{{$specialty->name}}</option>
             @endforeach
         </select>
 
         <select class="hospital_id" name="hospital_id">
-            <option disabled selected>Select Hospital</option>
+            <option disabled selected>Select a Hospital</option>
             @foreach ($hospitals as $hospital)
                 <option value="{{$hospital->id}}">{{$hospital->name}}</option>
             @endforeach
