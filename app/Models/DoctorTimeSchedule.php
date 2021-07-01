@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class City extends Model
+class DoctorTimeSchedule extends Model
 {
     use HasFactory;
 
@@ -15,9 +15,8 @@ class City extends Model
      * @var array
      */
     protected $fillable = [
+        'time',
         'id',
-        'city_name',
-        'governorate_id',
         'created_at',
         'updated_at',
     ];
@@ -27,15 +26,14 @@ class City extends Model
      *
      * @var array
      */
-
+    protected $hidden = [
+        'id',
+        'created_at',
+        'updated_at',
+    ];
 
     //relations
-    public function hasGovernorate(){
-        return $this->belongsTo(Governorate::class, 'governorate_id');
+    public function times(){
+        return $this->hasMany(Doctor::class, 'time_id');
     }
-
-    public function hasHospitals(){
-        return $this->hasMany(Hospital::class, 'city_id');
-    }
-
 }

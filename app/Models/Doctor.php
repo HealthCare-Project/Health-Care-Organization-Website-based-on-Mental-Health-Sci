@@ -40,7 +40,9 @@ class Doctor extends Authenticatable implements MustVerifyEmail
         'availability',
         'city_id',
         'governorate_id',
-        'speciality_id'
+        'speciality_id',
+        'day_id',
+        'time_id',
     ];
 
     /**
@@ -81,13 +83,23 @@ class Doctor extends Authenticatable implements MustVerifyEmail
     public function speciality(){
         return $this->belongsTo(Speciality::class, 'speciality_id');
     }
+
     public function governorate(){
         return $this->belongsTo(Governorate::class, 'governorate_id');
+    }
+
+    public function day(){
+        return $this->belongsTo(DoctorDaySchedule::class, 'day_id');
+    }
+
+    public function time(){
+        return $this->belongsTo(DoctorTimeSchedule::class, 'time_id');
     }
 
     public function complaintcomments(){
         return $this->hasMany(ComplaintComment::class);
     }
+    
     public function complaints(){
         return $this->hasMany(Complaint::class);
     }
@@ -95,6 +107,7 @@ class Doctor extends Authenticatable implements MustVerifyEmail
     public function doctors(){
         return $this->hasMany(Complaint::class);
     }
+
     public function reviews(){
         return $this->hasMany(Review::class);
     }

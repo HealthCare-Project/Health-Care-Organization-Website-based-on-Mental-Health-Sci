@@ -18,6 +18,7 @@ use App\Http\Controllers\doctor\DoctorSessionsController;
 */
 //doctor register
 Route::get('register', [DoctorsController::class, 'index']);
+Route::get('register', [DoctorsController::class, 'showData']);
 Route::post('register', [DoctorsController::class, 'store'])->name('doctor.store');
 
 //doctor login

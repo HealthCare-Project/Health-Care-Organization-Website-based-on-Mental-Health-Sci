@@ -45,11 +45,12 @@ body {
 }
 
 .box2 .gender,
-.box2 .governorate,
-.box2 .work_time,
-.box2 .work_day,
-.box2 .city,
-.box2 .specialty {
+.box2 .governorate_id,
+.box2 .city_id,
+.box2 .speciality_id,
+.box2 .hospital_id,
+.box2 .day_id,
+.box2 .time_id {
     border: 2px solid #9c9b9b;
     margin: 2px auto;
     display: block;
@@ -72,11 +73,12 @@ body {
 }
 
 .box2 .gender:focus,
-.box2 .governorate:focus,
-.box2 .work_time:focus,
-.box2 .work_day:focus,
-.box2 .city:focus,
-.box2 .specialty:focus {
+.box2 .governorate_id:focus,
+.box2 .city_id:focus,
+.box2 .speciality_id:focus,
+.box2 .hospital_id:focus,
+.box2 .day_id:focus,
+.box2 .time_id:focus {
     border: 3px solid #db8624;
     width: 288px;
 }

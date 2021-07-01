@@ -6,6 +6,12 @@ use App\Models\Doctor;
 use Illuminate\Http\Request;
 use PhpParser\Comment\Doc;
 use App\Http\Controllers\Controller;
+use App\Models\City;
+use App\Models\DoctorDaySchedule;
+use App\Models\DoctorTimeSchedule;
+use App\Models\Governorate;
+use App\Models\Hospital;
+use App\Models\Speciality;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
@@ -20,6 +26,28 @@ class DoctorsController extends Controller
     public function index()
     {
         return view('doctor-auth.registrations.register');
+    }
+
+    /**
+     * retrieve data from several tables
+     */
+    public function showData(){
+
+        $days = DoctorDaySchedule::select('id', 'day')->get();
+        $times = DoctorTimeSchedule::select('id', 'time')->get();
+        $governorates = Governorate::select('id', 'governorate_name')->get();
+        $cities = City::select('id', 'city_name')->get();
+        $specialities = Speciality::select('id', 'name')->get();
+        $hospitals = Hospital::select('id', 'name')->get();
+
+        return view('doctor-auth.registrations.register', [
+            'days' => $days,
+            'times' => $times,
+            'governorates' => $governorates,
+            'cities' => $cities,
+            'specialities' => $specialities,
+            'hospitals' => $hospitals,
+        ]);
     }
 
     /**
@@ -42,9 +70,12 @@ class DoctorsController extends Controller
             'password' => 'required|min:8|max:50|confirmed',
             'phone' => 'required|string|min:8|max:16',
             'address' => 'required',
-            'city' => 'required',
-            'governorate' => 'required',
-            'specialty' => 'required',
+            'city_id' => 'required',
+            'governorate_id' => 'required',
+            'speciality_id' => 'required',
+            'hospital_id' => 'required',
+            'day_id' => 'required',
+            'time_id' => 'required',
             'doctor_image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:5048',
             'availability' => 'required'
         ]);
@@ -66,16 +97,19 @@ class DoctorsController extends Controller
             'password' => Hash::make($request->password),
             'phone' => request('phone'),
             'address' => request('address'),
-            'city' => request('city'),
-            'governorate' => request('governorate'),
-            'specialty' => request('specialty'),
+            'city_id' => request('city_id'),
+            'governorate_id' => request('governorate_id'),
+            'speciality_id' => request('speciality_id'),
+            'hospital_id' => request('hospital_id'),
+            'day_id' => request('day_id'),
+            'time_id' => request('time_id'),
             'doctor_image' => $image,
             'availability' => request("availability"),
         ]);
 
         Auth::login($doctor);
 
-        return redirect()->to('doctor/login');
+        return redirect()->to('/');
         
     }
 

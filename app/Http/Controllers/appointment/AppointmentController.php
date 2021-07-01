@@ -4,6 +4,9 @@ namespace App\Http\Controllers\appointment;
 
 use App\Http\Controllers\Controller;
 use App\Models\Doctor;
+use App\Models\Governorate;
+use App\Models\Speciality;
+use App\Models\City;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
@@ -18,71 +21,16 @@ class AppointmentController extends Controller
      */
     public function index()
     {
-        $governorates = DB::table('governorates')
-            ->select('governorate_name', 'id')
-            ->distinct()
-            ->get()
-            ->sort();
+        $cities = City::all()->toJson();
+        $governorates = Governorate::all()->toJson();
+        $specialities = Speciality::all()->toJson();
 
-        return view('appointment.search', ['governorates' => $governorates]);
+        return view('appointment.search', [
+            'cities' => $cities, 
+            'governorates' => $governorates, 
+            'specialities' => $specialities
+        ]);
     }
-
-    /**
-     * Fetch Hospital locations 
-     */
-    //fetch cities
-    public function getCity(Request $request)
-    {
-
-        $cities[] = DB::table('cities')
-            ->where('governorate_id', $request->id)
-            ->select('id', 'city_name')
-            ->distinct()
-            ->get();
-
-        return response()->json($cities);
-    }
-
-    //fetch hospital names
-    public function getName(Request $request)
-    {
-        $Names[] = DB::table('hospitals')
-            ->where('city_id', $request->id)
-            ->select('id', 'name')
-            ->distinct()
-            ->get();
-
-        return response()->json($Names);
-    }
-
-    /**
-     * Fetch Doctors Data
-     */
-    //get doctors speciality
-    public function getSpeciality(Request $request)
-    {
-        $doctorSpeciality[] = DB::table('doctors')
-            ->where('hospital_id', $request->id)
-            ->select('id', 'specialty')
-            ->distinct()
-            ->get();
-
-        return response()->json($doctorSpeciality);
-    }
-
-    // //get doctors info
-    // public function getDoctors(Request $request)
-    // {
-
-    //     $doctorsInfo[] = DB::table('doctors')
-    //         ->where('id', $request->id)
-    //         ->select('doctor_image', 'first_name', 'last_name', 'phone', 'id')
-    //         ->distinct()
-    //         ->get();
-
-    //     return response()->json($doctorsInfo);
-    // }
-
 
     //get doctors info
     public function getDoctors(Request $request)

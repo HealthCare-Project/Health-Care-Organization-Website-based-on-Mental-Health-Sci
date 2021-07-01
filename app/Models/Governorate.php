@@ -15,6 +15,7 @@ class Governorate extends Model
      * @var array
      */
     protected $fillable = [
+        'id',
         'governorate_name',
         'created_at',
         'updated_at',
