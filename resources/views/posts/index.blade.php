@@ -30,7 +30,7 @@
 						</li>
 						<li class="breadcrumb-item active" aria-current="page">My Health</li>
 
-						<li class="breadcrumb-item active" aria-current="page">Health News</li>
+						<li class="breadcrumb-item active" aria-current="page">Diseases</li>
 					</ol>
 				</nav>
 			</div>

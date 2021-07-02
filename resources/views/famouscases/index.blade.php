@@ -31,7 +31,7 @@
 						</li>
 						<li class="breadcrumb-item active" aria-current="page">My Health</li>
 
-						<li class="breadcrumb-item active" aria-current="page">Health News</li>
+						<li class="breadcrumb-item active" aria-current="page">Famous Cases</li>
 					</ol>
 				</nav>
 			</div>
@@ -56,9 +56,10 @@
                     <img style="height: 194px;" class="card-img-top" src="{{url($famouscase['feature_image'])}}" alt="...">
                     <div class="card-body">
                         <h5 class="card-title light-300 text-dark">{{$famouscase['title']}}</h5>
-                        <p class="card-text light-300 text-dark">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolor.
+                        <p style="-webkit-line-clamp: 2;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;" class="card-text light-300 text-dark">
+                            {{ $famouscase['content'] }}
                         </p>
                         <span class="text-decoration-none text-primary light-300">
 						{{$famouscase['publish_date']}} <i class='bx bxs-hand-right ms-1'></i>

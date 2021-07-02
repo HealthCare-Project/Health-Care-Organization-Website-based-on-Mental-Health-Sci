@@ -6,17 +6,10 @@
     <title> Doctor Registeration </title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/doctor_register.css') }}">
-</head>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-<head>
-    <meta charset="utf-8">
-    <title> Doctor Registeration </title>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/doctor_style/doctor_register.css') }}">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-select/1.13.1/js/bootstrap-select.min.js"></script>
 </head>
 
 <body>
@@ -42,69 +35,68 @@
         <input type="password" name="password_confirmation" placeholder="Confirm Password"
             value="{{ old('password_confirmation') }}" required>
 
-        <input type="number" name="age" placeholder="Age" value="{{ old('age') }}" required>
+        <input type="number" name="age" placeholder="Your Age" value="{{ old('age') }}" required>
         @error('age')
             <small class="form-text text-danger">{{ $message }}</small>
         @enderror
 
         <select class="gender" name="gender">
-            <option selected>Select Gender</option>
+            <option disabled selected> Select a Gender </option>
             <option value="Male" @if (old('gender') == 'Male') {{ 'selected' }} @endif>Male</option>
             <option value="Female" @if (old('gender') == 'Female') {{ 'selected' }} @endif>Female</option>
         </select>
 
-        <input type="text" name="phone" placeholder="Phone" value="{{ old('phone') }}" required>
+        <input type="text" name="phone" placeholder="Phone Number" value="{{ old('phone') }}" required>
         @error('phone')
             <small class="form-text text-danger">{{ $message }}</small>
         @enderror
 
-        <input type="text" name="address" placeholder="Address" value="{{ old('address') }}" required>
+        <input type="text" name="address" placeholder="Your Address" value="{{ old('address') }}" required>
         @error('address')
             <small class="form-text text-danger">{{ $message }}</small>
         @enderror
 
-        <input type="text" name="city" placeholder="City" value="{{ old('city') }}" required>
-        @error('city')
-            <small class="form-text text-danger">{{ $message }}</small>
-        @enderror
-
-        <select class="governorate" name="governorate">
-            <option selected>Choose a governorate...</option>
-            <option value="Alexandria" @if (old('governorate') == 'Alexandria') {{ 'selected' }} @endif>Alexandria</option>
-            <option value="Aswan" @if (old('governorate') == 'Aswan') {{ 'selected' }} @endif>Aswan</option>
-            <option value="Asyut" @if (old('governorate') == 'Asyut') {{ 'selected' }} @endif>Asyut</option>
-            <option value="Beheira" @if (old('governorate') == 'Beheira') {{ 'selected' }} @endif>Beheira</option>
-            <option value="Beni Suef" @if (old('governorate') == 'Beni Suef') {{ 'selected' }} @endif>Beni Suef</option>
-            <option value="Cairo" @if (old('governorate') == 'Cairo') {{ 'selected' }} @endif>Cairo</option>
-            <option value="Dakahlia" @if (old('governorate') == 'Dakahlia') {{ 'selected' }} @endif>Dakahlia</option>
-            <option value="Damietta" @if (old('governorate') == 'Damietta') {{ 'selected' }} @endif>Damietta</option>
-            <option value="Faiyum" @if (old('governorate') == 'Faiyum') {{ 'selected' }} @endif>Faiyum</option>
-            <option value="Gharbia" @if (old('governorate') == 'Gharbia') {{ 'selected' }} @endif>Gharbia</option>
-            <option value="Giza" @if (old('governorate') == 'Giza') {{ 'selected' }} @endif>Giza</option>
-            <option value="Ismailia" @if (old('governorate') == 'Ismailia') {{ 'selected' }} @endif>Ismailia</option>
-            <option value="Kafr El Sheikh" @if (old('governorate') == 'Kafr El Sheikh') {{ 'selected' }} @endif>Kafr El Sheikh</option>
-            <option value="Luxor" @if (old('governorate') == 'Luxor') {{ 'selected' }} @endif>Luxor</option>
-            <option value="Matruh" @if (old('governorate') == 'Matruh') {{ 'selected' }} @endif>Matruh</option>
-            <option value="Minya" @if (old('governorate') == 'Minya') {{ 'selected' }} @endif>Minya</option>
-            <option value="Monufia" @if (old('governorate') == 'Monufia') {{ 'selected' }} @endif>Monufia</option>
-            <option value="New Valley" @if (old('governorate') == 'New Valley') {{ 'selected' }} @endif>New Valley</option>
-            <option value="North Sinai" @if (old('governorate') == 'North Sinai') {{ 'selected' }} @endif>North Sinai</option>
-            <option value="Port Said" @if (old('governorate') == 'Port Said') {{ 'selected' }} @endif>Port Said</option>
-            <option value="Qalyubia" @if (old('governorate') == 'Qalyubia') {{ 'selected' }} @endif>Qalyubia</option>
-            <option value="Qena" @if (old('governorate') == 'Qena') {{ 'selected' }} @endif>Qena</option>
-            <option value="Red Sea" @if (old('governorate') == 'Red Sea') {{ 'selected' }} @endif>Red Sea</option>
-            <option value="Sharqia" @if (old('governorate') == 'Sharqia') {{ 'selected' }} @endif>Sharqia</option>
-            <option value="Sohag" @if (old('governorate') == 'Sohag') {{ 'selected' }} @endif>Sohag</option>
-            <option value="South Sinai" @if (old('governorate') == 'South Sinai') {{ 'selected' }} @endif>South Sinai</option>
-            <option value="Suez" @if (old('governorate') == 'Suez') {{ 'selected' }} @endif> Suez</option>
+        <select class="governorate_id" name="governorate_id">
+            <option selected>Select a Governorate</option>
+            @foreach ($governorates as $governorate)
+                <option value="{{$governorate->id}}">{{$governorate->governorate_name}}</option>
+            @endforeach
         </select>
 
-        <input type="text" name="specialty" placeholder="Enter Your Specialty" value="{{ old('specialty') }}"
-            required>
-        <input type="text" name="availability" placeholder="Example: 2-5 PM" required>
-        @error('specialty')
-            <small class="form-text text-danger">{{ $message }}</small>
-        @enderror
+        <select class="city_id" name="city_id">
+            <option selected> Select a City</option>
+            @foreach ($cities as $city)
+                <option value="{{$city->id}}">{{$city->city_name}}</option>
+            @endforeach
+        </select>
+
+        <select class="speciality_id" name="speciality_id">
+            <option disabled selected>Select a Speciality</option>
+            @foreach ($specialities as $specialty)
+                <option value="{{$specialty->id}}">{{$specialty->name}}</option>
+            @endforeach
+        </select>
+
+        <select class="hospital_id" name="hospital_id">
+            <option disabled selected>Select a Hospital</option>
+            @foreach ($hospitals as $hospital)
+                <option value="{{$hospital->id}}">{{$hospital->name}}</option>
+            @endforeach
+        </select>
+
+        <select class="day_id" name="day_id">
+            <option selected> Select Your Work Day</option>
+            @foreach ($days as $day)
+                <option value="{{$day->id}}">{{$day->day}}</option>
+            @endforeach
+        </select>
+
+        <select class="time_id" name="time_id">
+            <option selected> Your Work Appointment </option>
+            @foreach ($times as $time)
+                <option value="{{$time->id}}">{{$time->time}}</option>
+            @endforeach
+        </select>
 
         <input type="file" id="file" name="doctor_image" value="{{ old('doctor_image') }}" required>
         <label for="file">
@@ -117,8 +109,9 @@
             <small class="form-text text-danger">{{ $message }}</small>
         @enderror
 
-        <button type="submit" name="signup" value="Sign Up">Sign up</button>
+        <input type="submit" name="signup" value="Sign Up">
     </form>
+
 </body>
 
 </html>

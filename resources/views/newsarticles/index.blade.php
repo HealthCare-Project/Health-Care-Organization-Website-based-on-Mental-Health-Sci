@@ -56,9 +56,10 @@
                     <img style="height: 194px;" class="card-img-top" src="{{url($newsarticle['feature_image'])}}" alt="...">
                     <div class="card-body">
                         <h5 class="card-title light-300 text-dark">{{$newsarticle['title']}}</h5>
-                        <p class="card-text light-300 text-dark">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolor.
+                        <p style="-webkit-line-clamp: 2;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;" class="card-text light-300 text-dark">
+                            {{ $newsarticle['content'] }}
                         </p>
                         <span class="text-decoration-none text-primary light-300">
 						{{$newsarticle['publish_date']}} <i class='bx bxs-hand-right ms-1'></i>

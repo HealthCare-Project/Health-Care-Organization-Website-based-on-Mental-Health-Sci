@@ -7,8 +7,7 @@ use Mail;
 use App\Mail\VerificationEmail;
 use App\Mail\ForgotPassword;
 use App\Mail\NewReply;
-
-use DB;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Str;
 use Carbon\Carbon;
 

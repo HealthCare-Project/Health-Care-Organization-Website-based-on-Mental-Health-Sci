@@ -26,6 +26,7 @@ use App\Http\Controllers\FamousCaseInsertController;
 use App\Http\Controllers\NewsArticleInsertController;
 use App\Http\Controllers\RelativesArticleInsertController;
 use App\Http\Controllers\DoctorArticleInsertController;
+use App\Http\Controllers\appointment\AppointmentController;
 
 
 
@@ -57,13 +58,13 @@ Route::get('/dentist', [LayoutsController::class, 'dentist']);
 Route::get('/oncology', [LayoutsController::class, 'oncology']);
 Route::get('/neurology', [LayoutsController::class, 'neurology']);
 Route::get('/pediatric', [LayoutsController::class, 'pediatric']);
-Route::get('/psychiaty', [LayoutsController::class, 'psychiaty']);
+Route::get('/psychiatry', [LayoutsController::class, 'psychiatry']);
 Route::get('/cardiology', [LayoutsController::class, 'cardiology']);
 Route::get('/hematology', [LayoutsController::class, 'hematology']);
 Route::get('/nephrology', [LayoutsController::class, 'nephrology']);
-Route::get('/rheumatology', [LayoutsController::class, 'rheumatology']);
+Route::get('/surgery', [LayoutsController::class, 'surgery']);
 Route::get('/endocrinology', [LayoutsController::class, 'endocrinology']);
-Route::get('/internal medicine', [LayoutsController::class, 'internal medicine']);
+Route::get('/internal_medicine', [LayoutsController::class, 'internal_medicine']);
 
 
 //home page
@@ -125,26 +126,27 @@ Route::get('doctorarticles/{id}',[DoctorArticleController::class,'view']);
 Route::get('/application', [LayoutsController::class, 'application']);
 //
 
-Route::get('postsinsert','App\Http\Controllers\PostInsertController@insertform');
-Route::post('/create','App\Http\Controllers\PostInsertController@insert');
+
+Route::get('postsinsert', [PostInsertController::class, 'insertform']);
+Route::post('/create1', [PostInsertController::class, 'insert']);
+
+//
+Route::get('famouscasesinsert', [FamousCaseInsertController::class, 'insertform']);
+Route::post('/create2', [FamousCaseInsertController::class, 'insert']);
+
+//
+Route::get('newsarticlesinsert', [NewsArticleInsertController::class, 'insertform']);
+Route::post('/create3', [NewsArticleInsertController::class, 'insert']);
+
+//
+Route::get('relativesarticlesinsert', [RelativesArticleInsertController::class, 'insertform']);
+Route::post('/create4', [RelativesArticleInsertController::class, 'insert']);
 
 
 //
+Route::get('doctorarticlesinsert', [DoctorArticleInsertController::class, 'insertform']);
+Route::post('/create5', [DoctorArticleInsertController::class, 'insert']);
 
-Route::get('famouscasesinsert','App\Http\Controllers\FamousCaseInsertController@insertform');
-Route::post('/create','App\Http\Controllers\FamousCaseInsertController@insert');
-//
-
-Route::get('newsarticlesinsert','App\Http\Controllers\NewsArticleInsertController@insertform');
-Route::post('/create','App\Http\Controllers\NewsArticleInsertController@insert');
-//
-
-Route::get('relativesarticlesinsert','App\Http\Controllers\RelativesArticleInsertController@insertform');
-Route::post('/create','App\Http\Controllers\RelativesArticleInsertController@insert');
-//
-
-Route::get('doctorarticlesinsert','App\Http\Controllers\DoctorArticleInsertController@insertform');
-Route::post('/create','App\Http\Controllers\DoctorArticleInsertController@insert');
 //
 Route::group(['prefix'=>'doctor'], function() {
 
@@ -196,7 +198,6 @@ Route::group(['prefix'=>'patient'], function() {
     [SessionsController::class, 'PasswordReset'])->name("new-password");
 
     //pathological history
-#   Route::get('pathological-history', [PathologicalHistoryController::class, 'create']);
     Route::get('{id}/pathological-history/create', [PathologicalHistoryController::class, 'create']);
     Route::post('{id}/pathological-history/create', [PathologicalHistoryController::class, 'store'])->name('pathhistory.store');
     Route::get('pathological-history/show/{id}', [PathologicalHistoryController::class,'show']);
@@ -209,4 +210,19 @@ Route::post('complaints/create',[ComplaintController::class,'store'])->name('com
 Route::get('complaints/{id}', [ComplaintController::class,'show'])->name("show.complaint");
 Route::post('complaints/{id}', [ComplaintsCommentsController::class,'store'])->name("complaint.comment");
 
+<<<<<<< HEAD
 Route::get("/file/download/{id}", [ComplaintController::class,'getDownload'])->name("complaint.downloadfile");
+||||||| 98ad3e5
+=======
+
+//filter
+Route::get('/search', [AppointmentController::class, 'index']);
+Route::get('/getCity', [AppointmentController::class, 'getCity'])->name('getCity');
+Route::get('/getName', [AppointmentController::class, 'getName'])->name('getName');
+Route::get('/getAddress', [AppointmentController::class, 'getAddress'])->name('getAddress');
+Route::get('/getSpeciality', [AppointmentController::class, 'getSpeciality'])->name('getSpeciality');
+Route::get('/getDoctors', [AppointmentController::class, 'getDoctors'])->name('getDoctors');
+
+
+
+>>>>>>> 2f6d3b7878f75ca05bec752f6496a3236e475b80

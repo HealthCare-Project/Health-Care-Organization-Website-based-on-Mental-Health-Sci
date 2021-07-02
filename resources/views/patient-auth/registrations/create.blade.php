@@ -1,6 +1,6 @@
 
 
-<title> Login </title>
+<title> Sign up </title>
 <link rel="stylesheet" type="text/css" href="{{ asset('css/stylesignup.css') }}">
 
 

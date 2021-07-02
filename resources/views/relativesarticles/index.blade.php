@@ -1,3 +1,5 @@
+@extends('layout.main') @section('content')
+
 <head>
 <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -14,9 +16,10 @@
     <link rel="stylesheet" href="{{asset('poststyles/bootstrap.min.css')}}">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{asset('poststyles/boxicon.min.css')}}">
+        <link rel="stylesheet" href="{{asset('poststyles/boxicon.min.css')}}">
+
 </head>
 <body style="background-color:whitesmoke;">
-@extends('layout.main') @section('content')
 
 <!-- ***** Breadcrumb Area Start ***** -->
 <div class="breadcumb--con">
@@ -31,7 +34,7 @@
 						</li>
 						<li class="breadcrumb-item active" aria-current="page">My Health</li>
 
-						<li class="breadcrumb-item active" aria-current="page">Health News</li>
+						<li class="breadcrumb-item active" aria-current="page">Relatives Articles</li>
 					</ol>
 				</nav>
 			</div>
@@ -56,9 +59,10 @@
                     <img style="height: 194px;" class="card-img-top" src="{{url($relativesarticle['feature_image'])}}" alt="...">
                     <div class="card-body">
                         <h5 class="card-title light-300 text-dark">{{$relativesarticle['title']}}</h5>
-                        <p class="card-text light-300 text-dark">
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                            sed do eiusmod tempor incididunt ut labore et dolor.
+                        <p style="-webkit-line-clamp: 2;text-overflow: ellipsis;
+overflow: hidden;
+white-space: nowrap;" class="card-text light-300 text-dark">
+                            {{ $relativesarticle['content'] }}
                         </p>
                         <span class="text-decoration-none text-primary light-300">
 						{{$relativesarticle['publish_date']}} <i class='bx bxs-hand-right ms-1'></i>

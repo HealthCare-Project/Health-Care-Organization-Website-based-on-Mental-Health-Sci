@@ -18,7 +18,7 @@
         <div class="container h-100">
             <div class="row h-100 align-items-center">
                 <div class="col-12">
-                    <h2 class="title">Diseases Encyclopedia </h2>
+                    <h2 class="title">Health News Encyclopedia </h2>
                 </div>
             </div>
         </div>
@@ -26,7 +26,7 @@
 
 <div  class="container">
   
-  <form action = "/create" method = "post" class="box3"  action="/action_page.php">
+  <form action = "/create3" method = "post" class="box3"  action="/action_page.php">
 
   <input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>"><input type = "hidden" name = "_token" value = "<?php echo csrf_token(); ?>">
 

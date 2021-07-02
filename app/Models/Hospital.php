@@ -17,8 +17,6 @@ class Hospital extends Model
     protected $fillabe = [
         'name',
         'address',
-        'city',
-        'governorate',
         'created_at',
         'updated_at'
     ];
@@ -42,5 +40,9 @@ class Hospital extends Model
 
     public function hospitalDoctors(){
         return $this->hasMany(Doctor::class, 'hospital_id');
+    }
+
+    public function hasCity(){
+        return $this->belongsTo(City::class, 'city_id');
     }
 }
