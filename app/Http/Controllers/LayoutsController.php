@@ -16,17 +16,6 @@ class LayoutsController extends Controller
         return view('pages.index');
     }
 
-    //timetable
-    public function timeTable()
-    {
-
-        $cities = City::all()->toJson();
-        $governorates = Governorate::all()->toJson();
-        $specialities = Speciality::all()->toJson();
-
-        return view('pages.timetable', ['cities' => $cities, 'governorates' => $governorates, 'specialities' => $specialities]);
-    }
-
     public function service()
     {
         return view('pages.service');

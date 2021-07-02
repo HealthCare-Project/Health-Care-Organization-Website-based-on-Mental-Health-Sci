@@ -27,6 +27,7 @@ use App\Http\Controllers\NewsArticleInsertController;
 use App\Http\Controllers\RelativesArticleInsertController;
 use App\Http\Controllers\DoctorArticleInsertController;
 use App\Http\Controllers\appointment\AppointmentController;
+use App\Http\Controllers\TimeTableController;
 
 
 
@@ -70,8 +71,8 @@ Route::get('/internal_medicine', [LayoutsController::class, 'internal_medicine']
 //home page
 Route::get('/', [LayoutsController::class, 'index']);
 
-//timeTable 
-Route::get('/timetable', [LayoutsController::class, 'timeTable']);
+//timetable
+Route::get('timetable', [TimeTableController::class, 'index']);
 
 //blog 
 Route::get('/blog', [LayoutsController::class, 'blog']);
