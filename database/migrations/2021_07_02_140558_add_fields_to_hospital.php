@@ -13,7 +13,7 @@ class AddFieldsToHospital extends Migration
      */
     public function up()
     {
-        Schema::table('hospital', function (Blueprint $table) {
+        Schema::table('hospitalS', function (Blueprint $table) {
             $table->unsignedBigInteger('city_id')->nullable();
             $table->foreign('city_id')->references('id')->on('cities')->onDelete('cascade');
             $table->unsignedBigInteger('governorate_id')->nullable();
