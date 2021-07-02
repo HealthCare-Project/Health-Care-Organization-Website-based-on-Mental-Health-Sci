@@ -210,10 +210,7 @@ Route::post('complaints/create',[ComplaintController::class,'store'])->name('com
 Route::get('complaints/{id}', [ComplaintController::class,'show'])->name("show.complaint");
 Route::post('complaints/{id}', [ComplaintsCommentsController::class,'store'])->name("complaint.comment");
 
-<<<<<<< HEAD
 Route::get("/file/download/{id}", [ComplaintController::class,'getDownload'])->name("complaint.downloadfile");
-||||||| 98ad3e5
-=======
 
 //filter
 Route::get('/search', [AppointmentController::class, 'index']);
@@ -225,4 +222,3 @@ Route::get('/getDoctors', [AppointmentController::class, 'getDoctors'])->name('g
 
 
 
->>>>>>> 2f6d3b7878f75ca05bec752f6496a3236e475b80

@@ -521,5 +521,4 @@ return true;
 @extends('includes.main')
 @section('content')
 <h1>Hamanda</h1>
->>>>>>> 93cb29eee4589d0d01a44db1e28422ac9ff6cfa4
 @endsection
