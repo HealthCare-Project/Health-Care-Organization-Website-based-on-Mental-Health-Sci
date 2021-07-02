@@ -38,7 +38,7 @@
        >
   </select>
 <label>Content:</label>
-    <input type="text" class="area" placeholder="content" name="content"><br>
+    <textarea type="text" class="area" placeholder="content" name="content"></textarea><br>
     <input type = "file" id = "file" accept= "image/*" value = "" required placeholder="feature_image" name="feature_image">
                 <label for = "file">
                     <span class = "material-icons">

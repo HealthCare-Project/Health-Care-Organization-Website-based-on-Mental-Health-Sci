@@ -34,7 +34,7 @@
 
 	<!-- ***** Header Area Start ***** -->
 	<header  class="header-area">
-	<nav>
+	  <nav>
       <div class="logo">HealthCare</div>
       <label for="btn" class="iconheader">
         <span class="fa fa-bars"></span>
@@ -49,16 +49,16 @@
           <a href="#">My Health <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-1">
           <ul>
-		    <li>
+		        <li>
               <label for="btn-2" class="show1header">- Encyclopedia +</label>
               <a class="encyclo" href="#">- Encyclopedia <i class="fas fa-caret-right"></i></a>
               <input type="checkbox" id="btn-2">
               <ul>
                 <li><a href="posts">- Diseases </a></li>
                 <li><a href="famouscases">- Famous Cases</a></li>
-			  </ul>
+			        </ul>
             </li>  
-			<li><a href="newsarticles">- Health News</a></li>
+			      <li><a href="newsarticles">- Health News</a></li>
             <li><a href="relativesarticles">- Articles For Relatives</a></li>
             <li><a href="doctorarticles">- Articles For Doctors</a></li>
           </ul>
@@ -69,17 +69,10 @@
           <input type="checkbox" id="btn-3">
           <ul>
             <li><a href="internal_medicine">- Internal Medicine</a></li>
-            <li><a href="pediatric">- Pediatric</a></li>
-            <li><a href="surgery">- Surgery</a></li>
-            <li><a href="oncology">- Oncology</a></li>
-            <li><a href="nephrology">- Nephrology</a></li>
-            <li><a href="hematology">- Hematology</a></li>
-            <li><a href="endocrinology">- Endocrinology</a></li>
-            <li><a href="cardiology">- Cardiology</a></li>
-            <li><a href="neurology">- Neurology</a></li>
-            <li><a href="psychiatry">- Psychiaty</a></li>
-            <li><a href="surgery">- Surgery</a></li>
+            <li><a href="pediatrics">- Pediatrics</a></li>
+            <li><a href="Psychology">- Psychology</a></li>
             <li><a href="dentist">- Dentistry</a></li>
+            <li><a href="Nephrology">- Nephrology</a></li>
           </ul>
         </li>
         <li>
@@ -92,24 +85,24 @@
           <input type="checkbox" id="btn-5">
           <ul>
             <li><a href="application1">- Weight Calculator</a></li>
-			<li><a href="application2">- Calories</a></li>
+			      <li><a href="application2">- Calories</a></li>
             <li><a href="#">- Pathological History</a></li>
-			<li>
-            <label for="btn-6" class="show1header">- Make an Article +</label>
+		        <li>
+              <label for="btn-6" class="show1header">- Make an Article +</label>
               <a class="makearticle" href="#">- Make an Article <i class="fas fa-caret-right"></i></a>
               <input type="checkbox" id="btn-6">
               <ul>
                 <li><a href="postsinsert">- Diseases </a></li>
                 <li><a href="famouscasesinsert">- Famous Cases</a></li>
-				<li><a href="newsarticlesinsert">- Health News</a></li>
-				<li><a href="relativesarticlesinsert">- Relatives Articles</a></li>
-				<li><a href="doctorarticlesinsert">- Doctors Articles</a></li>
-			  </ul>
-			</li>
+				        <li><a href="newsarticlesinsert">- Health News</a></li>
+				        <li><a href="relativesarticlesinsert">- Relatives Articles</a></li>
+				        <li><a href="doctorarticlesinsert">- Doctors Articles</a></li>
+			        </ul>
+		        </li>
           </ul>
         </li>
 			@if(!auth()->guard('patient')->check() && !auth()->guard('doctor')->check())
-		<li>
+		    <li>
           <label for="btn-7" class="showheader">Login +</label>
           <a href="#">Login <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-7">
@@ -129,7 +122,7 @@
           @endif
         </li>
         @endif
-		<li>
+	    	<li>
           <label for="btn-8" class="showheader">Registration +</label>
           <a href="#">Registration  <i class="fas fa-caret-down"></i></a>
           <input type="checkbox" id="btn-8">
@@ -159,7 +152,7 @@
             <ul>
                 <li><a href="{{ route('patient-registeration-page') }}">Sign up</a></li>
                 <li><a href="newsarticles">Health News</a></li>
-				<li><a href="timetable">Timetable</a></li>
+				        <li><a href="timetable">Timetable</a></li>
                 <li><a href="posts">Diseases</a></li>
             </ul>
             <p>Download HealthCare App Now Available</p>
