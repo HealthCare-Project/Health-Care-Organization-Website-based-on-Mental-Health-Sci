@@ -8,12 +8,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     </head>
+    
+    @include('flash-message')
 
     <div class="appointment_search">
         <div class="search_content">
             <div class="subject">
                 <h3>Book a Doctor</h3>
             </div>
+            
             <div class="search_container">
                 <div class="dropdown_row">
                     <label for="governorate">Governorate:</label>
@@ -37,6 +40,7 @@
                     <button id="search">Search</button>
                 </div>
             </div>
+            
         </div>
         <!-- Start Result -->
         <div class="doctor_info">
@@ -91,7 +95,12 @@
                     <p>Dr.${d.first_name} ${d.last_name}</p>
                     <p>${d.phone}</p>
                     <hr>
-                    <p><button>Book Now</button></p>
+                    <form method="GET" action="{{ route('book.store') }}">
+                    @csrf
+                    <p id="book_id">
+                    <button id="book_id" type="submit">Book Now</button>
+                    </p>
+                    </form>
                     </div>`)
                     });
                     $('#search').removeAttr('disabled');

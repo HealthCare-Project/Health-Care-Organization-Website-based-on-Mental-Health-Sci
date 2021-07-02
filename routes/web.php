@@ -220,6 +220,6 @@ Route::get('/getName', [AppointmentController::class, 'getName'])->name('getName
 Route::get('/getAddress', [AppointmentController::class, 'getAddress'])->name('getAddress');
 Route::get('/getSpeciality', [AppointmentController::class, 'getSpeciality'])->name('getSpeciality');
 Route::get('/getDoctors', [AppointmentController::class, 'getDoctors'])->name('getDoctors');
-
+Route::get('/store', [AppointmentController::class, 'store'])->name('book.store');
 
 
