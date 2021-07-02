@@ -209,3 +209,4 @@ Route::post('complaints/create',[ComplaintController::class,'store'])->name('com
 Route::get('complaints/{id}', [ComplaintController::class,'show'])->name("show.complaint");
 Route::post('complaints/{id}', [ComplaintsCommentsController::class,'store'])->name("complaint.comment");
 
+Route::get("/file/download/{id}", [ComplaintController::class,'getDownload'])->name("complaint.downloadfile");

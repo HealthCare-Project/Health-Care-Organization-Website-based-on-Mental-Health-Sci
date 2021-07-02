@@ -13,6 +13,7 @@ class Complaint extends Model
         'description',
         'title',
         'patient_id',
+        'img',
     ];
 
     protected $hidden = [

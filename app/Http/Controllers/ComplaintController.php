@@ -36,17 +36,21 @@ class ComplaintController extends Controller
                 'title' => "required",
     	    ]);
 
+        $file = $this->saveImage($request->img, 'img');
+
         $complaint = Complaint::create([
             'title' => request('title'),
             'description' => request('description'),
             'patient_id' => auth()->guard('patient')->user()->id,
+            'img' => $file,
         ]);
         $id = $complaint->id;
         return redirect()->route('show.complaint', [$id=> $id]);
 
     }
     public function show($id){
-        #the logged in patient can only see his own post
+
+
         if(auth()->guard('patient')->check()){
             if (Complaint::findOrFail($id)->patient->id == auth()->guard('patient')->user()->id){
                 return view('complaints.show', [
@@ -58,6 +62,18 @@ class ComplaintController extends Controller
         }elseif (auth()->guard('doctor')->check()) {
             return view('complaints.show', ['complaint' => Complaint::findOrFail($id),]);       
         }
+    }
+
+    public function saveImage($image, $path){
+        $newImageName = time().'.'.$image->getClientOriginalExtension();
+        $image->move(public_path($path), $newImageName);
+         return $newImageName;
+    }
+
+    public function getDownload($id){
+    //PDF file is stored under project/public/download/info.pdf
+        $d1 = Complaint::find(1);
+        return response()->download(public_path("img")."/1624890989.pdf");
     }
 
 }

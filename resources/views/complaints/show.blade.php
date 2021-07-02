@@ -4,7 +4,10 @@
 showing
 {{$complaint->title}}
 {{$complaint->description}}
-
+<a href="{{ route('complaint.downloadfile', $complaint->img) }}" method="post">
+<img src="{{asset('img/'.$complaint->img)}}" width="200" height="200" alt="image">
+}
+}
 
 
 <h1>Comments</h1>
@@ -18,5 +21,6 @@ showing
 
 {{ $complaint->title }}
 {{ $complaint->description }}
+
 
 @endsection
