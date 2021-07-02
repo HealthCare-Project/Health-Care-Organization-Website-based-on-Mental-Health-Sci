@@ -1,6 +1,225 @@
 @extends('layout.main')
 @section('content')
 
+
+
+
+
+
+ <!-- ***** Welcome Area Start ***** -->
+ <section class="welcome-area">
+    <!-- Welcome Slides -->
+    <div class="welcome-slides owl-carousel">
+      <!-- Single Welcome Slide -->
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url(img/bg-img/Top-Internal-Medicine-Subspecialties-apply-now.jpg);">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12">
+              <!-- Welcome Text -->
+              <div class="welcome-text text-center">
+                <h2 data-animation="fadeInUp" data-delay="100ms">We Believe Everyone Should Have Easy Access To Great Dental Care</h2>
+                <p data-animation="fadeInUp" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
+                  offer you.</p>
+                  <div class="welcome-btn-group">
+                                    <a href="{{ route('patient-registeration-page') }}" class="btn dento-btn mx-2" data-animation="fadeInDown"
+                                        data-delay="500ms">Join Us</a>
+                                    <a href="{{route('session.login')}}"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
+                                        data-delay="700ms">Sign In</a>
+                                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Single Welcome Slide -->
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url(img/bg-img/Internal.png);">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12">
+              <!-- Welcome Text -->
+              <div class="welcome-text text-center">
+                <h2 data-animation="fadeInDown" data-delay="100ms">We Believe Everyone Should Have Easy Access To Great Dental Care</h2>
+                <p data-animation="fadeInDown" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
+                  offer you.</p>
+                  <div class="welcome-btn-group">
+                                    <a href="{{ route('patient-registeration-page') }}" class="btn dento-btn mx-2" data-animation="fadeInDown"
+                                        data-delay="500ms">Join Us</a>
+                                    <a href="{{route('session.login')}}"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
+                                        data-delay="700ms">Sign In</a>
+                                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ***** Welcome Area End ***** -->
+
+  <!-- ****** About Us Area Start ******* -->
+  <section class="dento-about-us-area section-padding-100-0">
+    <div class="container">
+      <div class="row align-items-center">
+        <!-- About Us Thumbnail -->
+        <div class="col-12 col-md-6">
+          <div class="about-us-thumbnail mb-50">
+            <img style ="height:500px;"src="./img/bg-img/internal-medicine3.jpg" alt="">
+          </div>
+        </div>
+        <!-- About Content -->
+        <div class="col-12 col-md-6">
+          <div class="about-us-content mb-50">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <h2>We are</h2>
+              <div class="line"></div>
+            </div>
+            <p>       There are many systemic diseases that affect the motor performance of the digestive system.
+
+Gastrointestinal diseases listed below are the most common diseases or the most affecting the motor functioning of the digestive system.
+</p>
+
+            <!-- Single Skills Area -->
+            <div class="single-skills-area mt-30">
+              <h6> Our Experience</h6>
+              <div id="bar1" class="barfiller">
+                <span class="tip"></span>
+                <span class="fill" data-percentage="80"></span>
+              </div>
+            </div>
+
+            <!-- Single Skills Area -->
+            <div class="single-skills-area mt-30">
+              <h6>Modern Equipment</h6>
+              <div id="bar2" class="barfiller">
+                <span class="tip"></span>
+                <span class="fill" data-percentage="90"></span>
+              </div>
+            </div>
+
+            <!-- Single Skills Area -->
+            <div class="single-skills-area mt-30">
+              <h6>Friendly Staff</h6>
+              <div id="bar3" class="barfiller">
+                <span class="tip"></span>
+                <span class="fill" data-percentage="85"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ****** About Us Area End ****** -->
+
+  <div class="container">
+    <div class="dento-border clearfix"></div>
+  </div>
+
+  <!-- Cool Facts Area Start -->
+  <section class="dento-cta-area">
+    <div class="container">
+      <div class="row">
+        <!-- Cool Facts Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-cta text-center mt-50 mb-100">
+            <i class="icon_genius"></i>
+            <h2><span class="counter">20</span></h2>
+            <h5>Years Of Experience</h5>
+          </div>
+        </div>
+
+        <!-- Cool Facts Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-cta text-center mt-50 mb-100">
+            <i class="icon_heart_alt"></i>
+            <h2><span class="counter">700</span>+</h2>
+            <h5>Happy Patients</h5>
+          </div>
+        </div>
+
+        <!-- Cool Facts Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-cta text-center mt-50 mb-100">
+            <i class="icon_book_alt"></i>
+            <h2><span class="counter">120</span></h2>
+            <h5>Certificate</h5>
+          </div>
+        </div>
+
+        <!-- Cool Facts Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-cta text-center mt-50 mb-100">
+            <i class="icon_id"></i>
+            <h2><span class="counter">40</span>+</h2>
+            <h5>Doctors</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cool Facts Area End -->
+
+  <!-- Dento Service Area Start -->
+
+  <!-- Dento Service Area End -->
+  <section class="dento-blog-area section-padding-100-0 clearfix">
+        <div class="container">
+            <div class="row">
+                <!-- Section Heading -->
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Do you know !</h2>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Blog Item -->
+               
+                <!-- Single Blog Item -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-item mb-100">
+                        <a href="./blog-details.html">
+                            <img src="./img/bg-img/medical 2.jpg" alt="">
+                        </a>
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="./blog-details.html" class="post-title">The most common diseases</a>
+                            <p>The most common disorder caused by metastases in the gastrointestinal tract, which ...
+                            </p>
+                            <div class="post-meta">
+                                <a href="#"><i class="icon_clock_alt"></i> 28 jun 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Item -->
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="single-blog-item mb-100">
+                        <a href="./blog-details.html">
+                            <img src="./img/bg-img/31.jpg" alt="">
+                        </a>
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="./blog-details.html" class="post-title">The Best Treatment Ways</a>
+                            <p>It is one of the best-selling medicinal plants in the United States today, and its origin is the Native ...
+                            </p>
+                            <div class="post-meta">
+                                <a href="#"><i class="icon_clock_alt"></i> 29 Jun 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
 <!-- Title section -->
 <style>
 html {
