@@ -79,8 +79,8 @@ class LayoutsController extends Controller
     {
         return view('medical_department.dentist');
     }
-    public function surgery()
+    public function psychology()
     {
-        return view('medical_department.surgery');
+        return view('medical_department.psychology');
     }
 }

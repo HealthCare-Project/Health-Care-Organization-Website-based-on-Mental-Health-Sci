@@ -69,10 +69,10 @@
           <input type="checkbox" id="btn-3">
           <ul>
             <li><a href="internal_medicine">- Internal Medicine</a></li>
-            <li><a href="pediatrics">- Pediatrics</a></li>
-            <li><a href="Psychology">- Psychology</a></li>
+            <li><a href="pediatric">- Pediatric</a></li>
+            <li><a href="psychology">- Psychology</a></li>
             <li><a href="dentist">- Dentistry</a></li>
-            <li><a href="Nephrology">- Nephrology</a></li>
+            <li><a href="nephrology">- Nephrology</a></li>
           </ul>
         </li>
         <li>

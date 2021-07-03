@@ -63,7 +63,7 @@ Route::get('/psychiatry', [LayoutsController::class, 'psychiatry']);
 Route::get('/cardiology', [LayoutsController::class, 'cardiology']);
 Route::get('/hematology', [LayoutsController::class, 'hematology']);
 Route::get('/nephrology', [LayoutsController::class, 'nephrology']);
-Route::get('/surgery', [LayoutsController::class, 'surgery']);
+Route::get('/psychology', [LayoutsController::class, 'psychology']);
 Route::get('/endocrinology', [LayoutsController::class, 'endocrinology']);
 Route::get('/internal_medicine', [LayoutsController::class, 'internal_medicine']);
 
