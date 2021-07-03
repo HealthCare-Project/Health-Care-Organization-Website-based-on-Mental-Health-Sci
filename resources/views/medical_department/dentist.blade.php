@@ -1,8 +1,310 @@
 @extends('layout.main')
 @section('content')
 
- <!-- Title section -->
+
 <style>
+.go-down{
+    position: absolute;
+    bottom: 50px;
+    width: 26px;
+    height: 40px;
+    border: 1px solid #fff;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    left: 50%;
+    margin-left: -13px;
+}
+
+ .go-down .fa{
+    color: #fff;
+    animation: goDown 1s ease infinite;
+    -webkit-animation: goDown 1s ease infinite;
+    -moz-animation: goDown 1s ease infinite;
+    -o-animation: goDown 1s ease infinite;
+}
+
+@keyframes  goDown {
+    0%{transform: translateY(0);opacity: 0.3;}
+    100%{transform: translateY(11px);}
+}
+
+@-webkit-keyframes goDown {
+    0%{transform: translateY(0);opacity: 0.3;}
+    100%{transform: translateY(11px);}
+}
+
+@-moz-keyframes goDown {
+    0%{transform: translateY(0);opacity: 0.3;}
+    100%{transform: translateY(11px);}
+}
+
+@-o-keyframes goDown {
+    0%{transform: translateY(0);opacity: 0.3;}
+    100%{transform: translateY(11px);}
+}
+
+
+.single-blog-item-con{
+  display: flex;
+    flex-wrap: wrap;
+}
+
+</style>
+
+
+
+ <!-- ***** Welcome Area Start ***** -->
+ <section class="welcome-area">
+    <!-- Welcome Slides -->
+    <div class="welcome-slides owl-carousel">
+      <!-- Single Welcome Slide -->
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url(img/bg-img/Top-Internal-Medicine-Subspecialties-apply-now.jpg);">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12">
+              <!-- Welcome Text -->
+              <div class="welcome-text text-center">
+                <h2 data-animation="fadeInUp" data-delay="100ms">We Believe Everyone Should Have Easy Access To Great Dental Care</h2>
+                <p data-animation="fadeInUp" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
+                  offer you.</p>
+                  <div class="welcome-btn-group">
+<!--                                     <a href="http://127.0.0.1:8000/patient/register" class="btn dento-btn mx-2" data-animation="fadeInDown"
+                                        data-delay="500ms">Join Us</a>
+                                    <a href="http://127.0.0.1:8000/patient/login"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
+                                        data-delay="700ms">Sign In</a> -->
+                                          <!-- Start Go down -->
+
+
+
+                                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+                                            <a href="#about" class="go-down">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </a>
+                                        <!-- End Go down -->
+      </div>
+
+      <!-- Single Welcome Slide -->
+      <div class="welcome-welcome-slide bg-img bg-gradient-overlay jarallax" style="background-image: url(img/bg-img/Internal.png);">
+        <div class="container h-100">
+          <div class="row h-100 align-items-center">
+            <div class="col-12">
+              <!-- Welcome Text -->
+              <div class="welcome-text text-center">
+                <h2 data-animation="fadeInDown" data-delay="100ms">We Believe Everyone Should Have Easy Access To Great Dental Care</h2>
+                <p data-animation="fadeInDown" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
+                  offer you.</p>
+                  <div class="welcome-btn-group">
+<!--                                     <a href="http://127.0.0.1:8000/patient/register" class="btn dento-btn mx-2" data-animation="fadeInDown"
+                                        data-delay="500ms">Join Us</a>
+                                    <a href="http://127.0.0.1:8000/patient/login"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
+                                        data-delay="700ms">Sign In</a> -->
+
+                                          <!-- Start Go down -->
+
+
+                                </div>
+              </div>
+            </div>
+          </div>
+                                            <a href="#about" class="go-down">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </a> 
+        </div>
+      </div>
+                                        
+    </div>
+  </section>
+  <!-- ***** Welcome Area End ***** -->
+
+  <!-- ****** About Us Area Start ******* -->
+  <section class="dento-about-us-area section-padding-100-0">
+    <div class="container" id="about">
+      <div class="row align-items-center">
+        <!-- About Us Thumbnail -->
+        <div class="col-12 col-md-6">
+          <div class="about-us-thumbnail mb-50">
+            <img style ="height:500px;"src="./img/bg-img/internal-medicine3.jpg" alt="">
+          </div>
+        </div>
+        <!-- About Content -->
+        <div class="col-12 col-md-6">
+          <div class="about-us-content mb-50">
+            <!-- Section Heading -->
+            <div class="section-heading">
+              <h2>About</h2>
+              <div class="line"></div>
+            </div>
+            <p>             also known as dental medicine and oral medicine, is a branch of medicine that consists of the study, diagnosis, prevention, and treatment of diseases, disorders, and conditions of the oral cavity, commonly in the dentition but also the oral mucosa, and of adjacent and related structures and tissues, particularly in the maxillofacial (jaw and facial) area.
+</p>
+
+            <!-- Single Skills Area -->
+            <div class="single-skills-area mt-30">
+              <h6> Our Experience</h6>
+              <div id="bar1" class="barfiller">
+                <span class="tip"></span>
+                <span class="fill" data-percentage="80"></span>
+              </div>
+            </div>
+
+            <!-- Single Skills Area -->
+            <div class="single-skills-area mt-30">
+              <h6>Modern Equipment</h6>
+              <div id="bar2" class="barfiller">
+                <span class="tip"></span>
+                <span class="fill" data-percentage="90"></span>
+              </div>
+            </div>
+
+            <!-- Single Skills Area -->
+            <div class="single-skills-area mt-30">
+              <h6>Friendly Staff</h6>
+              <div id="bar3" class="barfiller">
+                <span class="tip"></span>
+                <span class="fill" data-percentage="85"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ****** About Us Area End ****** -->
+
+  <div class="container">
+    <div class="dento-border clearfix"></div>
+  </div>
+
+  <!-- Cool Facts Area Start -->
+  <section class="dento-cta-area">
+    <div class="container">
+      <div class="row">
+        <!-- Cool Facts Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-cta text-center mt-50 mb-100">
+            <i class="icon_genius"></i>
+            <h2><span class="counter">20</span></h2>
+            <h5>Years Of Experience</h5>
+          </div>
+        </div>
+
+        <!-- Cool Facts Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-cta text-center mt-50 mb-100">
+            <i class="icon_heart_alt"></i>
+            <h2><span class="counter">700</span>+</h2>
+            <h5>Happy Patients</h5>
+          </div>
+        </div>
+
+        <!-- Cool Facts Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-cta text-center mt-50 mb-100">
+            <i class="icon_book_alt"></i>
+            <h2><span class="counter">120</span></h2>
+            <h5>Certificate</h5>
+          </div>
+        </div>
+
+        <!-- Cool Facts Area -->
+        <div class="col-12 col-sm-6 col-lg-3">
+          <div class="single-cta text-center mt-50 mb-100">
+            <i class="icon_id"></i>
+            <h2><span class="counter">40</span>+</h2>
+            <h5>Doctors</h5>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cool Facts Area End -->
+
+  <!-- Dento Service Area Start -->
+
+  <!-- Dento Service Area End -->
+  <section class="dento-blog-area section-padding-100-0 clearfix">
+        <div class="container">
+            <div class="row">
+                <!-- Section Heading -->
+                <div class="col-12">
+                    <div class="section-heading text-center">
+                        <h2>Do you know !</h2>
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Single Blog Item -->
+                
+                <!-- Single Blog Item -->
+                <div class="col-12 col-md-6 col-lg-4 single-blog-item-con">
+                    <div class="single-blog-item mb-100">
+                        <a href="#reasons">
+                            <img src="./img/bg-img/medical 2.jpg" alt="reasons">
+                        </a>
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="#reasons" class="post-title">The most common diseases</a>
+                            <p>The most common disorder caused by metastases in the gastrointestinal tract, which ...
+                            </p>
+                            <div class="post-meta">
+                                <a href="#"><i class="icon_clock_alt"></i> 28 jun 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+                                <!-- Single Blog Item -->
+                                <div class="col-12 col-md-6 col-lg-4 single-blog-item-con">
+                    <div class="single-blog-item mb-100">
+                        <a href="#treadmint">
+                            <img src="././img/bg-img/31.jpg" alt="treadmint">
+                        </a>
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="#treadmint" class="post-title">The Best Treatment Ways</a>
+                            <p>It is one of the best-selling medicinal plants in the United States today, and its origin is the Native ...
+                            </p>
+                            <div class="post-meta">
+                                <a href="#"><i class="icon_clock_alt"></i> 29 Jun 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Item -->
+                <div class="col-12 col-md-6 col-lg-4 single-blog-item-con">
+                    <div class="single-blog-item mb-100">
+                        <a href="timetable">
+                            <img src="./img/bg-img/timetable.jpg" alt="timetable">
+                        </a>
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="timetable" class="post-title">The most common diseases</a>
+                            <p>The most common disorder caused by metastases in the gastrointestinal tract, which ...
+                            </p>
+                            <div class="post-meta">
+                                <a href="#"><i class="icon_clock_alt"></i> 28 jun 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+ <!-- Title section -->
+ <style>
 html {
   scroll-behavior: smooth;
 }
@@ -74,7 +376,7 @@ html {
 }
 </style>
 
-
+<!-- 
 
 
 <section class="about-section">
@@ -117,7 +419,7 @@ html {
         <div class="content-card col-3 col-md-3">
         <h5 class="text-center"><a href="#timetable"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
         <p class="text-center"><a href="#timetable"> timetable </a></p>
-        </div>
+        </div> -->
 
      <!--    <ul>
         <li><a href="#">reasons</a></li>
@@ -125,10 +427,10 @@ html {
         <li><a href="#">refrence</a></li>
         <li><a href="#">timetable</a></li>
         </ul> -->
-      </div>
+      <!-- </div> -->
 
       <!-- <button class="btn btn-outline-info"><a href="time table">move to time table</a></button> -->
-      </div>
+<!--       </div>
 
 
 
@@ -137,7 +439,7 @@ html {
       </div>
     </div>
   </div>
-</section>
+</section> -->
 
 <!-- Start reasons sections -->
 
@@ -274,6 +576,7 @@ This is done by covering the tooth with a cover that protects it, which helps to
 
 
 </section>
+
 
 
 

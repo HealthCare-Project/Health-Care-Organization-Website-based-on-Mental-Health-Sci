@@ -5,6 +5,57 @@
 
 
 
+<style>
+.go-down{
+    position: absolute;
+    bottom: 50px;
+    width: 26px;
+    height: 40px;
+    border: 1px solid #fff;
+    display: block;
+    border-radius: 4px;
+    text-align: center;
+    left: 50%;
+    margin-left: -13px;
+}
+
+ .go-down .fa{
+    color: #fff;
+    animation: goDown 1s ease infinite;
+    -webkit-animation: goDown 1s ease infinite;
+    -moz-animation: goDown 1s ease infinite;
+    -o-animation: goDown 1s ease infinite;
+}
+
+@keyframes  goDown {
+    0%{transform: translateY(0);opacity: 0.3;}
+    100%{transform: translateY(11px);}
+}
+
+@-webkit-keyframes goDown {
+    0%{transform: translateY(0);opacity: 0.3;}
+    100%{transform: translateY(11px);}
+}
+
+@-moz-keyframes goDown {
+    0%{transform: translateY(0);opacity: 0.3;}
+    100%{transform: translateY(11px);}
+}
+
+@-o-keyframes goDown {
+    0%{transform: translateY(0);opacity: 0.3;}
+    100%{transform: translateY(11px);}
+}
+
+
+.single-blog-item-con{
+  display: flex;
+    flex-wrap: wrap;
+}
+
+</style>
+
+
 
  <!-- ***** Welcome Area Start ***** -->
  <section class="welcome-area">
@@ -21,15 +72,23 @@
                 <p data-animation="fadeInUp" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
                   offer you.</p>
                   <div class="welcome-btn-group">
-                                    <a href="{{ route('patient-registeration-page') }}" class="btn dento-btn mx-2" data-animation="fadeInDown"
+<!--                                     <a href="http://127.0.0.1:8000/patient/register" class="btn dento-btn mx-2" data-animation="fadeInDown"
                                         data-delay="500ms">Join Us</a>
-                                    <a href="{{route('session.login')}}"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
-                                        data-delay="700ms">Sign In</a>
+                                    <a href="http://127.0.0.1:8000/patient/login"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
+                                        data-delay="700ms">Sign In</a> -->
+                                          <!-- Start Go down -->
+
+
+
                                 </div>
               </div>
             </div>
           </div>
         </div>
+                                            <a href="#about" class="go-down">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </a>
+                                        <!-- End Go down -->
       </div>
 
       <!-- Single Welcome Slide -->
@@ -43,23 +102,31 @@
                 <p data-animation="fadeInDown" data-delay="300ms">As a leading industry innovator, Dento is opening up exciting new opportunities for dental professionals, investors, employees & suppliers. Contact us to find out what we have to
                   offer you.</p>
                   <div class="welcome-btn-group">
-                                    <a href="{{ route('patient-registeration-page') }}" class="btn dento-btn mx-2" data-animation="fadeInDown"
+<!--                                     <a href="http://127.0.0.1:8000/patient/register" class="btn dento-btn mx-2" data-animation="fadeInDown"
                                         data-delay="500ms">Join Us</a>
-                                    <a href="{{route('session.login')}}"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
-                                        data-delay="700ms">Sign In</a>
+                                    <a href="http://127.0.0.1:8000/patient/login"" class="btn dento-btn mx-2 active" data-animation="fadeInDown"
+                                        data-delay="700ms">Sign In</a> -->
+
+                                          <!-- Start Go down -->
+
+
                                 </div>
               </div>
             </div>
           </div>
+                                            <a href="#about" class="go-down">
+                                                <i class="fa fa-angle-down" aria-hidden="true"></i>
+                                            </a> 
         </div>
       </div>
+                                        
     </div>
   </section>
   <!-- ***** Welcome Area End ***** -->
 
   <!-- ****** About Us Area Start ******* -->
   <section class="dento-about-us-area section-padding-100-0">
-    <div class="container">
+    <div class="container" id="about">
       <div class="row align-items-center">
         <!-- About Us Thumbnail -->
         <div class="col-12 col-md-6">
@@ -72,7 +139,7 @@
           <div class="about-us-content mb-50">
             <!-- Section Heading -->
             <div class="section-heading">
-              <h2>We are</h2>
+              <h2>About</h2>
               <div class="line"></div>
             </div>
             <p>       There are many systemic diseases that affect the motor performance of the digestive system.
@@ -178,16 +245,16 @@ Gastrointestinal diseases listed below are the most common diseases or the most 
 
             <div class="row">
                 <!-- Single Blog Item -->
-               
+                
                 <!-- Single Blog Item -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 col-md-6 col-lg-4 single-blog-item-con">
                     <div class="single-blog-item mb-100">
-                        <a href="./blog-details.html">
-                            <img src="./img/bg-img/medical 2.jpg" alt="">
+                        <a href="#reasons">
+                            <img src="./img/bg-img/medical 2.jpg" alt="reasons">
                         </a>
                         <!-- Blog Content -->
                         <div class="blog-content">
-                            <a href="./blog-details.html" class="post-title">The most common diseases</a>
+                            <a href="#reasons" class="post-title">The most common diseases</a>
                             <p>The most common disorder caused by metastases in the gastrointestinal tract, which ...
                             </p>
                             <div class="post-meta">
@@ -197,15 +264,16 @@ Gastrointestinal diseases listed below are the most common diseases or the most 
                     </div>
                 </div>
 
-                <!-- Single Blog Item -->
-                <div class="col-12 col-md-6 col-lg-4">
+
+                                <!-- Single Blog Item -->
+                                <div class="col-12 col-md-6 col-lg-4 single-blog-item-con">
                     <div class="single-blog-item mb-100">
-                        <a href="./blog-details.html">
-                            <img src="./img/bg-img/31.jpg" alt="">
+                        <a href="#treadmint">
+                            <img src="././img/bg-img/31.jpg" alt="treadmint">
                         </a>
                         <!-- Blog Content -->
                         <div class="blog-content">
-                            <a href="./blog-details.html" class="post-title">The Best Treatment Ways</a>
+                            <a href="#treadmint" class="post-title">The Best Treatment Ways</a>
                             <p>It is one of the best-selling medicinal plants in the United States today, and its origin is the Native ...
                             </p>
                             <div class="post-meta">
@@ -214,6 +282,25 @@ Gastrointestinal diseases listed below are the most common diseases or the most 
                         </div>
                     </div>
                 </div>
+
+                <!-- Single Blog Item -->
+                <div class="col-12 col-md-6 col-lg-4 single-blog-item-con">
+                    <div class="single-blog-item mb-100">
+                        <a href="timetable">
+                            <img src="./img/bg-img/timetable.jpg" alt="timetable">
+                        </a>
+                        <!-- Blog Content -->
+                        <div class="blog-content">
+                            <a href="timetable" class="post-title">timetable</a>
+                            <p>The most common disorder caused by metastases in the gastrointestinal tract, which ...
+                            </p>
+                            <div class="post-meta">
+                                <a href="#"><i class="icon_clock_alt"></i> 28 jun 2021</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -221,151 +308,95 @@ Gastrointestinal diseases listed below are the most common diseases or the most 
 
     
 <!-- Title section -->
-<style>
-html {
-  scroll-behavior: smooth;
-}
+  <style>
+  html {
+    scroll-behavior: smooth;
+  }
 
-.about-section{
-  margin-bottom:60px
-}
+  .about-section{
+    margin-bottom:60px
+  }
 
-.title-section{
+  .title-section{
 
-  padding:50px 0px;
+    padding:50px 0px;
 
-}
+  }
 
-.content-list{
-  text-transform:capitalize;
-}
+  .content-list{
+    text-transform:capitalize;
+  }
 
-.content-card{
-  margin-top:20px;
-  cursor: pointer;
-}
+  .content-card{
+    margin-top:20px;
+    cursor: pointer;
+  }
 
-.content-card:hover h5 i{
-  color:#3498db
-}
+  .content-card:hover h5 i{
+    color:#3498db
+  }
 
-.content-card:hover p a{
-  color:#3498db
-}
+  .content-card:hover p a{
+    color:#3498db
+  }
 
-.content-card p{
-  font-size:17px;
-  font-weight:500;
-}
+  .content-card p{
+    font-size:17px;
+    font-weight:500;
+  }
 
-#reasons ol li{
-  list-style:auto;
-  font-size:17px;
-  font-weight:500;
-}
+  #reasons ol li{
+    list-style:auto;
+    font-size:17px;
+    font-weight:500;
+  }
 
-.reasons-section{
-  background: whitesmoke;
-  padding: 50px 30px;
-}
-.reasons-section h3{
-  text-align:center
-}
+  .reasons-section{
+    background: whitesmoke;
+    padding: 50px 30px;
+  }
+  .reasons-section h2{
+    text-align:center
+  }
 
-.treadmint-section{
+  .treadmint-section{
 
-  padding: 50px 30px;
-}
-.treadmint-section h3{
-  text-align:center
-}
-.treadmint-section ol li{
-  list-style:auto;
-  font-size:17px;
-  font-weight:500;
-}
+    padding: 50px 30px;
+  }
+  .treadmint-section h2{
+    text-align:center
+  }
+  .treadmint-section ol li{
+    list-style:auto;
+    font-size:17px;
+    font-weight:500;
+  }
 
+  .refrence-section{
+    background: whitesmoke;
+    padding: 50px 30px;
+  }
+  .refrence-section .doc-card img{
+    height:150px;
+    width:150px;
+    display:block;border-radius: 50%;
+  }
 
-.refrence-section .doc-card img{
-  height:150px;
-  width:150px;
-  display:block;border-radius: 50%;
-}
+  .refrence-section .doc-card .advice p{
+    text-align:center
+  }
 </style>
 
 
 
 
-<section class="about-section">
-<div class="title-section">
-  <div class="container">
-    <h1 class="text-center ">
-    internal medicine
-    </h1>
-  </div>
-</div>
-
-  <div class="container">
-    <div class="row">
-      <div class="col-6">
-
-      <h3>
-      About
-      </h3>
-
-      <p>
-      There are many systemic diseases that affect the motor performance of the digestive system.
-
-      Gastrointestinal diseases listed below are the most common diseases or the most affecting the motor functioning of the digestive system.
-      </p>
-      <div class="content-list row">
-
-        <div class="content-card col-3 col-md-3">
-        <h5 class="text-center"><a href="#reasons"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
-        <p class="text-center"><a href="#reasons"> Diseases</a></p>
-        </div>
-
-        <div class="content-card col-3 col-md-3">
-        <h5 class="text-center"><a href="#treadmint"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
-        <p class="text-center"><a href="#treadmint">treadmint</a></p>
-        </div>
-
-        <div class="content-card col-3 col-md-3">
-        <h5 class="text-center"><a href="#refrence"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
-        <p class="text-center"><a href="#refrence"> refrence </a></p>
-        </div>
-
-        <div class="content-card col-3 col-md-3">
-        <h5 class="text-center"><a href="#timetable"><i class="fa fa-telegram fa-2x" aria-hidden="true"></i></a></h5>
-        <p class="text-center"><a href="#timetable"> timetable </a></p>
-        </div>
-
-     <!--    <ul>
-        <li><a href="#">reasons</a></li>
-        <li><a href="#">treadmint</a></li>
-        <li><a href="#">refrence</a></li>
-        <li><a href="#">timetable</a></li>
-        </ul> -->
-      </div>
-
-      <!-- <button class="btn btn-outline-info"><a href="time table">move to time table</a></button> -->
-      </div>
-
-
-
-      <div class="col-6">
-        <img src="https://static.webteb.net/images/content/tbl_diseases_disease_1269_91533a5ec18-abb6-4e3c-8c64-73b0012beadf.jpg" alt="img">
-      </div>
-    </div>
-  </div>
-</section>
 
 <!-- Start reasons sections -->
 
 <section class="reasons-section">
 
   <div class="container" id="reasons">
-    <h3>Diseases</h3>
+    <h2>Diseases</h2>
     <p>
     <ol>
       <li>Rheumatic Diseases</li>
@@ -413,7 +444,7 @@ html {
 <section class="treadmint-section">
 
   <div class="container" id="treadmint">
-    <h3>treadmint</h3>
+    <h2>treadmint</h2>
     <p>
     <ol>
       <li>Echinacea</li>
@@ -457,7 +488,7 @@ Green tea helps break down fats, prevent mutations in cells that can become canc
 <section class="refrence-section">
 
   <div class="container" id="refrence">
-    <h3 class="text-center">refrence</h3>
+    <h2 class="text-center">refrence</h2>
 
     <div class="row">
       <div class="col-6 doc-card">
@@ -498,14 +529,6 @@ Green tea helps break down fats, prevent mutations in cells that can become canc
 
 
 </section>
-
-
-
-
-
-
-
-
 
 
 
